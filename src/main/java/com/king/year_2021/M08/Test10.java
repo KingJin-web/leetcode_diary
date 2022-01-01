@@ -1,8 +1,8 @@
 package com.king.year_2021.M08;
 
-import com.king.Helper;
-import com.king.MyAssert;
-import org.junit.Assert;
+import com.king.util.Helper;
+
+import com.king.year_2021.MyAssert;
 
 /**
  * @program: leetcode

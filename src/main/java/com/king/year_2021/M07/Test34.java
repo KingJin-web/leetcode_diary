@@ -1,9 +1,6 @@
 package com.king.year_2021.M07;
 
-import com.king.Helper;
-
-import java.util.Arrays;
-import java.util.Scanner;
+import com.king.util.Helper;
 
 /**
  * @program: leetcode

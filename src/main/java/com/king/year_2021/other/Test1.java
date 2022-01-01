@@ -1,11 +1,7 @@
 package com.king.year_2021.other;
 
-import com.king.Helper;
+import com.king.util.Helper;
 import com.king.util.MyPrint;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * @program: leetcode

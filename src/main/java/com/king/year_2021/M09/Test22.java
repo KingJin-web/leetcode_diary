@@ -1,6 +1,6 @@
 package com.king.year_2021.M09;
 
-import com.king.ListNode;
+import com.king.util.ListNode;
 import com.king.util.LeetcodeUtil;
 import com.king.util.MyPrint;
 

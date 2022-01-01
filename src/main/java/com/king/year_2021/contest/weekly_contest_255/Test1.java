@@ -1,19 +1,21 @@
 package com.king.year_2021.contest.weekly_contest_255;
 
-import com.king.Helper;
+
+
+import com.king.year_2021.Helper;
 
 import java.util.Arrays;
 
 /**
  * @program: leetcode
- * @description: 5850. ÕÒ³öÊı×éµÄ×î´ó¹«Ô¼Êı
+ * @description: 5850. æ‰¾å‡ºæ•°ç»„çš„æœ€å¤§å…¬çº¦æ•°
  * @author: King
  * @create: 2021-08-22 10:36
  */
 public class Test1 {
-/*    ¸øÄãÒ»¸öÕûÊıÊı×é nums £¬·µ»ØÊı×éÖĞ×î´óÊıºÍ×îĞ¡ÊıµÄ ×î´ó¹«Ô¼Êı ¡£
+/*    ç»™ä½ ä¸€ä¸ªæ•´æ•°æ•°ç»„ nums ï¼Œè¿”å›æ•°ç»„ä¸­æœ€å¤§æ•°å’Œæœ€å°æ•°çš„ æœ€å¤§å…¬çº¦æ•° ã€‚
 
-    Á½¸öÊıµÄ ×î´ó¹«Ô¼Êı ÊÇÄÜ¹»±»Á½¸öÊıÕû³ıµÄ×î´óÕıÕûÊı¡£*/
+    ä¸¤ä¸ªæ•°çš„ æœ€å¤§å…¬çº¦æ•° æ˜¯èƒ½å¤Ÿè¢«ä¸¤ä¸ªæ•°æ•´é™¤çš„æœ€å¤§æ­£æ•´æ•°ã€‚*/
 
     public int findGCD(int[] nums) {
         int max = Arrays.stream(nums).max().getAsInt();

@@ -1,10 +1,9 @@
 package com.king.year_2021.contest.biweekly_contest_59;
 
-import com.king.Helper;
-
+import com.king.year_2021.Helper;
 /**
  * @program: leetcode
- * @description: 5837. 划分数字的方案数
+ * @description: 5837. 鍒掑垎鏁板瓧鐨勬柟妗堟暟
  * @author: King
  * @create: 2021-08-21 23:25
  */

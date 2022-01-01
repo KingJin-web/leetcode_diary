@@ -1,14 +1,15 @@
 package com.king.year_2021.contest.weekly_contest_262;
 
-import com.king.Helper;
+
 import com.king.util.LeetcodeUtil;
 import com.king.util.MyPrint;
+import com.king.year_2021.Helper;
 
 import java.util.*;
 
 /**
  * @program: leetcode
- * @description: 5896. ¹ÉÆ±¼Û¸ñ²¨¶¯
+ * @description: 5896. è‚¡ç¥¨ä»·æ ¼æ³¢åŠ¨
  * https://leetcode-cn.com/contest/weekly-contest-262/problems/stock-price-fluctuation/
  * @author: King
  * @create: 2021-10-10 11:22
@@ -17,7 +18,7 @@ public class Test3 {
 
     static class StockPrice1 {
 
-        //Ê±¼ä´Á  ¼Û¸ñ
+        //æ—¶é—´æˆ³  ä»·æ ¼
         Map<Integer, Integer> map;
 
         int last;
@@ -80,15 +81,15 @@ public class Test3 {
 
     public static void main(String[] args) {
         StockPrice stockPrice = new StockPrice();
-        stockPrice.update(1, 10); // Ê±¼ä´ÁÎª [1] £¬¶ÔÓ¦µÄ¹ÉÆ±¼Û¸ñÎª [10] ¡£
-        stockPrice.update(2, 5);  // Ê±¼ä´ÁÎª [1,2] £¬¶ÔÓ¦µÄ¹ÉÆ±¼Û¸ñÎª [10,5] ¡£
-        MyPrint.print(stockPrice.current() );     // ·µ»Ø 5 £¬×îĞÂÊ±¼ä´ÁÎª 2 £¬¶ÔÓ¦¼Û¸ñÎª 5 ¡£
-        MyPrint.print(stockPrice.maximum());     // ·µ»Ø 10 £¬×î¸ß¼Û¸ñµÄÊ±¼ä´ÁÎª 1 £¬¼Û¸ñÎª 10 ¡£
-        stockPrice.update(1, 3);  // Ö®Ç°Ê±¼ä´ÁÎª 1 µÄ¼Û¸ñ´íÎó£¬¼Û¸ñ¸üĞÂÎª 3 ¡£
-        // Ê±¼ä´ÁÎª [1,2] £¬¶ÔÓ¦¹ÉÆ±¼Û¸ñÎª [3,5] ¡£
-        MyPrint.print(stockPrice.maximum());     // ·µ»Ø 5 £¬¸üÕıºó×î¸ß¼Û¸ñÎª 5 ¡£
-        stockPrice.update(4, 2);  // Ê±¼ä´ÁÎª [1,2,4] £¬¶ÔÓ¦¼Û¸ñÎª [3,5,2] ¡£
-        MyPrint.print( stockPrice.minimum());     // ·µ»Ø 2 £¬×îµÍ¼Û¸ñÊ±¼ä´ÁÎª 4 £¬¼Û¸ñÎª 2 ¡£
+        stockPrice.update(1, 10); // æ—¶é—´æˆ³ä¸º [1] ï¼Œå¯¹åº”çš„è‚¡ç¥¨ä»·æ ¼ä¸º [10] ã€‚
+        stockPrice.update(2, 5);  // æ—¶é—´æˆ³ä¸º [1,2] ï¼Œå¯¹åº”çš„è‚¡ç¥¨ä»·æ ¼ä¸º [10,5] ã€‚
+        MyPrint.print(stockPrice.current() );     // è¿”å› 5 ï¼Œæœ€æ–°æ—¶é—´æˆ³ä¸º 2 ï¼Œå¯¹åº”ä»·æ ¼ä¸º 5 ã€‚
+        MyPrint.print(stockPrice.maximum());     // è¿”å› 10 ï¼Œæœ€é«˜ä»·æ ¼çš„æ—¶é—´æˆ³ä¸º 1 ï¼Œä»·æ ¼ä¸º 10 ã€‚
+        stockPrice.update(1, 3);  // ä¹‹å‰æ—¶é—´æˆ³ä¸º 1 çš„ä»·æ ¼é”™è¯¯ï¼Œä»·æ ¼æ›´æ–°ä¸º 3 ã€‚
+        // æ—¶é—´æˆ³ä¸º [1,2] ï¼Œå¯¹åº”è‚¡ç¥¨ä»·æ ¼ä¸º [3,5] ã€‚
+        MyPrint.print(stockPrice.maximum());     // è¿”å› 5 ï¼Œæ›´æ­£åæœ€é«˜ä»·æ ¼ä¸º 5 ã€‚
+        stockPrice.update(4, 2);  // æ—¶é—´æˆ³ä¸º [1,2,4] ï¼Œå¯¹åº”ä»·æ ¼ä¸º [3,5,2] ã€‚
+        MyPrint.print( stockPrice.minimum());     // è¿”å› 2 ï¼Œæœ€ä½ä»·æ ¼æ—¶é—´æˆ³ä¸º 4 ï¼Œä»·æ ¼ä¸º 2 ã€‚
     }
 //["StockPrice","update","maximum","current","minimum","maximum","maximum","maximum","minimum","minimum","maximum","update","maximum","minimum","update","maximum","minimum","current","maximum","update","minimum","maximum","update","maximum","maximum","current","update","current","minimum","update","update","minimum","minimum","update","current","update","maximum","update","minimum"]
 //[[],[38,2308],[],[],[],[],[],[],[],[],[],[47,7876],[],[],[58,1866],[],[],[],[],[43,121],[],[],[40,5339],[],[],[],[32,5339],[],[],[43,6414],[49,9369],[],[],[36,3192],[],[48,1006],[],[53,8013],[]]

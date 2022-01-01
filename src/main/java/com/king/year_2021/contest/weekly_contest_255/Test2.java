@@ -1,6 +1,8 @@
 package com.king.year_2021.contest.weekly_contest_255;
 
-import com.king.Helper;
+
+
+import com.king.year_2021.Helper;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,7 +27,7 @@ public class Test2 {
         return a;
     }
 
-    //step´Ódeep¿ªÊ¼, 0½áÊø
+    //stepä»deepå¼€å§‹, 0ç»“æŸ
     void dfs(int step, String res) {
         if (step == 0) {
             if (!list.contains(res)){

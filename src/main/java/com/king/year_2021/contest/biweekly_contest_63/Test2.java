@@ -3,8 +3,6 @@ package com.king.year_2021.contest.biweekly_contest_63;
 import com.king.util.MyPrint;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -68,7 +66,7 @@ public class Test2 {
 
     }
 
-    //Ö´ĞĞÓÃÊ±£º 9 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 39.8 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§
+    //æ‰§è¡Œç”¨æ—¶ï¼š 9 ms , åœ¨æ‰€æœ‰ Java æäº¤ä¸­å‡»è´¥äº† 100.00% çš„ç”¨æˆ· å†…å­˜æ¶ˆè€—ï¼š 39.8 MB , åœ¨æ‰€æœ‰ Java æäº¤ä¸­å‡»è´¥äº† 100.00% çš„ç”¨æˆ·
     public boolean winnerOfGame(String colors) {
 
         char [] s = colors.toCharArray();

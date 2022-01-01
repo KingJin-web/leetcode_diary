@@ -1,6 +1,6 @@
 package com.king.year_2021.M12;
 
-import com.king.Helper;
+import com.king.util.Helper;
 
 /**
  * @program: leetcode

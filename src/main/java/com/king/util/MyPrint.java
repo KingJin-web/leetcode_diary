@@ -1,4 +1,4 @@
-package com.king.year_2021.util;
+package com.king.util;
 
 import java.lang.reflect.*;
 import java.util.*;

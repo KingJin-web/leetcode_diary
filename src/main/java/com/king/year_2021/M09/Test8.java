@@ -1,6 +1,6 @@
 package com.king.year_2021.M09;
 
-import com.king.Helper;
+import com.king.util.Helper;
 import com.king.util.MyPrint;
 
 import java.util.ArrayList;
@@ -62,8 +62,13 @@ public class Test8 {
 
     // blank 返回长度为 n 的由空格组成的字符串
     public String blank(int n) {
-        return " ".repeat(Math.max(0, n));
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < n; ++i) {
+            sb.append(' ');
+        }
+        return sb.toString();
     }
+
 
     // join 返回用 sep 拼接 [left, right) 范围内的 words 组成的字符串
     public StringBuffer join(String[] words, int left, int right, String sep) {

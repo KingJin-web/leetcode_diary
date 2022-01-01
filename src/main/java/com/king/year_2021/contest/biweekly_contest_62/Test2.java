@@ -1,6 +1,6 @@
 package com.king.year_2021.contest.biweekly_contest_62;
 
-import com.king.Helper;
+import com.king.year_2021.Helper;
 import com.king.util.MyPrint;
 
 /**

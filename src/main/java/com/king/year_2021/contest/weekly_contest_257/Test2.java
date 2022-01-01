@@ -1,8 +1,9 @@
 package com.king.year_2021.contest.weekly_contest_257;
 import java.util.Arrays;
 
-import com.king.Helper;
+
 import com.king.util.LeetcodeUtil;
+import com.king.year_2021.Helper;
 
 /**
  * @program: leetcode
@@ -58,7 +59,7 @@ public class Test2 {
 
     }
 
-    //Ö´ĞĞÓÃÊ±£º 91 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 84.2 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§
+    //æ‰§è¡Œç”¨æ—¶ï¼š 91 ms , åœ¨æ‰€æœ‰ Java æäº¤ä¸­å‡»è´¥äº† 100.00% çš„ç”¨æˆ· å†…å­˜æ¶ˆè€—ï¼š 84.2 MB , åœ¨æ‰€æœ‰ Java æäº¤ä¸­å‡»è´¥äº† 100.00% çš„ç”¨æˆ·
     public int numberOfWeakCharacters2(int[][] properties) {
         Arrays.sort(properties,(o1, o2)->o1[0]==o2[0]?o1[1]-o2[1]:o2[0]-o1[0]);
         int cnt=0;

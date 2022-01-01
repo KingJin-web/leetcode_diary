@@ -1,7 +1,8 @@
 package com.king.year_2021.contest.problems.OneDay;
 
-import com.king.Helper;
+
 import com.king.util.MyPrint;
+import com.king.year_2021.Helper;
 
 /**
  * @program: leetcode

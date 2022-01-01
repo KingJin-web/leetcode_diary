@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * @program: leetcode
- * @description: 1. ÎŞÈË»ú·½Õó
+ * @description: 1. æ— äººæœºæ–¹é˜µ
  * https://leetcode-cn.com/problems/0jQkd0/
  * https://leetcode-cn.com/contest/season/2021-fall/problems/0jQkd0/
  * @author: King
@@ -38,8 +38,8 @@ public class Test1 {
         return c;
     }
 
-    //Ö´ĞĞÓÃÊ±£º 4 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§
-    // ÄÚ´æÏûºÄ£º 40 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§
+    //æ‰§è¡Œç”¨æ—¶ï¼š 4 ms , åœ¨æ‰€æœ‰ Java æäº¤ä¸­å‡»è´¥äº† 100.00% çš„ç”¨æˆ·
+    // å†…å­˜æ¶ˆè€—ï¼š 40 MB , åœ¨æ‰€æœ‰ Java æäº¤ä¸­å‡»è´¥äº† 100.00% çš„ç”¨æˆ·
     public int minimumSwitchingTimes1(int[][] A, int[][] B) {
         int n = A.length, m = A[0].length, res = 0;
         int[] cnt = new int[10005];
@@ -52,8 +52,8 @@ public class Test1 {
         return res;
     }
 
-    //Ö´ĞĞÓÃÊ±£º 4 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§
-    // ÄÚ´æÏûºÄ£º 40 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§
+    //æ‰§è¡Œç”¨æ—¶ï¼š 4 ms , åœ¨æ‰€æœ‰ Java æäº¤ä¸­å‡»è´¥äº† 100.00% çš„ç”¨æˆ·
+    // å†…å­˜æ¶ˆè€—ï¼š 40 MB , åœ¨æ‰€æœ‰ Java æäº¤ä¸­å‡»è´¥äº† 100.00% çš„ç”¨æˆ·
     public int minimumSwitchingTimes11(int[][] source, int[][] target) {
         int n = source.length;
         int m = source[0].length;

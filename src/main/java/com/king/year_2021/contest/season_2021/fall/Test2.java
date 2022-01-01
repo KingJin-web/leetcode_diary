@@ -9,13 +9,13 @@ import java.util.List;
 
 /**
  * @program: leetcode
- * @description: 2. ĞÄËãÌôÕ½
+ * @description: 2. å¿ƒç®—æŒ‘æˆ˜
  * https://leetcode-cn.com/contest/season/2021-fall/problems/uOAnQW/
  * @author: King
  * @create: 2021-09-11 16:31
  */
 public class Test2 {
-    //Ö´ĞĞÓÃÊ±£º 94 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 53.9 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§
+    //æ‰§è¡Œç”¨æ—¶ï¼š 94 ms , åœ¨æ‰€æœ‰ Java æäº¤ä¸­å‡»è´¥äº† 100.00% çš„ç”¨æˆ· å†…å­˜æ¶ˆè€—ï¼š 53.9 MB , åœ¨æ‰€æœ‰ Java æäº¤ä¸­å‡»è´¥äº† 100.00% çš„ç”¨æˆ·
     public int maxmiumScore(int[] cards, int cnt) {
         Arrays.sort(cards);
         List<Integer> odd = new ArrayList<Integer>();

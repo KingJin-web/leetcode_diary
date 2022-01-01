@@ -2,7 +2,7 @@ package com.king.year_2021.contest.biweekly_contest_62;
 
 /**
  * @program: leetcode
- * @description: 5873. 考试的最大困扰度
+ * @description: 5873. 鑰冭瘯鐨勬渶澶у洶鎵板害
  * @author: King
  * @create: 2021-10-02 23:06
  */

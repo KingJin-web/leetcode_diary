@@ -1,6 +1,6 @@
 package com.king.year_2021.tencent.arr_and_str;
 
-import com.king.Helper;
+import com.king.util.Helper;
 import com.sun.management.OperatingSystemMXBean;
 
 import java.lang.management.ManagementFactory;

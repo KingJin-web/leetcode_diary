@@ -1,6 +1,7 @@
 package com.king.year_2021.M04;
 
-import com.king.TreeNode;
+
+import com.king.year_2021.TreeNode;
 
 /**
  * @program: leetcode

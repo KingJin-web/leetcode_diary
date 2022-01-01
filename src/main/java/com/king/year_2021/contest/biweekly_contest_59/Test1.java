@@ -1,10 +1,11 @@
 package com.king.year_2021.contest.biweekly_contest_59;
 
-import com.king.Helper;
+
+import com.king.year_2021.Helper;
 
 /**
  * @program: leetcode
- * @description: 5834. Ê¹ÓÃÌØÊâ´ò×Ö»ú¼üÈëµ¥´ÊµÄ×îÉÙÊ±¼ä
+ * @description: 5834. ä½¿ç”¨ç‰¹æ®Šæ‰“å­—æœºé”®å…¥å•è¯çš„æœ€å°‘æ—¶é—´
  * @author: King
  * @create: 2021-08-21 22:34
  */

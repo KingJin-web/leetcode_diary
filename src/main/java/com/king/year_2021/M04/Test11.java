@@ -1,6 +1,8 @@
 package com.king.year_2021.M04;
 
-import com.king.ListNode;
+
+
+import com.king.year_2021.ListNode;
 
 import java.util.Arrays;
 import java.util.List;

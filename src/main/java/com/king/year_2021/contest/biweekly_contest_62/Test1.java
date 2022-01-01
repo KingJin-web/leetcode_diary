@@ -5,17 +5,17 @@ import com.king.util.MyPrint;
 
 /**
  * @program: leetcode
- * @description: 5871. ��һά����ת��ɶ�ά����
+ * @description: 5871. 将一维数组转变成二维数组
  * @author: King
  * @create: 2021-10-02 22:35
  */
 public class Test1 {
-    //����һ���±�� 0 ��ʼ��һά�������� original ���������� m ��  n ������Ҫʹ�� original �� ���� Ԫ�ش���һ�� m �� n �еĶ�ά���顣
-    //original ���±�� 0 �� n - 1 ���� ���� ����Ԫ�ع��ɶ�ά����ĵ�һ�У�
-    // �±�� n �� 2 * n - 1 ���� ���� ����Ԫ�ع��ɶ�ά����ĵڶ��У��������ơ�
-    //��������������̷���һ�� m x n �Ķ�ά���顣����޷����������Ķ�ά���飬���㷵��һ���յĶ�ά���顣
+    //给你一个下标从 0 开始的一维整数数组 original 和两个整数 m 和  n 。你需要使用 original 中 所有 元素创建一个 m 行 n 列的二维数组。
+    //original 中下标从 0 到 n - 1 （都 包含 ）的元素构成二维数组的第一行，
+    // 下标从 n 到 2 * n - 1 （都 包含 ）的元素构成二维数组的第二行，依此类推。
+    //请你根据上述过程返回一个 m x n 的二维数组。如果无法构成这样的二维数组，请你返回一个空的二维数组。
 
-    //ִ����ʱ�� 3 ms , ������ Java �ύ�л����� 99.80% ���û� �ڴ����ģ� 48.5 MB , ������ Java �ύ�л����� 60.49% ���û�
+    //执行用时： 3 ms , 在所有 Java 提交中击败了 99.80% 的用户 内存消耗： 48.5 MB , 在所有 Java 提交中击败了 60.49% 的用户
     public int[][] construct2DArray(int[] original, int m, int n) {
         int ln = original.length;
         if (n * m != ln) {

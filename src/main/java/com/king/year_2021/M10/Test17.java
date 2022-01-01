@@ -1,6 +1,6 @@
 package com.king.year_2021.M10;
 
-import com.king.TreeNode;
+import com.king.util.TreeNode;
 import com.king.util.LeetcodeUtil;
 import com.king.util.MyPrint;
 

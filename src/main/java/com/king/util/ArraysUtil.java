@@ -1,9 +1,6 @@
-package com.king.year_2021.util;
+package com.king.util;
 
 import java.util.Arrays;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.stream.IntStream;
 
 /**
  * @program: leetcode
