@@ -59,5 +59,6 @@ public class Test2 {
     public static void main(String[] args) {
         Test2 test2 = Helper.getYoursObj(Test2.class);
         MyPrint.print(test2.lastRemaining(9));
+        MyPrint.print(13<<1);
     }
 }
