@@ -43,7 +43,7 @@ public class Test3 {
     }
 
     //执行用时： 0 ms , 在所有 Java 提交中击败了 100.00% 的用户;内存消耗： 35.5 MB , 在所有 Java 提交中击败了 71.21% 的用户
-    public String dayOfTheWeek(int day, int month, int year) {
+    public String dayOfTheWeek3(int day, int month, int year) {
         String[] week = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
         int[] monthDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30};
         int sum = 0;
@@ -74,6 +74,63 @@ public class Test3 {
         return (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
     }
 
+    public String dayOfTheWeek4(int day, int month, int year) {
+        String[] week = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+        int[] monthDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30};
+        /* 输入年份之前的年份的天数贡献 */
+        //这里估计很多同学没看懂，后面是为了把闰年2月多的一天算上
+        //举例 为什么要-1969年 因为四年一润 而1972年刚好是闰年 1972-1969 = 3 ，而3/4 = 0，对输入的1972年如果月份大于3 在下面多加一天 这里就不加了 ，所以减去1969。说实话这个操作确实有点东西。
+        int days = 365 * (year - 1971) + (year - 1969) / 4;
+        /* 输入年份中，输入月份之前的月份的天数贡献 */
+        for (int i = 0; i < month - 1; ++i) {
+            days += monthDays[i];
+        }
+        //判断是否是闰年
+        if ((year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) && month >= 3) {
+            days += 1;
+        }
+        /* 输入月份中的天数贡献 */
+        days += day;
+        return week[(days + 3) % 7];
+    }
+
+    //方法5：基姆拉尔森计算公式
+    public String dayOfTheWeek5(int day, int month, int year) {
+        //注意开始是周日
+        String week[] = {  "Sunday" ,"Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday" } ;
+        if ( month == 1 || month == 2 )
+        {
+            month = month + 12 ;
+            year -- ;
+        }
+        int index = 0 ;
+        //基姆拉尔森计算公式
+        index = ( day + 2 * month + 3 * ( month + 1 ) / 5 + year + year / 4 - year / 100 + year / 400 +1) % 7 ;
+        return week[index] ;
+    }
+
+
+    //方法6：蔡勒公式
+    public String dayOfTheWeek(int day, int month, int year) {
+        //注意开始是周六！
+        String week[] = {  "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday"} ;
+        int m ,y;
+        if (month < 3) {
+            m = month + 12;
+            y = year - 1;
+        } else {
+            m = month;
+            y = year;
+        }
+        int index = 0 ;
+        //蔡勒公式
+        int c = y/100;
+        y %= 100;
+        int D = c/4 - 2*c + y + y/4 + 13*(m+1)/5 + day - 1 + 210;//加上30*7防止出现负数
+        return week[D%7] ;
+    }
+
+    //https://leetcode-cn.com/problems/day-of-the-week/solution/dai-ma-jie-de-xiao-bai-javac-jian-dan-ti-egz2/
 
     public static void main(String[] args) {
 
