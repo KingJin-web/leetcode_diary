@@ -29,7 +29,7 @@ public class Test3 {
     public String dayOfTheWeek1(int day, int month, int year) {
         LocalDate localDate = LocalDate.of(year, month, day);
         String[] weeks = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
-        return weeks[localDate.getDayOfWeek().getValue() -1 ];
+        return weeks[localDate.getDayOfWeek().getValue() - 1];
     }
 
     //执行用时： 11 ms , 在所有 Java 提交中击败了 8.42% 的用户 内存消耗： 38.4 MB , 在所有 Java 提交中击败了 5.55% 的用户
@@ -39,13 +39,41 @@ public class Test3 {
         // 0表示一月 所以month 要减去一
         cal.set(year, month - 1, day);
         int w = cal.get(Calendar.DAY_OF_WEEK) - 1;
-        return weeks[w] ;
+        return weeks[w];
     }
 
-    private String dayOfTheWeek(int day, int month, int year) {
-
-        return null;
+    //执行用时： 0 ms , 在所有 Java 提交中击败了 100.00% 的用户;内存消耗： 35.5 MB , 在所有 Java 提交中击败了 71.21% 的用户
+    public String dayOfTheWeek(int day, int month, int year) {
+        String[] week = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+        int[] monthDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30};
+        int sum = 0;
+        //计算输入年之前的天数
+        for (int i = 1971; i < year; i++) {
+            if (is_leap(i))
+                sum += 366;
+            else
+                sum += 365;
+        }
+        //计算输入月之前的天数
+        for (int i = 0; i < month - 1; i++) {
+            sum += monthDays[i];
+        }
+        //注意大于2月的情况才需要考虑是否要额外加1
+        if (month > 2 && is_leap(year))
+            sum += 1 + day;
+        else
+            sum += day;
+        //天数 由于对应的是周四
+        int temp = sum % 7;
+        //最终结果在+3 就可以得到是一周的第几天了
+        return week[(temp + 3) % 7];
     }
+
+    //判断是否是闰年
+    public boolean is_leap(int year){
+        return (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
+    }
+
 
     public static void main(String[] args) {
 
