@@ -35,11 +35,9 @@ public class Test4 {
     //3            2        [0,1,3,2]
     //4            1        [0,4,1,3,2]
     public int[] createTargetArray(int[] nums, int[] index) {
-        MyPrint.print(nums);
         List<Integer> list = new ArrayList<>();
         for (int i = 0;i < nums.length;++i){
-            list.set(index[i],nums[i]);
-            System.out.println(1);
+            list.add(index[i],nums[i]);
         }
         return list.stream().mapToInt(Integer::intValue).toArray();
     }
