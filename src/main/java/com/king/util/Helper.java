@@ -13,13 +13,15 @@ import java.util.*;
  * @create: 2021-07-07 21:04
  */
 public class Helper {
+
+
     public static <T> T getYoursObj(Class<T> returnClass) {
         try {
             return returnClass.newInstance();
         } catch (InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
-            return null;
         }
+        return (T) new Object();
     }
 
 

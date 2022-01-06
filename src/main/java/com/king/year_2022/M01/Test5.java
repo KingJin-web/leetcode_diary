@@ -1,4 +1,4 @@
-﻿package com.king.year_2022.M01;
+package com.king.year_2022.M01;
 
 /**
  * @program: leetcode_diary
