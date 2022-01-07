@@ -21,7 +21,7 @@ public class Helper {
         } catch (InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
         }
-        return (T) new Object();
+        return null;
     }
 
 
