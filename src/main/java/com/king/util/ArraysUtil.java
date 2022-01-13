@@ -1,8 +1,10 @@
 package com.king.util;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 /**
  * @program: leetcode
@@ -16,6 +18,9 @@ public class ArraysUtil {
        return list.stream().filter(Objects::nonNull).mapToInt(i->i).toArray();
     }
 
+    public static List<Integer> IntArrayToList(int []nums){
+        return Arrays.stream(nums).boxed().collect(Collectors.toList());
+    }
     /**
      * Sort the array from largest to smallest
      *
