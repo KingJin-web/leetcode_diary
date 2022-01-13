@@ -1,5 +1,9 @@
 package com.king.year_2022.M01;
 
+import com.king.util.MyPrint;
+
+import java.util.Arrays;
+
 /**
  * @program: leetcode_diary
  * @description: 334. 递增的三元子序列
@@ -9,10 +13,14 @@ package com.king.year_2022.M01;
 public class Test12 {
     public boolean increasingTriplet(int[] nums) {
         int a = 2147483647, b = a;
-        for (int n: nums)
+        for (int n : nums)
             if (n <= a) a = n;
             else if (n <= b) b = n;
             else return true;
         return false;
+    }
+
+    public static void main(String[] args) {
+
     }
 }
