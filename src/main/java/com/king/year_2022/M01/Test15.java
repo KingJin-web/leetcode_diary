@@ -14,7 +14,21 @@ public class Test15 {
         for (int i = 1;i <= 1000;++i){
             bigInteger = bigInteger.multiply(BigInteger.valueOf(i));
         }
-        System.out.println(bigInteger);
-        System.out.println(bigInteger.toString().length());
-    }
+        //问题一：
+        //1000的阶乘末尾有多少个0？
+        char []chs = bigInteger.toString().toCharArray();
+        for (int i = chs.length -1;i >=0;--i){
+            if (chs[i] != '0'){
+                System.out.printf("1000的阶乘末尾有%d个0\n",chs.length - i -1);
+                break;
+            }
+        }
+        //问题二：
+        //1000的阶乘有多少位数？
+        System.out.printf("1000的阶乘有%d位数\n",bigInteger.toString().length());
+        //问题三：
+        //1000的阶乘的值是多少？
+        System.out.println("1000的阶乘的值是: " + bigInteger);
+
+         }
 }
