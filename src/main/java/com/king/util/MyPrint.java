@@ -11,7 +11,15 @@ import java.util.*;
  */
 public class MyPrint {
 
+    public static void printObs(Object ...o){
+        print(o);
+    }
 
+    public static void main(String[] args) {
+        print("<p>ÈËÍ¨¹ıÖ²ÎïÖ®¼Ò£¬ÈÏÊ¶Ö²Îï¡£</p>\n" +
+        "\t\t\t\t<p>ÏÖÔÚ£¬ÕâĞ©Êı×Ö»¹ÔÚ²»¶ÏµÄÔö³¤×Å£¬»¶Ó­ÄúÀ´Ò»ÆğÊ¹ÓÃÖ²ÎïÖ®¼Ò¡£</p>\n" +
+                "\t\t\t\t<p>Ö²ÎïÖ®¼Ò±¸°¸ºÅ£º <a href=\"javascript:https://icp.chinaz.com/home/info?host=wuzhaoqi.top;\" rel=\"nofollow\" target=\"_blank\">ÏæICP±¸2020019542ºÅ</a></p><p>Copyright ? All Rights Reserved</p>");
+        }
 
 
     public static void println(Object o) {
@@ -34,14 +42,14 @@ public class MyPrint {
         System.out.printf(format, args);
     }
 
-    //è¾“å‡ºä¸€ä¸ªç©ºè¡Œ
+    //Êä³öÒ»¸ö¿ÕĞĞ
     public static void print() {
         printf('\n');
     }
 
     /**
      * https://www.cnblogs.com/fjdingsd/p/5272242.html
-     * //è‡ªå·±å°è£…çš„è¾“å‡ºï¼Œå¯ä»¥ç›´æ¥æ‰“å°æ•°ç»„ï¼Œlistï¼ŒIteratorç­‰
+     * //×Ô¼º·â×°µÄÊä³ö£¬¿ÉÒÔÖ±½Ó´òÓ¡Êı×é£¬list£¬IteratorµÈ
      *
      * @param o
      */
@@ -129,17 +137,17 @@ public class MyPrint {
 
 
         try {
-            // æ ¹æ®ä¼ å…¥çš„ç±»çš„å…¨åæ¥åˆ›å»ºClasså¯¹è±¡,æ³¨æ„å¿…é¡»æ˜¯å…¨å
+            // ¸ù¾İ´«ÈëµÄÀàµÄÈ«ÃûÀ´´´½¨Class¶ÔÏó,×¢Òâ±ØĞëÊÇÈ«Ãû
 
-            // å¾—åˆ°åŒ…è·¯å¾„
+            // µÃµ½°üÂ·¾¶
             System.out.println("package " + c.getPackage().getName() + ";\n");
-            // å¾—åˆ°ç±»ä¿®é¥°ç¬¦
+            // µÃµ½ÀàĞŞÊÎ·û
             System.out.print(Modifier.toString(c.getModifiers()));
-            //å¾—åˆ°ç±»å
+            //µÃµ½ÀàÃû
             System.out.print(" class " + c.getSimpleName());
-            //å¾—åˆ°çˆ¶ç±»å
+            //µÃµ½¸¸ÀàÃû
             System.out.print(" extends " + c.getSuperclass().getSimpleName());
-            //å¾—åˆ°ç±»å®ç°çš„æ¥å£æ•°ç»„
+            //µÃµ½ÀàÊµÏÖµÄ½Ó¿ÚÊı×é
             Class[] inters = c.getInterfaces();
             if (inters.length > 0) {
                 System.out.print(" implements ");
@@ -151,11 +159,11 @@ public class MyPrint {
                 }
             }
             System.out.println(" {");
-            // è·å–ç±»å±æ€§
+            // »ñÈ¡ÀàÊôĞÔ
             printField(c);
-            // è·å–ç±»æ„é€ å™¨
+            // »ñÈ¡Àà¹¹ÔìÆ÷
             printConstructor(c);
-            // è·å–ç±»æ–¹æ³•
+            // »ñÈ¡Àà·½·¨
             printMethods(c);
             System.out.println(" }");
 
@@ -225,7 +233,7 @@ public class MyPrint {
             }
             print(toString(coll.toArray(), n));
         } else {
-            print("è¿™ä¸æ˜¯æ•°ç»„ !");
+            print("Õâ²»ÊÇÊı×é !");
             print(o);
         }
     }
@@ -306,10 +314,10 @@ public class MyPrint {
     }
 
     /**
-     * å¯¹è±¡æ˜¯å¦ä¸ºæ•°ç»„å¯¹è±¡
-     *ç±»å‹
-     * @param obj å¯¹è±¡
-     * @return æ˜¯å¦ä¸ºæ•°ç»„å¯¹è±¡ï¼Œå¦‚æœä¸º{@code null} è¿”å›ç©ºæŒ‡é’ˆ
+     * ¶ÔÏóÊÇ·ñÎªÊı×é¶ÔÏó
+     *ÀàĞÍ
+     * @param obj ¶ÔÏó
+     * @return ÊÇ·ñÎªÊı×é¶ÔÏó£¬Èç¹ûÎª{@code null} ·µ»Ø¿ÕÖ¸Õë
      */
 //    public static boolean isType(Object obj,Class type) {
 //        if (null == obj) {
@@ -319,26 +327,26 @@ public class MyPrint {
 //    }
 
     /**
-     * å¯¹è±¡æ˜¯å¦ä¸ºæ•°ç»„å¯¹è±¡
+     * ¶ÔÏóÊÇ·ñÎªÊı×é¶ÔÏó
      *
-     * @param obj å¯¹è±¡
-     * @return æ˜¯å¦ä¸ºæ•°ç»„å¯¹è±¡ï¼Œå¦‚æœä¸º{@code null} è¿”å›ç©ºæŒ‡é’ˆ
+     * @param obj ¶ÔÏó
+     * @return ÊÇ·ñÎªÊı×é¶ÔÏó£¬Èç¹ûÎª{@code null} ·µ»Ø¿ÕÖ¸Õë
      */
     public static boolean isArray(Object obj) {
         if (null == obj) {
             //throw new NullPointerException("Object check for isArray is null");
             print("null");
         }
-//        åå°„ è·å¾—ç±»å‹
+//        ·´Éä »ñµÃÀàĞÍ
         return obj.getClass().isArray();
     }
 
 
     /**
-     * æ•°ç»„åˆ†é¡µ
+     * Êı×é·ÖÒ³
      *
-     * @param o æ•°ç»„
-     * @param l æ¯é¡µæ•°æ®é‡
+     * @param o Êı×é
+     * @param l Ã¿Ò³Êı¾İÁ¿
      * @return
      */
     private static String toString(Object[] o, int l) {
@@ -363,7 +371,7 @@ public class MyPrint {
     }
 
     /**
-     * è·å–å˜é‡æ•°æ®ç±»å‹
+     * »ñÈ¡±äÁ¿Êı¾İÀàĞÍ
      *
      * @param o
      * @return
@@ -380,54 +388,54 @@ public class MyPrint {
         print(nums);
     }
 
-    public static void main(String[] args) {
-        Class c = null;
-        try {
-            // æ ¹æ®ä¼ å…¥çš„ç±»çš„å…¨åæ¥åˆ›å»ºClasså¯¹è±¡,æ³¨æ„å¿…é¡»æ˜¯å…¨å
-            c = Class.forName("test.Person");
-            // å¾—åˆ°åŒ…è·¯å¾„
-            System.out.println("package " + c.getPackage().getName() + ";\n");
-            // å¾—åˆ°ç±»ä¿®é¥°ç¬¦
-            System.out.print(Modifier.toString(c.getModifiers()));
-            //å¾—åˆ°ç±»å
-            System.out.print(" class " + c.getSimpleName());
-            //å¾—åˆ°çˆ¶ç±»å
-            System.out.print(" extends " + c.getSuperclass().getSimpleName());
-            //å¾—åˆ°ç±»å®ç°çš„æ¥å£æ•°ç»„
-            Class[] inters = c.getInterfaces();
-            if (inters.length > 0) {
-                System.out.print(" implements ");
-                for (int i = 0; i < inters.length; i++) {
-                    System.out.print(inters[i].getSimpleName());
-                    if (i < inters.length - 1) {
-                        System.out.print(", ");
-                    }
-                }
-            }
-            System.out.println(" {");
-            // è·å–ç±»å±æ€§
-            printField(c);
-            // è·å–ç±»æ„é€ å™¨
-            printConstructor(c);
-            // è·å–ç±»æ–¹æ³•
-            printMethods(c);
-            System.out.println(" }");
-
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
+//    public static void main(String[] args) {
+//        Class c = null;
+//        try {
+//            // ¸ù¾İ´«ÈëµÄÀàµÄÈ«ÃûÀ´´´½¨Class¶ÔÏó,×¢Òâ±ØĞëÊÇÈ«Ãû
+//            c = Class.forName("test.Person");
+//            // µÃµ½°üÂ·¾¶
+//            System.out.println("package " + c.getPackage().getName() + ";\n");
+//            // µÃµ½ÀàĞŞÊÎ·û
+//            System.out.print(Modifier.toString(c.getModifiers()));
+//            //µÃµ½ÀàÃû
+//            System.out.print(" class " + c.getSimpleName());
+//            //µÃµ½¸¸ÀàÃû
+//            System.out.print(" extends " + c.getSuperclass().getSimpleName());
+//            //µÃµ½ÀàÊµÏÖµÄ½Ó¿ÚÊı×é
+//            Class[] inters = c.getInterfaces();
+//            if (inters.length > 0) {
+//                System.out.print(" implements ");
+//                for (int i = 0; i < inters.length; i++) {
+//                    System.out.print(inters[i].getSimpleName());
+//                    if (i < inters.length - 1) {
+//                        System.out.print(", ");
+//                    }
+//                }
+//            }
+//            System.out.println(" {");
+//            // »ñÈ¡ÀàÊôĞÔ
+//            printField(c);
+//            // »ñÈ¡Àà¹¹ÔìÆ÷
+//            printConstructor(c);
+//            // »ñÈ¡Àà·½·¨
+//            printMethods(c);
+//            System.out.println(" }");
+//
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     private static void printConstructor(Class c){
         Constructor[] cs = c.getConstructors();
         for (int i = 0; i < cs.length; i++) {
             System.out.println();
             System.out.print("\t");
-            // å¾—åˆ°æ•´æ•°å½¢å¼æ„é€ å‡½æ•°ä¿®é¥°ç¬¦ï¼Œä½¿ç”¨Modifierè¿›è¡Œè§£ç 
+            // µÃµ½ÕûÊıĞÎÊ½¹¹Ôìº¯ÊıĞŞÊÎ·û£¬Ê¹ÓÃModifier½øĞĞ½âÂë
             System.out.print(Modifier.toString(cs[i].getModifiers()) + " ");
-            // å¾—åˆ°æ–¹æ³•å
+            // µÃµ½·½·¨Ãû
             System.out.print(cs[i].getName() + "(");
-            // å¾—åˆ°æ–¹æ³•å‚æ•°æ•°ç»„
+            // µÃµ½·½·¨²ÎÊıÊı×é
             Class[] paras = cs[i].getParameterTypes();
             for (int j = 0; j < paras.length; j++) {
                 System.out.print(paras[j].getSimpleName() + " arg" + j);
@@ -437,38 +445,38 @@ public class MyPrint {
             }
             System.out.print(")");
             System.out.println(" {");
-            System.out.println("\t\t\\\\æ–¹æ³•ä½“");
+            System.out.println("\t\t\\\\·½·¨Ìå");
             System.out.println("\t}");
         }
     }
 
     private static void printField(Class c) {
-        // å¾—åˆ°å±æ€§æ•°ç»„
+        // µÃµ½ÊôĞÔÊı×é
         Field[] fs = c.getDeclaredFields();
         for (int i = 0; i < fs.length; i++) {
             System.out.print("\t");
-            // å¾—åˆ°æ•´æ•°å½¢å¼å±æ€§ä¿®é¥°ç¬¦ï¼Œä½¿ç”¨Modifierè¿›è¡Œè§£ç 
+            // µÃµ½ÕûÊıĞÎÊ½ÊôĞÔĞŞÊÎ·û£¬Ê¹ÓÃModifier½øĞĞ½âÂë
             System.out.print(Modifier.toString(fs[i].getModifiers()) + " ");
-            // å¾—åˆ°å±æ€§ç±»å‹
+            // µÃµ½ÊôĞÔÀàĞÍ
             System.out.print(fs[i].getType().getSimpleName() + " ");
-            // å¾—åˆ°å±æ€§å
+            // µÃµ½ÊôĞÔÃû
             System.out.println(fs[i].getName() + ";");
         }
     }
 
     public static void printMethods(Class c) {
-        // å¾—åˆ°æ–¹æ³•æ•°ç»„
+        // µÃµ½·½·¨Êı×é
         Method[] md = c.getMethods();
         for (int i = 0; i < md.length; i++) {
             System.out.println();
             System.out.print("\t");
-            // å¾—åˆ°æ•´æ•°å½¢å¼æ–¹æ³•ä¿®é¥°ç¬¦ï¼Œä½¿ç”¨Modifierè¿›è¡Œè§£ç 
+            // µÃµ½ÕûÊıĞÎÊ½·½·¨ĞŞÊÎ·û£¬Ê¹ÓÃModifier½øĞĞ½âÂë
             System.out.print(Modifier.toString(md[i].getModifiers()) + " ");
-            // å¾—åˆ°æ–¹æ³•è¿”å›ç±»å‹
+            // µÃµ½·½·¨·µ»ØÀàĞÍ
             System.out.print(md[i].getGenericReturnType() + " ");
-            // å¾—åˆ°æ–¹æ³•å
+            // µÃµ½·½·¨Ãû
             System.out.print(md[i].getName() + "(");
-            // å¾—åˆ°æ–¹æ³•å‚æ•°æ•°ç»„
+            // µÃµ½·½·¨²ÎÊıÊı×é
             Class[] paras = md[i].getParameterTypes();
             for (int j = 0; j < paras.length; j++) {
                 System.out.print(paras[j].getSimpleName() + " arg" + j);
@@ -477,7 +485,7 @@ public class MyPrint {
                 }
             }
             System.out.print(")");
-            // å¾—åˆ°æŠ›å‡ºçš„å¼‚å¸¸ç±»æ•°ç»„
+            // µÃµ½Å×³öµÄÒì³£ÀàÊı×é
             Class[] exceps = md[i].getExceptionTypes();
             if (exceps.length > 0) {
                 System.out.print(" throws ");
@@ -489,7 +497,7 @@ public class MyPrint {
                 }
             }
             System.out.println(" {");
-            System.out.println("\t\t\\\\æ–¹æ³•ä½“");
+            System.out.println("\t\t\\\\·½·¨Ìå");
             System.out.println("\t}");
         }
     }
