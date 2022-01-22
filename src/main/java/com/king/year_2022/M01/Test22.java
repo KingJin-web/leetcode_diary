@@ -16,8 +16,17 @@ public class Test22 {
     //
     //「回文」定义：如果一个字符串向后和向前读是一致的，那么这个字符串就是一个回文。
     //
-    //
-    public int removePalindromeSub(String s) {
 
+
+    //顶多删两次(删掉所有a,删掉所有b)，当且仅当本身是回文串时删1次
+    //执行用时： 0 ms , 在所有 Java 提交中击败了 100.00% 的用户 内存消耗： 36.4 MB , 在所有 Java 提交中击败了 13.10% 的用户
+    public int removePalindromeSub(String str) {
+        int i = 0, j = str.length() - 1;
+        char []s = str.toCharArray();
+        while (i < j && s[i] == s[j])  {
+            ++i;
+            --j;
+        }
+        return i < j ? 2 : 1;
     }
 }
