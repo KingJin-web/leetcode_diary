@@ -1,5 +1,10 @@
 package com.king.year_2022.M01;
 
+import com.king.util.Helper;
+import com.king.util.MyPrint;
+
+import java.util.TreeMap;
+
 /**
  * @program: leetcode_diary
  * @description: 2034. 股票价格波动
@@ -17,23 +22,56 @@ public class Test23 {
 
         public int minimum();
 
+        public int current();
+
+
     }
-    private static class StockPrice1 implements StockPrice{
 
-        public StockPrice1(){
+    private static class StockPrice1 implements StockPrice {
 
+        private TreeMap<Integer, Integer> map, count;
+
+        public StockPrice1() {
+            map = new TreeMap<>();
+            count = new TreeMap<>();
         }
-        public void update(int timestamp, int price) {
 
+        public void update(int timestamp, int price) {
+            if (map.containsKey(timestamp)) {
+                count.put(map.get(timestamp), count.get(map.get(timestamp)) - 1);
+                if (count.get(map.get(timestamp)) == 0) {
+                    count.remove(map.get(timestamp));
+                }
+            }
+            map.put(timestamp, price);
+            count.put(price, count.getOrDefault(price, 0) + 1);
+        }
+
+        public int current() {
+            return map.lastEntry().getValue();
         }
 
         public int maximum() {
-            return 0;
+            return count.lastKey();
         }
 
         public int minimum() {
-            return 0;
+            return count.firstKey();
         }
+    }
+
+    public static void main(String[] args) {
+        StockPrice stockPrice = Helper.getYoursObj(StockPrice1.class);
+        stockPrice.update(1, 10); // 时间戳为 [1] ，对应的股票价格为 [10] 。
+        stockPrice.update(2, 5);  // 时间戳为 [1,2] ，对应的股票价格为 [10,5] 。
+        stockPrice.current();     // 返回 5 ，最新时间戳为 2 ，对应价格为 5 。
+        stockPrice.maximum();     // 返回 10 ，最高价格的时间戳为 1 ，价格为 10 。
+        stockPrice.update(1, 3);  // 之前时间戳为 1 的价格错误，价格更新为 3 。
+        // 时间戳为 [1,2] ，对应股票价格为 [3,5] 。
+        stockPrice.maximum();     // 返回 5 ，更正后最高价格为 5 。
+        stockPrice.update(4, 2);  // 时间戳为 [1,2,4] ，对应价格为 [3,5,2] 。
+        stockPrice.minimum();     // 返回 2 ，最低价格时间戳为 4 ，价格为 2 。
+
     }
 
     //给你一支股票价格的数据流。数据流中每一条记录包含一个 时间戳 和该时间点股票对应的 价格 。
@@ -53,6 +91,24 @@ public class Test23 {
     //int current() 返回股票 最新价格 。
     //int maximum() 返回股票 最高价格 。
     //int minimum() 返回股票 最低价格 。
+
+    //输入：
+    //["StockPrice", "update", "update", "current", "maximum", "update", "maximum", "update", "minimum"]
+    //[[], [1, 10], [2, 5], [], [], [1, 3], [], [4, 2], []]
+    //输出：
+    //[null, null, null, 5, 10, null, 5, null, 2]
+    //
+    //解释：
+    //StockPrice stockPrice = new StockPrice();
+    //stockPrice.update(1, 10); // 时间戳为 [1] ，对应的股票价格为 [10] 。
+    //stockPrice.update(2, 5);  // 时间戳为 [1,2] ，对应的股票价格为 [10,5] 。
+    //stockPrice.current();     // 返回 5 ，最新时间戳为 2 ，对应价格为 5 。
+    //stockPrice.maximum();     // 返回 10 ，最高价格的时间戳为 1 ，价格为 10 。
+    //stockPrice.update(1, 3);  // 之前时间戳为 1 的价格错误，价格更新为 3 。
+    //                          // 时间戳为 [1,2] ，对应股票价格为 [3,5] 。
+    //stockPrice.maximum();     // 返回 5 ，更正后最高价格为 5 。
+    //stockPrice.update(4, 2);  // 时间戳为 [1,2,4] ，对应价格为 [3,5,2] 。
+    //stockPrice.minimum();     // 返回 2 ，最低价格时间戳为 4 ，价格为 2 。
 }
 
 
