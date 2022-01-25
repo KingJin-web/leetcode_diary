@@ -1,5 +1,7 @@
 package com.king.year_2022.M01;
 
+import com.king.util.MyPrint;
+
 /**
  * @program: leetcode_diary
  * @description: 1688. 比赛中的配对次数
@@ -20,6 +22,7 @@ public class Test24 {
     }
 
     public static void main(String[] args) {
-        Thread
+        Test24 test24 = new Test24();
+        MyPrint.print(test24.numberOfMatches(11));
     }
 }
