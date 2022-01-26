@@ -33,15 +33,15 @@ public class Test18 {
         String filepath = "H:\\Downloads\\XFTV16.0\\Website\\Zz_www.zw3e.com";//给我你的目录文件夹路径
         File file = new File(filepath);
         Map<String, String> map = new HashMap<>();
-        map.put("一个已被访问超过<font color=\"red\">13,000,000</font>次的植物之家，每天超过<font color=\"red\">200,000</font>","");
-        map.put("<p>植物之家备案号： <a href=\"javascript:;\" rel=\"nofollow\" target=\"_blank\">陕ICP备09018639号-8</a>","<p>植物之家备案号： <a href=\"https://icp.chinaz.com/home/info?host=wuzhaoqi.top;\" rel=\"nofollow\" target=\"_blank\">湘ICP备2020019542号</a>");
-        map.put("植物之家备案号","花草信息网备案号");
-        map.put("static/picture/za.jpg","static/image/headerbj.jpg");
-        map.put("粤ICP备14009184号-2","湘ICP备2020019542号");
+//        map.put("一个已被访问超过<font color=\"red\">13,000,000</font>次的植物之家，每天超过<font color=\"red\">200,000</font>","");
+//        map.put("<p>植物之家备案号： <a href=\"javascript:;\" rel=\"nofollow\" target=\"_blank\">陕ICP备09018639号-8</a>","<p>植物之家备案号： <a href=\"https://icp.chinaz.com/home/info?host=wuzhaoqi.top;\" rel=\"nofollow\" target=\"_blank\">湘ICP备2020019542号</a>");
+//        map.put("植物之家备案号","花草信息网备案号");
+//        map.put("static/picture/za.jpg","static/image/headerbj.jpg");
+//        map.put("粤ICP备14009184号-2","湘ICP备2020019542号");
+        map.put("https://icp.chinaz.com/home/info?host=wuzhaoqi.top","https://beian.miit.gov.cn/");
+        map.put("https://beian.miit.gov.cn/;","https://beian.miit.gov.cn/");
         new Test18(map).refreshFileList(filepath);
 
-
-        return;
 //        if (!file.isDirectory()) {
 //            System.out.println("请输入一个目录文件路径");
 //        } else if (file.isDirectory()) {
