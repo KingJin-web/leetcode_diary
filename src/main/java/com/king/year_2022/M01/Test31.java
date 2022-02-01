@@ -23,5 +23,6 @@ public class Test31 {
     public static void main(String[] args) {
         Test31 test31 = new Test31();
         MyPrint.printObs(test31.numberOfSteps(12));
+
     }
 }
