@@ -1,5 +1,7 @@
 package com.king.year_2022.M02;
 
+import com.king.util.MyPrint;
+
 /**
  * @program: leetcode_diary
  * @description: 1414. 和为 K 的最少斐波那契数字数目
@@ -19,6 +21,7 @@ public class Test3 {
             102334155, 165580141, 267914296, 433494437, 701408733
     };
 
+    //执行用时： 0 ms , 在所有 Java 提交中击败了 100.00% 的用户 内存消耗： 38.6 MB , 在所有 Java 提交中击败了 5.15% 的用户
     public int findMinFibonacciNumbers(int k) {
         int ans = 0;
         for (int i = NUMS.length - 1; k > 0; --i) {
@@ -27,5 +30,10 @@ public class Test3 {
             k %= num;
         }
         return ans;
+    }
+
+    public static void main(String[] args) {
+        Test3 test3 = new Test3();
+        MyPrint.printObs(test3.findMinFibonacciNumbers(1000));
     }
 }
