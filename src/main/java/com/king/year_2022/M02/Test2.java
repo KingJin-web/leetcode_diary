@@ -26,7 +26,6 @@ public class Test2 {
             return word;
         }
         StringBuilder sb = new StringBuilder(word.substring(0, index + 1));
-        MyPrint.printObs(sb);
         return word.replace(sb.toString(), sb.reverse().toString());
 
     }
