@@ -11,15 +11,15 @@ import java.util.*;
  */
 public class MyPrint {
 
-    public static void printObs(Object ...o){
+    /**
+     * 万能打印
+     *
+     * @param o
+     */
+    public static void printObs(Object... o) {
         print(o);
     }
 
-    public static void main(String[] args) {
-        print("<p>人通过植物之家，认识植物。</p>\n" +
-        "\t\t\t\t<p>现在，这些数字还在不断的增长着，欢迎您来一起使用植物之家。</p>\n" +
-                "\t\t\t\t<p>植物之家备案号： <a href=\"javascript:https://icp.chinaz.com/home/info?host=wuzhaoqi.top;\" rel=\"nofollow\" target=\"_blank\">湘ICP备2020019542号</a></p><p>Copyright ? All Rights Reserved</p>");
-        }
 
 
     public static void println(Object o) {
@@ -31,7 +31,6 @@ public class MyPrint {
             print(o);
         }
     }
-
 
 
     public static void printf(Object o) {
@@ -426,7 +425,7 @@ public class MyPrint {
 //        }
 //    }
 
-    private static void printConstructor(Class c){
+    private static void printConstructor(Class c) {
         Constructor[] cs = c.getConstructors();
         for (int i = 0; i < cs.length; i++) {
             System.out.println();
