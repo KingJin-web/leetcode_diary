@@ -16,4 +16,10 @@ public class Test4 {
     //请你统计有多少个矩形能够切出边长为 maxLen 的正方形，并返回矩形 数目 。
     //
     //
+    public int countGoodRectangles(int[][] rectangles) {
+        int maxLen = 0;
+        int count = 0;
+
+        return 1;
+    }
 }
