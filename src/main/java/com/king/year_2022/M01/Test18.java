@@ -28,8 +28,10 @@ public class Test18 {
     public static void main(String[] args) {
 
         //读取指定文件夹下的所有文件
-        //给我你的目录文件夹路径
+
         String filepath = "F:\\A";
+        //给我你的目录文件夹路径
+        //"H:\\Downloads\\XFTV16.0\\Website\\Zz_www.zw3e.com";
         File file = new File(filepath);
         Map<String, String> map = new HashMap<>();
         map.put("要修改的内容1", "修改的内容1");
