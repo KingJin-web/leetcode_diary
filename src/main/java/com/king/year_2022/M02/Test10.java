@@ -14,10 +14,13 @@ import java.util.List;
 public class Test10 {
     //给你一个整数 n ，请你返回所有 0 到 1 之间（不包括 0 和 1）满足分母小于等于  n 的 最简 分数 。
     // 分数可以以 任意 顺序返回。
-    int gcd(int a, int b) {
-        return b == 0 ? gcd(b, a % b) : a;
+
+
+    public int gcd(int x, int y) {
+        return y == 0 ? x : gcd(y, x % y);
     }
 
+    //执行用时： 19 ms , 在所有 Java 提交中击败了 84.75% 的用户 内存消耗： 42.3 MB , 在所有 Java 提交中击败了 8.87% 的用户
     public List<String> simplifiedFractions(int n) {
         List<String> list = new ArrayList<>();
         for (int i = 1; i < n; i++) {
