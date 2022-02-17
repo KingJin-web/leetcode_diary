@@ -5,6 +5,7 @@ import com.king.util.MyPrint;
 /**
  * @program: leetcode_diary
  * @description: 688. 骑士在棋盘上的概率
+ * https://leetcode-cn.com/problems/knight-probability-in-chessboard/
  * @author: King
  * @create: 2022-02-17 23:10
  */
@@ -36,6 +37,6 @@ public class Test17 {
 
     public static void main(String[] args) {
         Test17 test17 = new Test17();
-        MyPrint.print(test17.knightProbability(  3,  2,  0, 0));
+        MyPrint.print(test17.knightProbability(3, 2, 0, 0));
     }
 }
