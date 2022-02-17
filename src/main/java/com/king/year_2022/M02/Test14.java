@@ -5,6 +5,8 @@ import com.king.util.MyPrint;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @program: leetcode_diary
@@ -45,11 +47,25 @@ public class Test14 {
 
         return num;
     }
-
+    public int singleNonDuplicate(int[] nums){
+        int c = 0;
+        Set<Integer> set =new HashSet<>();
+        for (int i = 0;i<nums.length;++i){
+            ++c;
+            if (!set.add(nums[i])) {
+              c=0;
+            }
+            if (c == 2){
+                return nums[i-1];
+            }
+        }
+        return nums[0];
+    }
     public static void main(String[] args) {
         Test14 test14 = new Test14();
         MyPrint.printObs(test14.singleNonDuplicate1(LeetcodeUtil.stringToIntegerArray("[3,3,7,7,10,11,11]")));
         MyPrint.printObs(test14.singleNonDuplicate2(LeetcodeUtil.stringToIntegerArray("[3,3,7,7,10,11,11]")));
+        MyPrint.printObs(test14.singleNonDuplicate(LeetcodeUtil.stringToIntegerArray("[3,3,7,7,10,11,11]")));
 
     }
 }
