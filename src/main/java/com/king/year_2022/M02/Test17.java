@@ -12,6 +12,7 @@ import com.king.util.MyPrint;
 public class Test17 {
 
 
+
     static int[][] dirs = {{-2, -1}, {-2, 1}, {2, -1}, {2, 1}, {-1, -2}, {-1, 2}, {1, -2}, {1, 2}};
 
     public double knightProbability(int n, int k, int row, int column) {
