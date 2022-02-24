@@ -28,7 +28,8 @@ public class Test5 {
         //输出: 3
         //解释: 最长特殊序列可为 "aba" (或 "cdc")，两者均为自身的子序列且不是对方的子序列。
         Test5 test5 = new Test5();
-        MyPrint.printObs(test5.findLUSlength("aba","cdc"));
+        MyPrint.printObs(test5.findLUSlength("aba","cdc"),
+                test5.findLUSlength("aba","cdc"));
 
     }
 }
