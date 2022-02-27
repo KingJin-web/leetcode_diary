@@ -24,8 +24,11 @@ public class Test5 {
     //
     //例如，"abc" 是 "aebdc" 的子序列，因为删除 "aebdc" 中斜体加粗的字符可以得到 "abc" 。 "aebdc" 的子序列还包括 "aebdc" 、 "aeb" 和 "" (空字符串)。
     public static void main(String[] args) {
+        //输入: a = "aba", b = "cdc"
+        //输出: 3
+        //解释: 最长特殊序列可为 "aba" (或 "cdc")，两者均为自身的子序列且不是对方的子序列。
         Test5 test5 = new Test5();
-        MyPrint.printObs(test5.findLUSlength("",""));
+        MyPrint.printObs(test5.findLUSlength("aba","cdc"));
 
     }
 }
