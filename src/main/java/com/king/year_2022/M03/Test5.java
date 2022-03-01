@@ -1,5 +1,7 @@
 package com.king.year_2022.M03;
 
+import com.king.util.MyPrint;
+
 /**
  * @program: leetcode_diary
  * @description: 521. 最长特殊序列 Ⅰ
@@ -16,7 +18,7 @@ public class Test5 {
 
     public static void main(String[] args) {
         Test5 test5 = new Test5();
-
+        MyPrint.printObs(test5.findLUSlength());
 
     }
 }
