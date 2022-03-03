@@ -13,4 +13,8 @@ public class Test5 {
         }
         return Math.max(a.length(), b.length());
     }
+
+    public static void main(String[] args) {
+
+    }
 }
