@@ -3,6 +3,7 @@ package com.king.year_2022.M03;
 /**
  * @program: leetcode_diary
  * @description: 2104. 子数组范围和
+ * https://leetcode-cn.com/problems/sum-of-subarray-ranges/
  * @author: King
  * @create: 2022-03-04 22:44
  */
