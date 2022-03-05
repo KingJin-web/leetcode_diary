@@ -11,6 +11,6 @@ public class Test5 {
         if(a.equals(b)){
             return -1;
         }
-        return a.length()>b.length()?a.length():b.length();
+        return Math.max(a.length(), b.length());
     }
 }
