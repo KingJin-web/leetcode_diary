@@ -89,6 +89,24 @@ public class Test8 {
     }
 
     public static void main(String[] args) {
+
+        //输入：s = "**|**|***|", queries = [[2,5],[5,9]]
+        //输出：[2,3]
+        //解释：
+        //- queries[0] 有两个盘子在蜡烛之间。
+        //- queries[1] 有三个盘子在蜡烛之间。
+        //
+        //来源：力扣（LeetCode）
+        //链接：https://leetcode-cn.com/problems/plates-between-candles
+        //著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+
+
+
+
+
+        Test8 test8 = new Test8();
+        MyPrint.print(test8.platesBetweenCandles("**|**|***|",new int[][]{{2,5},{5,9}}));
 //        try(Scanner in = new Scanner(System.in)){
 //            String[] strings = new String[3];
 //            for (int i = 0; i < strings.length; i++) {
