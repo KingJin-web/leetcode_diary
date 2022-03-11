@@ -4,6 +4,7 @@ import com.king.util.LeetcodeUtil;
 import com.king.util.MyPrint;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -53,8 +54,18 @@ public class Test11 {
         cnt[ptr] = ans;
     }
 
+    @Override
+    public String toString() {
+        return "Test11{" +
+                "cnt=" + Arrays.toString(cnt) +
+                ", children=" + Arrays.toString(children) +
+                '}';
+    }
+
     public static void main(String[] args) {
         Test11 test11 = new Test11();
         MyPrint.print(test11.countHighestScoreNodes(LeetcodeUtil.stringToIntegerArray("[-1,2,0,2,0]")));
+        final int i = test11.countHighestScoreNodes(LeetcodeUtil.stringToIntegerArray("[-1,2,0,2,0]"));
+
     }
 }
