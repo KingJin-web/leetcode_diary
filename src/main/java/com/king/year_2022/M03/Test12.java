@@ -1,6 +1,9 @@
 package com.king.year_2022.M03;
 
 
+import com.king.util.LeetcodeUtil;
+import com.king.util.MyPrint;
+
 import static com.king.year_2022.M03.Test10.Node;
 
 import java.util.LinkedList;
@@ -30,6 +33,8 @@ public class Test12 {
     }
 
     public static void main(String[] args) {
-
+        Test12 test12 = new Test12();
+        Node node = new Node();
+        MyPrint.print(test12.postorder(node));
     }
 }
