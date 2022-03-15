@@ -1,5 +1,7 @@
 package com.king.year_2022.M03;
 
+
+import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
@@ -24,5 +26,9 @@ public class Test14 {
                 .iterator()
                 .next()
                 .toArray(new String[0]);
+    }
+
+    public static void main(String[] args) {
+
     }
 }
