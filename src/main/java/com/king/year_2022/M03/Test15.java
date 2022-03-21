@@ -1,5 +1,7 @@
 package com.king.year_2022.M03;
 
+import java.util.Scanner;
+
 /**
  * @program: leetcode_diary
  * @description:
@@ -8,15 +10,16 @@ package com.king.year_2022.M03;
  */
 public class Test15 {
     public int countMaxOrSubsets(int[] nums) {
-        // å°è¯•dfsæš´åŠ›
-        // 1.é¦–å…ˆå¯¹numsæ‰€æœ‰å…ƒç´ æˆ–å¾—åˆ°ä¸€ä¸ªæœ€å¤§å€¼
+        // ³¢ÊÔdfs±©Á¦
+        // 1.Ê×ÏÈ¶ÔnumsËùÓĞÔªËØ»òµÃµ½Ò»¸ö×î´óÖµ
         int max = 0;
         for (int num : nums) {
             max |= num;
         }
-        // 2.dfsæ‰€æœ‰æƒ…å†µ, å¯é€‰æˆ–å¯ä¸é€‰
+        // 2.dfsËùÓĞÇé¿ö, ¿ÉÑ¡»ò¿É²»Ñ¡
         return dfs(0, nums, 0, max);
     }
+
 
     private int dfs(int curIndex, int[] nums, int curValue, int max) {
         if (curIndex == nums.length) {
@@ -24,4 +27,30 @@ public class Test15 {
         }
         return dfs(curIndex + 1, nums, curValue | nums[curIndex], max) + dfs(curIndex + 1, nums, curValue, max);
     }
+
+
+    public static void main(String[] args) {
+        try (Scanner in = new Scanner(System.in)) {
+            char c = ' ';
+            while (true) {
+                String s = in.nextLine();
+                for (char ch : s.toCharArray()) {
+                    if (ch == ' ') {
+                        continue;
+                    } else if (ch == '!') {
+                        System.out.println("ÊäÈë  £¡ °İ°İ");
+                        return;
+                    } else if (Character.isDigit(ch)) {
+                        System.out.println("Êı×Ö£º" + ch);
+                    } else if (Character.isLetter(ch)) {
+                        System.out.println("×ÖÄ¸£º" + ch);
+                    } else {
+                        System.out.println("ÆäËû£º" + ch);
+                    }
+                }
+            }
+        }
+    }
+
+
 }

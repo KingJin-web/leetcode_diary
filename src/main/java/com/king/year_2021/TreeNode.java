@@ -8,7 +8,7 @@ import java.util.LinkedList;
  * @author: King
  * @create: 2021-04-14 00:47
  */
-public class TreeNode {
+public class TreeNode extends com.king.util.TreeNode {
     public int val;
     public TreeNode left;
     public TreeNode right;
@@ -71,6 +71,8 @@ public class TreeNode {
         }
         System.out.println(queue);
     }
+
+
 
 
     @Override

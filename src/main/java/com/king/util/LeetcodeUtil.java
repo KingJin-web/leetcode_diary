@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  * @create: 2021-09-04 13:35
  */
 public class LeetcodeUtil {
-    private static Logger logger = Logger.getLogger(LeetcodeUtil.class.getName());
+    private static final Logger logger = Logger.getLogger(LeetcodeUtil.class.getName());
 
     /**
      * Convert String to int, return the specified value if it fails
