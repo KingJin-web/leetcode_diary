@@ -1,6 +1,7 @@
 package com.king.year_2022.M03;
 
 import com.king.util.LeetcodeUtil;
+import com.king.util.MyPrint;
 
 import java.util.*;
 
@@ -59,7 +60,8 @@ public class Test30 {
         ////输入：k = 3, arrival = [1,2,3,4,5], load = [5,2,3,3,3]
         //    //输出：[1]
         Test30 test30 = new Test30();
-        test30.busiestServers(3, LeetcodeUtil.stringToIntegerArray("[1,2,3,4,5]"),
+        Object o =test30.busiestServers(3, LeetcodeUtil.stringToIntegerArray("[1,2,3,4,5]"),
                 LeetcodeUtil.stringToIntegerArray("[5,2,3,3,3]"));
+        MyPrint.print(o);
     }
 }
