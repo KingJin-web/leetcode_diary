@@ -15,10 +15,10 @@ public class Test13 {
 
         List<Integer> list = new ArrayList<>();
         Map<Integer,Integer> map = new HashMap<>();
-        Random random = SecureRandom.getInstanceStrong();
+
 
         /** Initialize your data structure here. */
-        public RandomizedSet() throws NoSuchAlgorithmException {
+        public RandomizedSet()  {
 
         }
 
@@ -48,6 +48,12 @@ public class Test13 {
 
         /** Get a random element from the set. */
         public int getRandom() {
+            Random random = null;
+            try {
+                random = SecureRandom.getInstanceStrong();
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+            }
             return list.get(random.nextInt(list.size()));
         }
     }
