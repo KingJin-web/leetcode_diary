@@ -1,5 +1,7 @@
 package com.king.year_2022.M04;
 
+import java.time.LocalDateTime;
+
 /**
  * @program: leetcode_diary
  * @description: 1672. 最富有客户的资产总量
@@ -25,5 +27,24 @@ public class Test14 {
             MaxCount = Math.max(MaxCount,sum);
         }
         return MaxCount;
+    }
+
+    public static void main(String[] args) {
+        // 此时此刻
+        LocalDateTime now = LocalDateTime.now();
+        // 2019-11-12T15:48:27.075098100
+        System.out.println(now);
+        // 明天的这个时刻
+        LocalDateTime nowAtTomorrow = now.plusDays(1);
+        // 2019-11-13T15:48:27.075098100
+        System.out.println(nowAtTomorrow);
+
+        int i = now.compareTo(nowAtTomorrow);
+        // -1
+        System.out.println(i);
+
+        int j = nowAtTomorrow.compareTo(now);
+        // 1
+        System.out.println(j);
     }
 }
