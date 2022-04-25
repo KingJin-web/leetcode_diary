@@ -27,6 +27,10 @@ public class Test20 {
     }
 
     public static void main(String[] args) {
+        int a = 1;
+        // \u000a a = 10;
+        // \u000d a = 11;
+        System.out.println(a);
         Test20 test20=new Test20();
         System.out.println(test20.lengthLongestPath("dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"));
         System.out.println(test20.lengthLongestPath("dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"));
