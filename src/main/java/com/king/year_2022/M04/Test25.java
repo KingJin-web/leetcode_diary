@@ -1,11 +1,13 @@
 package com.king.year_2022.M04;
 
 
+import java.util.Random;
+
 /**
  * 398. 随机数索引
  */
 public class Test25 {
-    int[] arr;
+
 
     class Solution {
 
