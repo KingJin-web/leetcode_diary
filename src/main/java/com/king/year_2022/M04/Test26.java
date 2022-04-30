@@ -7,7 +7,7 @@ public class Test26 {
 
     String a = "2";
 
-    static T s = new T();
+
 
     static {
         System.out.println("static3");
@@ -18,8 +18,3 @@ public class Test26 {
     }
 }
 
-class T {
-    public T() {
-        System.out.println("static2");
-    }
-}
