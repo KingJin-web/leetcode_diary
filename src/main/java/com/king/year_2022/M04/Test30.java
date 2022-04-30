@@ -30,4 +30,11 @@ public class Test30 {
 
     }
 
+    public static void main(String[] args) {
+        Test30 test30 = new Test30();
+        int[] nums = {1,3,6};
+        int k = 3;
+        System.out.println(test30.smallestRangeI(nums, k));
+    }
+
 }
