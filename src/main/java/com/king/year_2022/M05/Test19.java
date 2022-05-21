@@ -1,5 +1,9 @@
 package com.king.year_2022.M05;
 
+import com.king.util.Helper;
+import com.king.util.MyPrint;
+import com.king.util.StringUtil;
+
 import java.util.Arrays;
 
 /**
@@ -18,6 +22,14 @@ public class Test19 {
             res += nums[j--] - nums[i++];
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        Test19 test19 = new Test19();
+        int[] nums= Helper.getArrays(1,2,3);
+        MyPrint.print(nums);
+        MyPrint.print(test19.minMoves2(nums));
+
     }
 
 
