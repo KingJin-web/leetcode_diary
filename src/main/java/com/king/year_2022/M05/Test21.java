@@ -2,7 +2,9 @@ package com.king.year_2022.M05;
 
 import com.king.util.MyPrint;
 
+import java.util.Arrays;
 import java.util.Objects;
+import java.util.Random;
 
 /**
  * @author: 12613
@@ -53,6 +55,33 @@ public class Test21 {
       }
   }
 
+    public int repeatedNTimes1(int[] A) {
+        int len = A.length;
+        int a,b;
+        while(true){
+            a = (int)(System.nanoTime()%len);
+            b = (int)(System.nanoTime()%len);
+            if(a!=b && A[a]==A[b]){
+                return A[a];
+            }
+        }
+    }
+    public int repeatedNTimes2(int[] A) {
+        Arrays.sort(A);
+        return A[A.length/2]==A[A.length-1]?A[A.length/2]:A[A.length/2-1];
+    }
+    public int repeatedNTimes3(int[] A) {
+        Random r = new Random();
+        int len = A.length;
+        int a,b;
+        while(true){
+            a = r.nextInt(len);
+            b = r.nextInt(len);
+            if(a!=b && A[a]==A[b]){
+                return A[a];
+            }
+        }
+    }
     public static void main(String[] args) {
         A a1 = new A("张三",12);
         A a2 = new A("张三",12);
