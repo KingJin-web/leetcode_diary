@@ -1,5 +1,10 @@
 package com.king.year_2022.M05;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  * @author: 12613
  * @project: leetcode_diary
@@ -19,13 +24,23 @@ public class Test27 {
             if (words[i].equals(word2)) {
                 end = i;
             }
-            min = Math.min(min, Math.abs(end-start));
+            min = Math.min(min, Math.abs(end - start));
         }
         return min;
     }
 
     public static void main(String[] args) {
         Test27 test27 = new Test27();
-        test27.findClosest()
+//
+
+        LocalDate localDate = LocalDate.of(2022, 1, 1);
+        LocalTime localTime = LocalTime.now();
+        LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);
+        DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        System.out.println(localDate.getMonth());
+        System.out.println(localDate.getMonthValue());
+        System.out.println(localDateTime.format(df));
     }
+
+
 }
