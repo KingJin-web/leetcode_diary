@@ -54,7 +54,7 @@ public class MyPrint {
      */
     public static void print(Object o) {
 
-        if (o == null) {
+        if ( o == null) {
             print("null");
             return;
         }
