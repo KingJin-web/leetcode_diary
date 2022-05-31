@@ -24,6 +24,8 @@ public class Test30 {
         }
         return helper(root.left, sum) + helper(root.right, sum);
     }
+
+
     public static void main(String[] args) {
        TreeNode treeNode = LeetcodeUtil.stringToTreeNode("[1,0,1,0,1,0,1]");
         MyPrint.print(treeNode);
