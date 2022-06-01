@@ -22,6 +22,7 @@ public class Test30 {
         if(root.left == null && root.right == null){
             return sum;
         }
+
         return helper(root.left, sum) + helper(root.right, sum);
     }
 
