@@ -60,7 +60,7 @@ public class Test2 {
     public static void main(String[] args) {
         Test2 test2 = new Test2();
         TreeNode treeNode = test2.deleteNode(LeetcodeUtil.stringToTreeNode("[5,3,6,2,4,null,7]"), 3);
-        MyPrint.print(treeNode);
+        MyPrint.print(treeNode.toString());
 //        输入：root = [5,3,6,2,4,null,7], key = 3
 //        输出：[5,4,6,2,null,null,7]
 //        解释：给定需要删除的节点值是 3，所以我们首先找到 3 这个节点，然后删除它。
