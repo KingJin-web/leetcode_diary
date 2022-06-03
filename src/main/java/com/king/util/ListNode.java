@@ -113,4 +113,23 @@ public class ListNode {
                 ", next=" + next +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        System.out.println(this.getClass().getSimpleName() + "equals");
+        if (this == o) return true;
+        if (!(o instanceof ListNode)) return false;
+
+        ListNode listNode = (ListNode) o;
+
+        if (val != null ? !val.equals(listNode.val) : listNode.val != null) return false;
+        return next != null ? next.equals(listNode.next) : listNode.next == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = val != null ? val.hashCode() : 0;
+        result = 31 * result + (next != null ? next.hashCode() : 0);
+        return result;
+    }
 }
