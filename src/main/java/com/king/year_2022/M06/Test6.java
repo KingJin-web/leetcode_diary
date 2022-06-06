@@ -1,5 +1,7 @@
 package com.king.year_2022.M06;
 
+import com.king.util.MyPrint;
+
 import java.util.TreeMap;
 
 /**
@@ -10,9 +12,9 @@ import java.util.TreeMap;
  * @description: ${}
  */
 public class Test6 {
-   private static class MyCalendarThree {
+    private static class MyCalendarThree {
 
-        private TreeMap<Integer, Integer> calendar;
+        private final TreeMap<Integer, Integer> calendar;
 
         public MyCalendarThree() {
             calendar = new TreeMap<>();
@@ -42,5 +44,22 @@ public class Test6 {
             return max;
         }
 
+    }
+
+    public static void main(String[] args) {
+        MyCalendarThree obj = new MyCalendarThree();
+        //["MyCalendarThree", "book", "book", "book", "book", "book", "book"]
+        //[[], [10, 20], [50, 60], [10, 40], [5, 15], [5, 10], [25, 55]]
+        //
+        //来源：力扣（LeetCode）
+        //链接：https://leetcode.cn/problems/my-calendar-iii
+        //著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+        int param_1 = obj.book(10, 20);
+        int param_2 = obj.book(50, 60);
+        int param_3 = obj.book(10, 40);
+        int param_4 = obj.book(5, 15);
+        int param_5 = obj.book(5, 10);
+        int param_6 = obj.book(25, 55);
+        MyPrint.printObs(param_1, param_2, param_3, param_4, param_5, param_6);
     }
 }
