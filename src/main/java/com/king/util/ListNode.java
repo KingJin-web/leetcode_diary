@@ -6,7 +6,7 @@ package com.king.util;
  * @author: King
  * @create: 2021-04-23 20:59
  */
-public class ListNode {
+public class ListNode implements Comparable<ListNode> {
 
     public Integer val;
     public ListNode next;
@@ -131,5 +131,10 @@ public class ListNode {
         int result = val != null ? val.hashCode() : 0;
         result = 31 * result + (next != null ? next.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public int compareTo(ListNode o) {
+        return 0;
     }
 }

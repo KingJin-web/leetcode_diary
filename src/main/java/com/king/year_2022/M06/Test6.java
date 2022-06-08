@@ -4,6 +4,8 @@ import com.king.util.MyPrint;
 
 import java.util.TreeMap;
 
+import static com.king.util.Helper.*;
+
 /**
  * @author: 12613
  * @project: leetcode_diary
@@ -61,5 +63,12 @@ public class Test6 {
         int param_5 = obj.book(5, 10);
         int param_6 = obj.book(25, 55);
         MyPrint.printObs(param_1, param_2, param_3, param_4, param_5, param_6);
+
+        int i = 10;
+        while (i-- > 0)
+        {
+            printf("%d", i);
+        }
+
     }
 }
