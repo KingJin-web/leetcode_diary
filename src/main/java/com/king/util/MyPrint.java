@@ -17,9 +17,9 @@ public class MyPrint {
      * @param o
      */
     public static void printObs(Object... o) {
+        System.out.println(o[0].getClass().getSimpleName());
         print(o);
     }
-
 
 
     public static void println(Object o) {
@@ -54,13 +54,13 @@ public class MyPrint {
      */
     public static void print(Object o) {
 
-        if ( o == null) {
+        if (o == null) {
             print("null");
             return;
         }
-        if (isArray(o)) {
-            //print(Arrays.deepToString(o));
-
+        if (o.getClass().getSimpleName().contains("[]")) {
+            System.out.println(Arrays.deepToString((Object[]) o));
+        } else if (isArray(o)) {
             List<Object> coll = new ArrayList<>();
             int length = Array.getLength(o);
             for (int i = 0; i < length; i++) {
