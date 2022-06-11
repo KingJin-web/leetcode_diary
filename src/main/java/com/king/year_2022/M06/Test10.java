@@ -33,6 +33,8 @@ public class Test10 {
         long ans=0;
         for(int i=0;i<4;i++){ans+=count[i][0][c.length-1];}
         return (int)(ans%mod);
+        
+        
     }
 
     public static void main(String[] args) {
