@@ -1,7 +1,8 @@
 package com.king.year_2022.M06;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import com.king.util.MyPrint;
+
+import java.util.*;
 
 /**
  * @author: 12613
@@ -24,6 +25,16 @@ public class Test17 {
     }
 
     public static void main(String[] args) {
+        Map<String, String> aa = new HashMap<>();
+
+        Map<String, String>[] a = new HashMap[6];
+        for (int i = 0;i<a.length;++i){
+            a[i] = new HashMap<>();
+            a[i].put("1","2");
+            a[i].put("2","2");
+            a[i].put("3","2");
+        }
+        System.out.println(Arrays.toString(a));
 
     }
 }
