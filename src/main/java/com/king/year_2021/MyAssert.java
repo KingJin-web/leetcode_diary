@@ -11,9 +11,9 @@ import org.junit.Assert;
 public class MyAssert extends Assert {
     public static void assertEquals(Object o1, Object o2) {
         if (o1.equals(o2)) {
-            Helper.print("ÏàµÈ");
+            Helper.print("ï¿½ï¿½ï¿½");
         } else {
-            Helper.print("²»ÏàµÈ");
+            Helper.print("ï¿½ï¿½ï¿½ï¿½ï¿½");
         }
     }
 }

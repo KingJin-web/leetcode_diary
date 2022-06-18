@@ -25,8 +25,8 @@ public class Test15 {
     }
 
     public static void main(String[] args) {
-        MyPrint.print(isContainChinese1("123£¬1"));
+        MyPrint.print(isContainChinese1("123ï¿½ï¿½1"));
         MyPrint.print(isContainChinese("Hello"));
-        MyPrint.print("ÄãºÃ".matches("[\u4E00-\u9FA5]+"));;
+        MyPrint.print("ï¿½ï¿½ï¿½".matches("[\u4E00-\u9FA5]+"));;
     }
 }

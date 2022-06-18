@@ -4,27 +4,27 @@ import com.king.util.Helper;
 
 /**
  * @program: leetcode
- * @description: 551. Ñ§Éú³öÇÚ¼ÇÂ¼ I
+ * @description: 551. Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½Ú¼ï¿½Â¼ I
  * https://leetcode-cn.com/problems/student-attendance-record-i/
  * @author: King
  * @create: 2021-08-17 00:38
  */
 public class Test17 {
     /**
-     * ¸øÄãÒ»¸ö×Ö·û´® s ±íÊ¾Ò»¸öÑ§ÉúµÄ³öÇÚ¼ÇÂ¼£¬ÆäÖÐµÄÃ¿¸ö×Ö·ûÓÃÀ´±ê¼Çµ±ÌìµÄ³öÇÚÇé¿ö£¨È±ÇÚ¡¢³Ùµ½¡¢µ½³¡£©¡£¼ÇÂ¼ÖÐÖ»º¬ÏÂÃæÈýÖÖ×Ö·û£º
+     * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ s ï¿½ï¿½Ê¾Ò»ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½Ä³ï¿½ï¿½Ú¼ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ã¿ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È±ï¿½Ú¡ï¿½ï¿½Ùµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
      * <p>
-     * 'A'£ºAbsent£¬È±ÇÚ
-     * 'L'£ºLate£¬³Ùµ½
-     * 'P'£ºPresent£¬µ½³¡
-     * Èç¹ûÑ§ÉúÄÜ¹» Í¬Ê± Âú×ãÏÂÃæÁ½¸öÌõ¼þ£¬Ôò¿ÉÒÔ»ñµÃ³öÇÚ½±Àø£º
+     * 'A'ï¿½ï¿½Absentï¿½ï¿½È±ï¿½ï¿½
+     * 'L'ï¿½ï¿½Lateï¿½ï¿½ï¿½Ùµï¿½
+     * 'P'ï¿½ï¿½Presentï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     * ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½Ü¹ï¿½ Í¬Ê± ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô»ï¿½Ã³ï¿½ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½
      * <p>
-     * °´ ×Ü³öÇÚ ¼Æ£¬Ñ§ÉúÈ±ÇÚ£¨'A'£©ÑÏ¸ñ ÉÙÓÚÁ½Ìì¡£
-     * Ñ§Éú ²»»á ´æÔÚ Á¬Ðø 3 Ìì»ò 3 ÌìÒÔÉÏµÄ³Ùµ½£¨'L'£©¼ÇÂ¼¡£
-     * Èç¹ûÑ§Éú¿ÉÒÔ»ñµÃ³öÇÚ½±Àø£¬·µ»Ø true £»·ñÔò£¬·µ»Ø false ¡£
+     * ï¿½ï¿½ ï¿½Ü³ï¿½ï¿½ï¿½ ï¿½Æ£ï¿½Ñ§ï¿½ï¿½È±ï¿½Ú£ï¿½'A'ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì¡£
+     * Ñ§ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 3 ï¿½ï¿½ï¿½ 3 ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÄ³Ùµï¿½ï¿½ï¿½'L'ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½
+     * ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½Ô»ï¿½Ã³ï¿½ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ true ï¿½ï¿½ï¿½ï¿½ï¿½ò£¬·ï¿½ï¿½ï¿½ false ï¿½ï¿½
      */
 
     /**
-     * Ö´ÐÐÓÃÊ±£º 0 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 36.5 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 59.04% µÄÓÃ»§
+     * Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 0 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 36.5 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 59.04% ï¿½ï¿½ï¿½Ã»ï¿½
      *
      * @param s
      * @return
@@ -44,7 +44,7 @@ public class Test17 {
         return !s.contains("LLL");
     }
 
-    //Ö´ÐÐÓÃÊ±£º 0 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 36.3 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 83.16% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 0 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 36.3 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 83.16% ï¿½ï¿½ï¿½Ã»ï¿½
     public boolean checkRecord(String s) {
         return (!s.contains("LLL"))&& (s.indexOf(65) == s.lastIndexOf(65));
     }

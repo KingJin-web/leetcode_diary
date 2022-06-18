@@ -7,7 +7,7 @@ import java.util.Queue;
 
 /**
  * @program: leetcode
- * @description: ½£Ö¸ Offer II 042. ×î½üÇëÇó´ÎÊý
+ * @description: ï¿½ï¿½Ö¸ Offer II 042. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/H8086Q/
  * @author: King
  * @create: 2021-08-25 23:04
@@ -37,10 +37,10 @@ public class Test25 {
 
     public static void main(String[] args) {
         //inputs = ["RecentCounter", "ping", "ping", "ping", "ping"]
-        //inputs = [[], [1], [100], [3001], [3002]]ÊäÈë£º
+        //inputs = [[], [1], [100], [3001], [3002]]ï¿½ï¿½ï¿½ë£º
         //inputs = ["RecentCounter", "ping", "ping", "ping", "ping"]
         //inputs = [[], [1], [100], [3001], [3002]]
-        //Êä³ö£º
+        //ï¿½ï¿½ï¿½ï¿½ï¿½
         //[null, 1, 2, 3, 3]
 
         RecentCounter p = new RecentCounter();

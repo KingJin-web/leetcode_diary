@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @program: leetcode
- * @description: 1403. ·ÇµÝÔöË³ÐòµÄ×îÐ¡×ÓÐòÁÐ
+ * @description: 1403. ï¿½Çµï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/minimum-subsequence-in-non-increasing-order/
  * @author: King
  * @create: 2021-11-09 23:49

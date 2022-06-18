@@ -2,7 +2,7 @@ package com.king.year_2021.M09;
 
 /**
  * @program: leetcode
- * @description: 223. ¾ØÐÎÃæ»ý
+ * @description: 223. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/rectangle-area/
  * @author: King
  * @create: 2021-09-30 23:24

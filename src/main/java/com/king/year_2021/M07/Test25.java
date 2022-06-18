@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * @program: leetcode
- * @description: 167. 两数之和 II - 输入有序数组
+ * @description: 167. 锟斤拷锟斤拷之锟斤拷 II - 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
  * https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/
  * @author: King
  * @create: 2021-07-23 16:33
@@ -16,8 +16,8 @@ import java.util.Map;
 public class Test25 {
 
     /**
-     * 执行用时： 2 ms , 在所有 Java 提交中击败了 33.20% 的用户
-     * 内存消耗： 37.9 MB , 在所有 Java 提交中击败了 99.91% 的用户
+     * 执锟斤拷锟斤拷时锟斤拷 2 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 33.20% 锟斤拷锟矫伙拷
+     * 锟节达拷锟斤拷锟侥ｏ拷 37.9 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 99.91% 锟斤拷锟矫伙拷
      *
      * @param numbers
      * @param target
@@ -38,7 +38,7 @@ public class Test25 {
     }
 
     /**
-     * 双指针
+     * 双指锟斤拷
      *
      * @param numbers
      * @param target
@@ -60,7 +60,7 @@ public class Test25 {
     }
 
     /**
-     * 二分查找
+     * 锟斤拷锟街诧拷锟斤拷
      *
      * @param numbers
      * @param target

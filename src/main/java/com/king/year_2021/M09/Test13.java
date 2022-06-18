@@ -7,7 +7,7 @@ import java.util.*;
 
 /**
  * @program: leetcode
- * @description: 524. 通过删除字母匹配到字典里最长单词
+ * @description: 524. 通锟斤拷删锟斤拷锟斤拷母匹锟戒到锟街碉拷锟斤拷锟筋长锟斤拷锟斤拷
  * https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/
  * @author: King
  * @create: 2021-09-14 10:01
@@ -31,7 +31,7 @@ public class Test13 {
         return "";
     }
 
-    //执行用时： 12 ms , 在所有 Java 提交中击败了 95.31% 的用户 内存消耗： 39.4 MB , 在所有 Java 提交中击败了 24.71% 的用户
+    //执锟斤拷锟斤拷时锟斤拷 12 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 95.31% 锟斤拷锟矫伙拷 锟节达拷锟斤拷锟侥ｏ拷 39.4 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 24.71% 锟斤拷锟矫伙拷
     public String findLongestWord1(String s, List<String> dictionary) {
         Collections.sort(dictionary);
         MyPrint.print(dictionary);

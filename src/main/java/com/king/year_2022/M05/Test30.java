@@ -5,7 +5,7 @@ import com.king.util.LeetcodeUtil;
 import com.king.util.MyPrint;
 import com.king.util.TreeNode;
 /**
- * @author: 12613
+ * @author: King
  * @project: leetcode_diary
  * @pcakage: com.king.year_2022.M05.Test30
  * @date: 2022年05月30日 23:35

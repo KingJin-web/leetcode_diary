@@ -10,13 +10,13 @@ import java.util.Scanner;
  */
 public class Test15 {
     public int countMaxOrSubsets(int[] nums) {
-        // ³¢ÊÔdfs±©Á¦
-        // 1.Ê×ÏÈ¶ÔnumsËùÓÐÔªËØ»òµÃµ½Ò»¸ö×î´óÖµ
+        // ï¿½ï¿½ï¿½ï¿½dfsï¿½ï¿½ï¿½ï¿½
+        // 1.ï¿½ï¿½ï¿½È¶ï¿½numsï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø»ï¿½Ãµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
         int max = 0;
         for (int num : nums) {
             max |= num;
         }
-        // 2.dfsËùÓÐÇé¿ö, ¿ÉÑ¡»ò¿É²»Ñ¡
+        // 2.dfsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Ñ¡ï¿½ï¿½É²ï¿½Ñ¡
         return dfs(0, nums, 0, max);
     }
 
@@ -38,14 +38,14 @@ public class Test15 {
                     if (ch == ' ') {
                         continue;
                     } else if (ch == '!') {
-                        System.out.println("ÊäÈë  £¡ °Ý°Ý");
+                        System.out.println("ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ ï¿½Ý°ï¿½");
                         return;
                     } else if (Character.isDigit(ch)) {
-                        System.out.println("Êý×Ö£º" + ch);
+                        System.out.println("ï¿½ï¿½ï¿½Ö£ï¿½" + ch);
                     } else if (Character.isLetter(ch)) {
-                        System.out.println("×ÖÄ¸£º" + ch);
+                        System.out.println("ï¿½ï¿½Ä¸ï¿½ï¿½" + ch);
                     } else {
-                        System.out.println("ÆäËû£º" + ch);
+                        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + ch);
                     }
                 }
             }

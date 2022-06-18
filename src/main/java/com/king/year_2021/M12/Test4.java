@@ -4,21 +4,21 @@ import com.king.util.MyPrint;
 
 /**
  * @program: leetcode
- * @description: 383. Êê½ğĞÅ
+ * @description: 383. ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-12-04 23:22
  */
 public class Test4 {
-    //Ö´ĞĞÓÃÊ±£º 1 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 99.85% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 38.3 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 96.38% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 1 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 99.85% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.3 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 96.38% ï¿½ï¿½ï¿½Ã»ï¿½
     public boolean canConstruct(String ransomNote, String magazine) {
-        // ÏÈÍ³¼ÆmagazineÖĞµÄ´ÊÆµ
+        // ï¿½ï¿½Í³ï¿½ï¿½magazineï¿½ĞµÄ´ï¿½Æµ
         int[] arr = new int[26];
         char[] chars = magazine.toCharArray();
         for (char c : chars) {
             arr[c - 'a']++;
         }
 
-        // ÔÙ±éÀúransomNoteÖĞµÄ×Ö·û£¬´Ó´ÊÆµ±íÖĞ¼õÈ¥
+        // ï¿½Ù±ï¿½ï¿½ï¿½ransomNoteï¿½Ğµï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ó´ï¿½Æµï¿½ï¿½ï¿½Ğ¼ï¿½È¥
         chars = ransomNote.toCharArray();
         for (char c : chars) {
             if (arr[c - 'a']-- <= 0) {
@@ -29,14 +29,14 @@ public class Test4 {
     }
 
     public boolean canConstruct1(String ransomNote, String magazine) {
-        // ÏÈÍ³¼ÆmagazineÖĞµÄ´ÊÆµ
+        // ï¿½ï¿½Í³ï¿½ï¿½magazineï¿½ĞµÄ´ï¿½Æµ
         int[] arr = new int[26];
 
         for (int i = 0; i < magazine.length(); i++) {
             arr[magazine.charAt(i) - 'a']++;
         }
 
-        // ÔÙ±éÀúransomNoteÖĞµÄ×Ö·û£¬´Ó´ÊÆµ±íÖĞ¼õÈ¥
+        // ï¿½Ù±ï¿½ï¿½ï¿½ransomNoteï¿½Ğµï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ó´ï¿½Æµï¿½ï¿½ï¿½Ğ¼ï¿½È¥
         for (int i = 0; i < ransomNote.length(); i++) {
             if (arr[ransomNote.charAt(i) - 'a']-- <= 0) {
                 return false;

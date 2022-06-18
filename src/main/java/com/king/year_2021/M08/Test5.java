@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class Test5 {
     /**
-     * 560. 和为K的子数组
+     * 560. 锟斤拷为K锟斤拷锟斤拷锟斤拷锟斤拷
      * https://leetcode-cn.com/problems/subarray-sum-equals-k/
      */
     public static class T1 {
@@ -21,7 +21,7 @@ public class Test5 {
 
         public int subarraySum(int[] nums, int k) {
             /**
-             扫描一遍数组, 使用map记录出现同样的和的次数, 对每个i计算累计和sum并判断map内是否有sum-k
+             扫锟斤拷一锟斤拷锟斤拷锟斤拷, 使锟斤拷map锟斤拷录锟斤拷锟斤拷同锟斤拷锟侥和的达拷锟斤拷, 锟斤拷每锟斤拷i锟斤拷锟斤拷锟桔计猴拷sum锟斤拷锟叫讹拷map锟斤拷锟角凤拷锟斤拷sum-k
              **/
             Map<Integer, Integer> map = new HashMap<>();
             map.put(0, 1);

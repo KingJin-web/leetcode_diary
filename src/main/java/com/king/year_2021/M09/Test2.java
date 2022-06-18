@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * @program: leetcode
- * @description: ½£Ö¸ Offer 22. Á´±íÖÐµ¹ÊýµÚk¸ö½Úµã
+ * @description: ï¿½ï¿½Ö¸ Offer 22. ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½kï¿½ï¿½ï¿½Úµï¿½
  * https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
  * @author: King
  * @create: 2021-09-02 18:08
@@ -20,7 +20,7 @@ import java.util.List;
 public class Test2 {
 
 
-    //Ö´ÐÐÓÃÊ±£º 0 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 36.3 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 41.18% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 0 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 36.3 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 41.18% ï¿½ï¿½ï¿½Ã»ï¿½
     public ListNode getKthFromEnd(ListNode head, int k) {
         ListNode fast = head;
         while (fast != null) {
@@ -43,7 +43,7 @@ public class Test2 {
 
     public static class s {
         /**
-         * ¸ù¾ÝÈÕÆÚ»ñµÃËùÔÚÖÜµÄÈÕÆÚ
+         * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½
          *
          * @param mdate
          * @return
@@ -57,8 +57,8 @@ public class Test2 {
             long fTime = mdate.getTime() - (long) b * 24 * 3600000;
             for (int a = 1; a <= 7; a++) {
                 fdate = new Date();
-                fdate.setTime(fTime + (a * 24 * 3600000)); //Ò»ÖÜ´ÓÖÜÒ»¿ªÊ¼Ëã£¬ÔòÊ¹ÓÃ´Ë·½Ê½
-                //fdate.setTime(fTime + ((a-1) * 24*3600000)); //Ò»ÖÜ´ÓÖÜÈÕ¿ªÊ¼Ëã£¬ÔòÊ¹ÓÃ´Ë·½Ê½
+                fdate.setTime(fTime + (a * 24 * 3600000)); //Ò»ï¿½Ü´ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ê¼ï¿½ã£¬ï¿½ï¿½Ê¹ï¿½Ã´Ë·ï¿½Ê½
+                //fdate.setTime(fTime + ((a-1) * 24*3600000)); //Ò»ï¿½Ü´ï¿½ï¿½ï¿½ï¿½Õ¿ï¿½Ê¼ï¿½ã£¬ï¿½ï¿½Ê¹ï¿½Ã´Ë·ï¿½Ê½
                 list.add(a - 1, fdate);
             }
 
@@ -66,16 +66,16 @@ public class Test2 {
         }
 
         /**
-         * ²âÊÔ
+         * ï¿½ï¿½ï¿½ï¿½
          *
          * @param args
          */
         public static void main(String[] args) {
-            // ¶¨ÒåÊä³öÈÕÆÚ¸ñÊ½
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½Ê½
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             Date currentDate = new Date();
             List<Date> days = dateToWeek(currentDate);
-            System.out.println("½ñÌìµÄÈÕÆÚ: " + sdf.format(currentDate));
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: " + sdf.format(currentDate));
             for (Date date : days) {
                 System.out.println(sdf.format(date));
 
@@ -88,8 +88,8 @@ public class Test2 {
     }
 
     public static class s2 {
-        //Õâ¸öÊÇ¸ù¾ÝÒ»ÌìµÄÊ±¼äµÃµ½Ò»ÖÜµÄÊ±¼ä
-        public static List<String> cal2(String time) {//ÆäÖÐtimeÎªyyyy-mm-ddÐÎÊ½
+        //ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ãµï¿½Ò»ï¿½Üµï¿½Ê±ï¿½ï¿½
+        public static List<String> cal2(String time) {//ï¿½ï¿½ï¿½ï¿½timeÎªyyyy-mm-ddï¿½ï¿½Ê½
             List<String> list = new ArrayList<>();
             String[] strings = time.split("-");
             int year = Integer.parseInt(strings[0]);
@@ -113,9 +113,9 @@ public class Test2 {
             List<String> list = new ArrayList<String>();
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
             Calendar calendar = Calendar.getInstance();
-            //×Ô¶¨ÒåÊ±¼ä
+            //ï¿½Ô¶ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
             //String recipeTime = "2019-01-01";
-            //ÏÖÔÚÊ±¼ä
+            //ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
             //String  recipeTime=simpleDateFormat.format(new Date());
             calendar.setTime(simpleDateFormat.parse(recipeTime));
             calendar.setFirstDayOfWeek(Calendar.MONDAY);
@@ -125,9 +125,9 @@ public class Test2 {
             }
             int getDayFirst = calendar.get(Calendar.DAY_OF_WEEK);
             calendar.add(Calendar.DATE, calendar.getFirstDayOfWeek() - getDayFirst);
-            //±¾ÖÜÐÇÆÚÒ»
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»
             //String beginDate = simpleDateFormat.format(calendar.getTime());
-            //±¾ÖÜÐÇÆÚÈÕ
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             calendar.add(Calendar.DATE, 6);
             //String endDate = simpleDateFormat.format(calendar.getTime());
             for (int i = 0; i < 7; i++) {

@@ -7,15 +7,15 @@ import java.util.*;
 
 /**
  * @program: leetcode
- * @description: 229. ÇóÖÚÊý II
+ * @description: 229. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ II
  * @author: King
  * @create: 2021-10-22 20:37
  */
 
 public class Test22 {
-    //¸ø¶¨Ò»¸ö´óÐ¡Îª n µÄÕûÊýÊý×é£¬ÕÒ³öÆäÖÐËùÓÐ³öÏÖ³¬¹ý ? n/3 ? ´ÎµÄÔªËØ¡£
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð¡Îª n ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¬ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð³ï¿½ï¿½Ö³ï¿½ï¿½ï¿½ ? n/3 ? ï¿½Îµï¿½Ôªï¿½Ø¡ï¿½
 
-    //Ö´ÐÐÓÃÊ±£º 11 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 28.12% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 41.3 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 94.25% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 11 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 28.12% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 41.3 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 94.25% ï¿½ï¿½ï¿½Ã»ï¿½
     public List<Integer> majorityElement(int[] nums) {
         int length = nums.length;
         int n = length / 3;
@@ -33,7 +33,7 @@ public class Test22 {
         return list;
     }
 
-    //Ö´ÐÐÓÃÊ±£º 2 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 53.04% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 42.6 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 6.66% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 2 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 53.04% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 42.6 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 6.66% ï¿½ï¿½ï¿½Ã»ï¿½
     public List<Integer> majorityElement1(int[] nums) {
         int element1 = 0;
         int element2 = 0;
@@ -41,17 +41,17 @@ public class Test22 {
         int vote2 = 0;
 
         for (int num : nums) {
-            if (vote1 > 0 && num == element1) { //Èç¹û¸ÃÔªËØÎªµÚÒ»¸öÔªËØ£¬Ôò¼ÆÊý¼Ó1
+            if (vote1 > 0 && num == element1) { //ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½Îªï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1
                 vote1++;
-            } else if (vote2 > 0 && num == element2) { //Èç¹û¸ÃÔªËØÎªµÚ¶þ¸öÔªËØ£¬Ôò¼ÆÊý¼Ó1
+            } else if (vote2 > 0 && num == element2) { //ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½Îªï¿½Ú¶ï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1
                 vote2++;
-            } else if (vote1 == 0) { // Ñ¡ÔñµÚÒ»¸öÔªËØ
+            } else if (vote1 == 0) { // Ñ¡ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½
                 element1 = num;
                 vote1++;
-            } else if (vote2 == 0) { // Ñ¡ÔñµÚ¶þ¸öÔªËØ
+            } else if (vote2 == 0) { // Ñ¡ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½Ôªï¿½ï¿½
                 element2 = num;
                 vote2++;
-            } else { //Èç¹ûÈý¸öÔªËØ¾ù²»ÏàÍ¬£¬ÔòÏà»¥µÖÏû1´Î
+            } else { //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø¾ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½à»¥ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½
                 vote1--;
                 vote2--;
             }
@@ -67,7 +67,7 @@ public class Test22 {
                 cnt2++;
             }
         }
-        // ¼ì²âÔªËØ³öÏÖµÄ´ÎÊýÊÇ·ñÂú×ãÒªÇó
+        // ï¿½ï¿½ï¿½Ôªï¿½Ø³ï¿½ï¿½ÖµÄ´ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½
         List<Integer> ans = new ArrayList<>();
         if (vote1 > 0 && cnt1 > nums.length / 3) {
             ans.add(element1);

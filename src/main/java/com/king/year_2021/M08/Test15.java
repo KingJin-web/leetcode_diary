@@ -2,7 +2,7 @@ package com.king.year_2021.M08;
 
 /**
  * @program: leetcode
- * @description: 526. 优美的排列
+ * @description: 526. 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
  * https://leetcode-cn.com/problems/beautiful-arrangement/
  * @author: King
  * @create: 2021-08-16 21:06
@@ -10,7 +10,7 @@ package com.king.year_2021.M08;
 public class Test15 {
 
     /**
-     * 执行用时： 0 ms , 在所有 Java 提交中击败了 100.00% 的用户 内存消耗： 35.1 MB , 在所有 Java 提交中击败了 69.08% 的用户
+     * 执锟斤拷锟斤拷时锟斤拷 0 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 100.00% 锟斤拷锟矫伙拷 锟节达拷锟斤拷锟侥ｏ拷 35.1 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 69.08% 锟斤拷锟矫伙拷
      *
      * @param n
      * @return
@@ -24,7 +24,7 @@ public class Test15 {
     int count = 0;
 
     /**
-     * 执行用时： 55 ms , 在所有 Java 提交中击败了 71.71% 的用户 内存消耗： 35.1 MB , 在所有 Java 提交中击败了 73.19% 的用户
+     * 执锟斤拷锟斤拷时锟斤拷 55 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 71.71% 锟斤拷锟矫伙拷 锟节达拷锟斤拷锟侥ｏ拷 35.1 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 73.19% 锟斤拷锟矫伙拷
      * @param N
      * @return
      */
@@ -40,10 +40,10 @@ public class Test15 {
             return;
         }
         for (int i = 1; i <= N; i++) {
-            //用过的不能再次使用，避免重复
+            //锟矫癸拷锟侥诧拷锟斤拷锟劫达拷使锟矫ｏ拷锟斤拷锟斤拷锟截革拷
             if (visited[i] == 0) {
                 visited[i] = 1;
-                //限制条件进行，剪枝
+                //锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟叫ｏ拷锟斤拷枝
                 if (i % step == 0 || step % i == 0) {
                     countArrangement(step + 1, N, visited);
                 }

@@ -4,7 +4,7 @@ import com.king.util.Helper;
 
 /**
  * @program: leetcode
- * @description: 541. ·´×ª×Ö·û´® II
+ * @description: 541. ï¿½ï¿½×ªï¿½Ö·ï¿½ï¿½ï¿½ II
  * https://leetcode-cn.com/problems/reverse-string-ii/
  * @author: King
  * @create: 2021-08-20 10:11
@@ -12,8 +12,8 @@ import com.king.util.Helper;
 public class Test20 {
 
     /**
-     * Ö´ÐÐÓÃÊ±£º 0 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 100.00% µÄÓÃ»§
-     * ÄÚ´æÏûºÄ£º 38.4 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 62.81% µÄÓÃ»§
+     * Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 0 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½
+     * ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.4 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 62.81% ï¿½ï¿½ï¿½Ã»ï¿½
      *
      * @param s
      * @param k
@@ -24,9 +24,9 @@ public class Test20 {
 
         char[] chars = s.toCharArray();
         for (int i = 0; i <= ln; i += 2 * k) {
-            //ÕâÀïÊÇÅÐ¶ÏÎ²Êý¹»²»¹»k¸öÀ´È¡¾öendÖ¸ÕëµÄÎ»ÖÃ
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½kï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½endÖ¸ï¿½ï¿½ï¿½Î»ï¿½ï¿½
             int end = Math.min(ln, i + k - 1);
-            //ÓÃÒì»òÔËËã·´×ª
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã·´×ª
             changArrays(chars, i, end);
         }
         return new String(chars);
@@ -45,8 +45,8 @@ public class Test20 {
     public static void main(String[] args) {
         Test20 test20 = new Test20();
         Helper.print(test20.reverseStr("abcdefg", 2));
-        //Êä³ö£º"bacdfeg"
+        //ï¿½ï¿½ï¿½ï¿½ï¿½"bacdfeg"
         Helper.print(test20.reverseStr("abcd", 4));
-        //Êä³ö£º"dcba"
+        //ï¿½ï¿½ï¿½ï¿½ï¿½"dcba"
     }
 }

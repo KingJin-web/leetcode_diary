@@ -7,26 +7,26 @@ import java.util.Set;
 
 /**
  * @program: leetcode
- * @description: 1805. ×Ö·û´®ÖÐ²»Í¬ÕûÊýµÄÊýÄ¿
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/number-of-different-integers-in-a-string
+ * @description: 1805. ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ð²ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/number-of-different-integers-in-a-string
  * @author: King
  * @create: 2021-08-27 00:19
  */
 public class Test27 {
-//    ¸øÄãÒ»¸ö×Ö·û´® word £¬¸Ã×Ö·û´®ÓÉÊý×ÖºÍÐ¡Ð´Ó¢ÎÄ×ÖÄ¸×é³É¡£
+//    ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ word ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öºï¿½Ð¡Ð´Ó¢ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½É¡ï¿½
 //
-//    ÇëÄãÓÃ¿Õ¸ñÌæ»»Ã¿¸ö²»ÊÇÊý×ÖµÄ×Ö·û¡£ÀýÈç£¬"a123bc34d8ef34" ½«»á±ä³É " 123 34 8 34" ¡£×¢Òâ£¬Ê£ÏÂµÄÕâÐ©ÕûÊýÎª£¨ÏàÁÚ±Ë´ËÖÁÉÙÓÐÒ»¸ö¿Õ¸ñ¸ô¿ª£©£º"123"¡¢"34"¡¢"8" ºÍ "34" ¡£
+//    ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿Õ¸ï¿½ï¿½æ»»Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç£¬"a123bc34d8ef34" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ " 123 34 8 34" ï¿½ï¿½×¢ï¿½â£¬Ê£ï¿½Âµï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Ú±Ë´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Õ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"123"ï¿½ï¿½"34"ï¿½ï¿½"8" ï¿½ï¿½ "34" ï¿½ï¿½
 //
-//    ·µ»Ø¶Ô word Íê³ÉÌæ»»ºóÐÎ³ÉµÄ ²»Í¬ ÕûÊýµÄÊýÄ¿¡£
+//    ï¿½ï¿½ï¿½Ø¶ï¿½ word ï¿½ï¿½ï¿½ï¿½æ»»ï¿½ï¿½ï¿½Î³Éµï¿½ ï¿½ï¿½Í¬ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½
 //
-//    Ö»ÓÐµ±Á½¸öÕûÊýµÄ ²»º¬Ç°µ¼Áã µÄÊ®½øÖÆ±íÊ¾²»Í¬£¬ ²ÅÈÏÎªÕâÁ½¸öÕûÊýÒ²²»Í¬¡£
+//    Ö»ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ê®ï¿½ï¿½ï¿½Æ±ï¿½Ê¾ï¿½ï¿½Í¬ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½Í¬ï¿½ï¿½
 //
-//    À´Ô´£ºÁ¦¿Û£¨LeetCode£©
+//    ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
 //
-//    Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+//    ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 
-    //Ö´ÐÐÓÃÊ±£º 3 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 73.14% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 38.6 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 17.15% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 3 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 73.14% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.6 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 17.15% ï¿½ï¿½ï¿½Ã»ï¿½
     public int numDifferentIntegers(String word) {
         char[] chars = word.toCharArray();
         Set<String> set = new HashSet<>();

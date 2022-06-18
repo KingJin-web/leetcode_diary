@@ -5,16 +5,16 @@ import com.king.util.MyPrint;
 /**
  * @program: leetcode
  * @description: 69. Sqrt(x)
- * À´Ô´£ºÁ¦¿Û£¨LeetCode£©
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/sqrtx
- * Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/sqrtx
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-10-17 17:10
  */
 public class Test16 {
 
-    //Ö´ÐÐÓÃÊ±£º 55 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 5.12% µÄÓÃ»§
-    // ÄÚ´æÏûºÄ£º 35.2 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 94.11% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 55 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 5.12% ï¿½ï¿½ï¿½Ã»ï¿½
+    // ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 35.2 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 94.11% ï¿½ï¿½ï¿½Ã»ï¿½
     public int mySqrt(int x) {
         int a = 1;
         while (x / a >= a) {
@@ -23,11 +23,11 @@ public class Test16 {
         return --a;
     }
 
-    //¸øÄãÒ»¸ö·Ç¸ºÕûÊý x £¬¼ÆËã²¢·µ»Ø?x?µÄ ËãÊõÆ½·½¸ù ¡£
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ x ï¿½ï¿½ï¿½ï¿½ï¿½ã²¢ï¿½ï¿½ï¿½ï¿½?x?ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
     //
-    //ÓÉÓÚ·µ»ØÀàÐÍÊÇÕûÊý£¬½á¹ûÖ»±£Áô ÕûÊý²¿·Ö £¬Ð¡Êý²¿·Ö½«±» ÉáÈ¥ ¡£
+    //ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½ ï¿½ï¿½È¥ ï¿½ï¿½
     //
-    //×¢Òâ£º²»ÔÊÐíÊ¹ÓÃÈÎºÎÄÚÖÃÖ¸Êýº¯ÊýºÍËã·û£¬ÀýÈç pow(x, 0.5) »òÕß x ** 0.5 ¡£
+    //×¢ï¿½â£ºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ pow(x, 0.5) ï¿½ï¿½ï¿½ï¿½ x ** 0.5 ï¿½ï¿½
     //
 
     public static void main(String[] args) {

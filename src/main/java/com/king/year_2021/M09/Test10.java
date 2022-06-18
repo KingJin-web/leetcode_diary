@@ -4,32 +4,32 @@ import com.king.util.MyPrint;
 
 /**
  * @program: leetcode
- * @description: 600. ²»º¬Á¬Ðø1µÄ·Ç¸ºÕûÊý
- * À´Ô´£ºÁ¦¿Û£¨LeetCode£©
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/non-negative-integers-without-consecutive-ones
- * Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+ * @description: 600. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½Ä·Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/non-negative-integers-without-consecutive-ones
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-09-11 00:04
  */
 public class Test10 {
-    //¸ø¶¨Ò»¸öÕýÕûÊý n£¬ÕÒ³öÐ¡ÓÚ»òµÈÓÚ n µÄ·Ç¸ºÕûÊýÖÐ£¬Æä¶þ½øÖÆ±íÊ¾²»°üº¬?Á¬ÐøµÄ1?µÄ¸öÊý¡£
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ nï¿½ï¿½ï¿½Ò³ï¿½Ð¡ï¿½Ú»ï¿½ï¿½ï¿½ï¿½ n ï¿½Ä·Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1?ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    //Ê¾Àý 1:
+    //Ê¾ï¿½ï¿½ 1:
     //
-    //ÊäÈë: 5
-    //Êä³ö: 5
-    //½âÊÍ:
-    //ÏÂÃæÊÇ´øÓÐÏàÓ¦¶þ½øÖÆ±íÊ¾µÄ·Ç¸ºÕûÊý<= 5£º
+    //ï¿½ï¿½ï¿½ï¿½: 5
+    //ï¿½ï¿½ï¿½: 5
+    //ï¿½ï¿½ï¿½ï¿½:
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½Ê¾ï¿½Ä·Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½<= 5ï¿½ï¿½
     //0 : 0
     //1 : 1
     //2 : 10
     //3 : 11
     //4 : 100
     //5 : 101
-    //ÆäÖÐ£¬Ö»ÓÐÕûÊý3Î¥·´¹æÔò£¨ÓÐÁ½¸öÁ¬ÐøµÄ1£©£¬ÆäËû5¸öÂú×ã¹æÔò¡£
-    //ËµÃ÷: 1 <= n <= 109
+    //ï¿½ï¿½ï¿½Ð£ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½3Î¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //Ëµï¿½ï¿½: 1 <= n <= 109
 
-    //Ö´ÐÐÓÃÊ±£º 1 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 99.26% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 35.5 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 44.85% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 1 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 99.26% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 35.5 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 44.85% ï¿½ï¿½ï¿½Ã»ï¿½
     public int findIntegers(int num) {
         int[] dp = new int[32];
         dp[0] = 1;

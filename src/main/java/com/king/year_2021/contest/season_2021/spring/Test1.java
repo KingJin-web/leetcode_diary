@@ -5,14 +5,14 @@ import com.king.util.LeetcodeUtil;
 
 /**
  * @program: leetcode
- * @description: 1. ÄÃÓ²±Ò
+ * @description: 1. ï¿½ï¿½Ó²ï¿½ï¿½
  * <p>
  * https://leetcode-cn.com/problems/na-ying-bi/submissions/
  * @author: King
  * @create: 2021-09-11 17:19
  */
 public class Test1 {
-    //Ö´ĞĞÓÃÊ±£º 0 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 35.5 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 85.27% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 0 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 35.5 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 85.27% ï¿½ï¿½ï¿½Ã»ï¿½
     public int minCount(int[] coins) {
         int result = 0;
         for (int coin : coins) {
@@ -23,8 +23,8 @@ public class Test1 {
 
     public static void main(String[] args) {
         Test1 test1 = new Test1();
-//        ÊäÈë£º[4,2,1]
-//        Êä³ö£º4
+//        ï¿½ï¿½ï¿½ë£º[4,2,1]
+//        ï¿½ï¿½ï¿½ï¿½ï¿½4
         MyPrint.print(test1.minCount(LeetcodeUtil.stringToIntegerArray("[4,2,1]")));
     }
 }

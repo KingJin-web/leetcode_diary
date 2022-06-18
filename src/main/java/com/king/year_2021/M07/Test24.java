@@ -7,14 +7,14 @@ import java.util.Comparator;
 
 /**
  * @program: leetcode
- * @description: 1893. ¼ì²éÊÇ·ñÇøÓòÄÚËùÓÐÕûÊý¶¼±»¸²¸Ç
+ * @description: 1893. ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/check-if-all-the-integers-in-a-range-are-covered/
  * @author: King
  * @create: 2021-07-23 14:33
  */
 public class Test24 {
     /**
-     * ±©Á¦·¨
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      *
      * @param ranges
      * @param left

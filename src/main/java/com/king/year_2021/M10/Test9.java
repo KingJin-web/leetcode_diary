@@ -8,20 +8,20 @@ import java.util.List;
 
 /**
  * @program: leetcode
- * @description: 352.½«Êý¾ÝÁ÷±äÎª¶à¸ö²»Ïà½»Çø¼ä
+ * @description: 352.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à½»ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/data-stream-as-disjoint-intervals/
  * @author: King
  * @create: 2021-10-09 23:22
  */
 
 public class Test9 {
-    //ÊµÏÖ SummaryRanges Àà£º
+    //Êµï¿½ï¿½ SummaryRanges ï¿½à£º
     //
-    //SummaryRanges() Ê¹ÓÃÒ»¸ö¿ÕÊý¾ÝÁ÷³õÊ¼»¯¶ÔÏó¡£
-    //void addNum(int val) ÏòÊý¾ÝÁ÷ÖÐ¼ÓÈëÕûÊý val ¡£
-    //int[][] getIntervals() ÒÔ²»Ïà½»Çø¼ä?[starti, endi] µÄÁÐ±íÐÎÊ½·µ»Ø¶ÔÊý¾ÝÁ÷ÖÐÕûÊýµÄ×Ü½á¡£
+    //SummaryRanges() Ê¹ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //void addNum(int val) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ val ï¿½ï¿½
+    //int[][] getIntervals() ï¿½Ô²ï¿½ï¿½à½»ï¿½ï¿½ï¿½ï¿½?[starti, endi] ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü½á¡£
 
-    //Ö´ÐÐÓÃÊ±£º 315 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 5.60% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 44.1 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 24.80% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 315 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 5.60% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 44.1 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 24.80% ï¿½ï¿½ï¿½Ã»ï¿½
     private static class SummaryRanges {
 
         private final List<Integer> list;
@@ -63,43 +63,43 @@ public class Test9 {
 
         SummaryRanges summaryRanges = new SummaryRanges();
         summaryRanges.addNum(1);      // arr = [1]
-        // ·µ»Ø [[1, 1]]
+        // ï¿½ï¿½ï¿½ï¿½ [[1, 1]]
         MyPrint.print(summaryRanges.getIntervals(),true);
 
         summaryRanges.addNum(3);      // arr = [1, 3]
-        // ·µ»Ø [[1, 1], [3, 3]]
+        // ï¿½ï¿½ï¿½ï¿½ [[1, 1], [3, 3]]
         MyPrint.print(summaryRanges.getIntervals());
         summaryRanges.addNum(7);      // arr = [1, 3, 7]
-        // ·µ»Ø [[1, 1], [3, 3], [7, 7]]
+        // ï¿½ï¿½ï¿½ï¿½ [[1, 1], [3, 3], [7, 7]]
         MyPrint.print(summaryRanges.getIntervals());
         summaryRanges.addNum(2);      // arr = [1, 2, 3, 7]
-        // ·µ»Ø [[1, 3], [7, 7]]
+        // ï¿½ï¿½ï¿½ï¿½ [[1, 3], [7, 7]]
         MyPrint.print(summaryRanges.getIntervals());
         summaryRanges.addNum(6);      // arr = [1, 2, 3, 6, 7]
-        // ·µ»Ø [[1, 3], [6, 7]]
+        // ï¿½ï¿½ï¿½ï¿½ [[1, 3], [6, 7]]
         MyPrint.print(summaryRanges.getIntervals());
     }
 
-    //ÊäÈë£º
+    //ï¿½ï¿½ï¿½ë£º
     //["SummaryRanges", "addNum", "getIntervals", "addNum", "getIntervals", "addNum", "getIntervals", "addNum", "getIntervals", "addNum", "getIntervals"]
     //[[], [1], [], [3], [], [7], [], [2], [], [6], []]
-    //Êä³ö£º
+    //ï¿½ï¿½ï¿½ï¿½ï¿½
     //[null, null, [[1, 1]], null, [[1, 1], [3, 3]], null, [[1, 1], [3, 3], [7, 7]], null, [[1, 3], [7, 7]], null, [[1, 3], [6, 7]]]
     //
-    //½âÊÍ£º
+    //ï¿½ï¿½ï¿½Í£ï¿½
     //SummaryRanges summaryRanges = new SummaryRanges();
     //summaryRanges.addNum(1);      // arr = [1]
-    //summaryRanges.getIntervals(); // ·µ»Ø [[1, 1]]
+    //summaryRanges.getIntervals(); // ï¿½ï¿½ï¿½ï¿½ [[1, 1]]
     //summaryRanges.addNum(3);      // arr = [1, 3]
-    //summaryRanges.getIntervals(); // ·µ»Ø [[1, 1], [3, 3]]
+    //summaryRanges.getIntervals(); // ï¿½ï¿½ï¿½ï¿½ [[1, 1], [3, 3]]
     //summaryRanges.addNum(7);      // arr = [1, 3, 7]
-    //summaryRanges.getIntervals(); // ·µ»Ø [[1, 1], [3, 3], [7, 7]]
+    //summaryRanges.getIntervals(); // ï¿½ï¿½ï¿½ï¿½ [[1, 1], [3, 3], [7, 7]]
     //summaryRanges.addNum(2);      // arr = [1, 2, 3, 7]
-    //summaryRanges.getIntervals(); // ·µ»Ø [[1, 3], [7, 7]]
+    //summaryRanges.getIntervals(); // ï¿½ï¿½ï¿½ï¿½ [[1, 3], [7, 7]]
     //summaryRanges.addNum(6);      // arr = [1, 2, 3, 6, 7]
-    //summaryRanges.getIntervals(); // ·µ»Ø [[1, 3], [6, 7]]
+    //summaryRanges.getIntervals(); // ï¿½ï¿½ï¿½ï¿½ [[1, 3], [6, 7]]
     //
-    //À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-    //Á´½Ó£ºhttps://leetcode-cn.com/problems/data-stream-as-disjoint-intervals
-    //Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+    //ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+    //ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/data-stream-as-disjoint-intervals
+    //ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 }

@@ -4,27 +4,27 @@ import com.king.util.MyPrint;
 
 /**
  * @program: leetcode
- * @description: 507. ÍêÃÀÊý
- * À´Ô´£ºÁ¦¿Û£¨LeetCode£©
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/perfect-number
- * Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+ * @description: 507. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/perfect-number
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-12-30 23:08
  */
 public class Test31 {
-    //¶ÔÓÚÒ»¸ö?ÕýÕûÊý£¬Èç¹ûËüºÍ³ýÁËËü×ÔÉíÒÔÍâµÄËùÓÐ ÕýÒò×Ó Ö®ºÍÏàµÈ£¬ÎÒÃÇ³ÆËüÎª ¡¸ÍêÃÀÊý¡¹¡£
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½?ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ö®ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½Ç³ï¿½ï¿½ï¿½Îª ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     //
-    //¸ø¶¨Ò»¸ö?ÕûÊý?n£¬?Èç¹ûÊÇÍêÃÀÊý£¬·µ»Ø true£¬·ñÔò·µ»Ø false
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½?ï¿½ï¿½ï¿½ï¿½?nï¿½ï¿½?ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ trueï¿½ï¿½ï¿½ï¿½ï¿½ò·µ»ï¿½ false
     //
     //?
     //
 
-    //ÊäÈë£ºnum = 28
-    //Êä³ö£ºtrue
-    //½âÊÍ£º28 = 1 + 2 + 4 + 7 + 14
-    //1, 2, 4, 7, ºÍ 14 ÊÇ 28 µÄËùÓÐÕýÒò×Ó¡£
+    //ï¿½ï¿½ï¿½ë£ºnum = 28
+    //ï¿½ï¿½ï¿½ï¿½ï¿½true
+    //ï¿½ï¿½ï¿½Í£ï¿½28 = 1 + 2 + 4 + 7 + 14
+    //1, 2, 4, 7, ï¿½ï¿½ 14 ï¿½ï¿½ 28 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¡ï¿½
 
-    //Ö´ÐÐÓÃÊ±£º 0 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 35 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 83.18% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 0 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 35 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 83.18% ï¿½ï¿½ï¿½Ã»ï¿½
     public boolean checkPerfectNumber1(int num) {
         switch (num) {
             case 6:
@@ -37,7 +37,7 @@ public class Test31 {
         return false;
     }
 
-    //Ö´ÐÐÓÃÊ±£º 2468 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 5.11% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 35.2 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 51.02% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 2468 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 5.11% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 35.2 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 51.02% ï¿½ï¿½ï¿½Ã»ï¿½
     private boolean checkPerfectNumber(int num) {
         return factor(num) == num;
     }

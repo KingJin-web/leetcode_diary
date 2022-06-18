@@ -1,14 +1,11 @@
-package com.king.year_2022.M06;
-
-import com.king.util.MyPrint;
 
 import java.util.*;
 
 /**
- * @author: 12613
+ * @author: King
  * @project: leetcode_diary
  * @pcakage: com.king.year_2022.M06.Test17
- * @date: 2022年06月17日 21:12
+ * @date: 2022��06��17�� 21:12
  * @description: ${}
  */
 public class Test17 {
@@ -25,16 +22,23 @@ public class Test17 {
     }
 
     public static void main(String[] args) {
-        Map<String, String> aa = new HashMap<>();
-
-        Map<String, String>[] a = new HashMap[6];
-        for (int i = 0;i<a.length;++i){
-            a[i] = new HashMap<>();
-            a[i].put("1","2");
-            a[i].put("2","2");
-            a[i].put("3","2");
-        }
-        System.out.println(Arrays.toString(a));
+//        Map<String, String> aa = new HashMap<>();
+//        aa.put("���","Hello World");
+//        System.out.println(aa);
+        String H = "Hello World! ������磡";
+        byte[] bytes = H.getBytes();
+        System.out.println(bytes.length);
+        System.out.println(Arrays.toString(bytes));
+        System.out.println(new String(bytes));
+//        Map<String, String>[] a = new HashMap[6];
+//        for (int i = 0;i<a.length;++i){
+//            a[i] = new HashMap<>();
+//            a[i].put("1","2");
+//            a[i].put("2","2");
+//            a[i].put("3","2");
+//            a[i].put("���","Hello World");
+//        }
+//        System.out.println(Arrays.toString(a));
 
     }
 }

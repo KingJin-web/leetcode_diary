@@ -2,7 +2,7 @@ package com.king.year_2021.M08;
 
 /**
  * @program: leetcode
- * @description: 1646. »ñÈ¡Éú³ÉÊı×éÖĞµÄ×î´óÖµ
+ * @description: 1646. ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½ï¿½ï¿½ï¿½Öµ
  * https://leetcode-cn.com/problems/get-maximum-in-generated-array/
  * @author: King
  * @create: 2021-08-23 10:23
@@ -10,13 +10,13 @@ package com.king.year_2021.M08;
 public class Test23 {
 
     /**
-     * ¸øÄãÒ»¸öÕûÊı n ¡£°´ÏÂÊö¹æÔòÉú³ÉÒ»¸ö³¤¶ÈÎª n + 1 µÄÊı×é nums £º
+     * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ n ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª n + 1 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ nums ï¿½ï¿½
      * <p>
      * nums[0] = 0
      * nums[1] = 1
-     * µ± 2 <= 2 * i <= n Ê±£¬nums[2 * i] = nums[i]
-     * µ± 2 <= 2 * i + 1 <= n Ê±£¬nums[2 * i + 1] = nums[i] + nums[i + 1]
-     * ·µ»ØÉú³ÉÊı×é nums ÖĞµÄ ×î´ó Öµ¡£
+     * ï¿½ï¿½ 2 <= 2 * i <= n Ê±ï¿½ï¿½nums[2 * i] = nums[i]
+     * ï¿½ï¿½ 2 <= 2 * i + 1 <= n Ê±ï¿½ï¿½nums[2 * i + 1] = nums[i] + nums[i + 1]
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ nums ï¿½Ğµï¿½ ï¿½ï¿½ï¿½ Öµï¿½ï¿½
      *
      * @param n
      * @return

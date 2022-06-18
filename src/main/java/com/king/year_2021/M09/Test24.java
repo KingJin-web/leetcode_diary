@@ -19,7 +19,7 @@ public class Test24 {
         return s.replace(" ", "%20");
     }
 
-    //½£Ö¸ Offer 05. Ìæ»»¿Õ¸ñ
+    //ï¿½ï¿½Ö¸ Offer 05. ï¿½æ»»ï¿½Õ¸ï¿½
     //https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/
     public String replace(String s) {
         StringBuilder sb = new StringBuilder();
@@ -35,11 +35,11 @@ public class Test24 {
     }
 
 
-    //ÔÚÒ»¸ö¶şÎ¬Êı×éÖĞ,Ã¿Ò»ĞĞ¶¼°´ÕÕ´Ó×óµ½ÓÒµİÔöµÄË³ĞòÅÅĞò,Ã¿- -ÁĞ¶¼°´ÕÕ´Ó ÉÏµ½ÏÂµİÔöµÄË³ĞòÅÅĞò¡£ÇëÍê³ÉÒ»¸ö
-    //º¯Êı,ÊäÈëÕâÑùµÄÒ»¸ö¶şÎ¬Êı×éºÍÒ»¸öÕûÊı, ÅĞ¶ÏÊı×éÖĞÊÇ·ñº¬ÓĞ¸ÃÕûÊı¡£
-    //½£Ö¸ Offer 04. ¶şÎ¬Êı×éÖĞµÄ²éÕÒ
+    //ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,Ã¿Ò»ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½Õ´ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,Ã¿- -ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½Õ´ï¿½ ï¿½Ïµï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+    //ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ğ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //ï¿½ï¿½Ö¸ Offer 04. ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½ï¿½ĞµÄ²ï¿½ï¿½ï¿½
     //https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof
-    //Ö´ĞĞÓÃÊ±£º 0 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 44 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 82.94% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 0 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 44 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 82.94% ï¿½ï¿½ï¿½Ã»ï¿½
     public boolean findNumberIn2DArray(int[][] matrix, int target) {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return false;
@@ -98,12 +98,12 @@ public class Test24 {
 
     public static class Solution {
         /**
-         * ´úÂëÖĞµÄÀàÃû¡¢·½·¨Ãû¡¢²ÎÊıÃûÒÑ¾­Ö¸¶¨£¬ÇëÎğĞŞ¸Ä£¬Ö±½Ó·µ»Ø·½·¨¹æ¶¨µÄÖµ¼´¿É
+         * ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ş¸Ä£ï¿½Ö±ï¿½Ó·ï¿½ï¿½Ø·ï¿½ï¿½ï¿½ï¿½æ¶¨ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½
          * <p>
-         * ³öÏÖ´ÎÊı×î¶àµÄ´Ê×é
+         * ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½
          *
-         * @param content string×Ö·û´® Ó¢ÎÄÎÄ±¾
-         * @return string×Ö·û´®ArrayList<ArrayList <>>
+         * @param content stringï¿½Ö·ï¿½ï¿½ï¿½ Ó¢ï¿½ï¿½ï¿½Ä±ï¿½
+         * @return stringï¿½Ö·ï¿½ï¿½ï¿½ArrayList<ArrayList <>>
          */
         public ArrayList<ArrayList<String>> frequentWords(String content) {
             // write code here
@@ -131,7 +131,7 @@ public class Test24 {
         public ArrayList<ArrayList<Integer>> factorization(int n) {
             Map<Integer, Integer> map = new HashMap<>();
             int k = 2;
-            while (k <= n) {    //½øĞĞÑ­»·ÅĞ¶Ï
+            while (k <= n) {    //ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½Ğ¶ï¿½
                 if (k == n) {
                     map.put(k, map.getOrDefault(k, 0) + 1);
                     break;

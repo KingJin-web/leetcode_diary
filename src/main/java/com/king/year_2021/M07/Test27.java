@@ -6,18 +6,18 @@ import java.util.HashMap;
 
 /**
  * @program: leetcode
- * @description: 3. 无重复字符的最长子串
+ * @description: 3. 锟斤拷锟截革拷锟街凤拷锟斤拷锟筋长锟接达拷
  * https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
  * @author: King
  * @create: 2021-07-24 10:09
  */
 public class Test27 {
     private static Test27 t27 = new Test27();
-    //给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
+    //锟斤拷锟斤拷一锟斤拷锟街凤拷锟斤拷 s 锟斤拷锟斤拷锟斤拷锟揭筹拷锟斤拷锟叫诧拷锟斤拷锟斤拷锟截革拷锟街凤拷锟斤拷 锟筋长锟接达拷 锟侥筹拷锟饺★拷
 
     /**
-     * 执行用时： 6 ms , 在所有 Java 提交中击败了 83.79% 的用户
-     * 内存消耗： 38.4 MB , 在所有 Java 提交中击败了 77.33% 的用户
+     * 执锟斤拷锟斤拷时锟斤拷 6 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 83.79% 锟斤拷锟矫伙拷
+     * 锟节达拷锟斤拷锟侥ｏ拷 38.4 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 77.33% 锟斤拷锟矫伙拷
      * @param s
      * @return
      */

@@ -6,10 +6,10 @@ import com.king.year_2021.Helper;
 
 /**
  * @program: leetcode
- * @description: LCP 33. ÐîË®
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/o8SXZn
- * À´Ô´£ºÁ¦¿Û£¨LeetCode£©
- * Öø×÷È¨¹é×÷ÕßËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ×÷Õß»ñµÃÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+ * @description: LCP 33. ï¿½ï¿½Ë®
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/o8SXZn
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ß»ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-09-16 20:32
  */
@@ -18,25 +18,25 @@ public class Test3 {
     public int storeWater(int[] bucket, int[] vat) {
         int maxVat = 0;
         for (int v : vat) maxVat = Math.max(v, maxVat);
-        if (maxVat == 0) return 0; //×î´óÈÝÁ¿Îª0£¬´ú±í²»ÐèÐîË®£¬Ö±½Ó·µ»Ø0
+        if (maxVat == 0) return 0; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½Ö±ï¿½Ó·ï¿½ï¿½ï¿½0
         int ans = 10001;
-        for (int pour = 1; pour <= 10000; pour++) { //Ã¶¾Ùµ¹Ë®´ÎÊý1-10000
+        for (int pour = 1; pour <= 10000; pour++) { //Ã¶ï¿½Ùµï¿½Ë®ï¿½ï¿½ï¿½ï¿½1-10000
             if (pour >= ans) break;
             int upgrade = 0;
-            for (int i = 0; i < vat.length; i++) { //Ã¶¾ÙÃ¿¸öË®Í°£¬¼ÆËã×ÜÉý¼¶´ÎÊý
-                int cur = (int) Math.ceil((double) vat[i] / pour - bucket[i]); //ÈÝÁ¿/µ¹Ë®´ÎÊý-³õÊ¼ÐîË®Á¿=Éý¼¶´ÎÊý
+            for (int i = 0; i < vat.length; i++) { //Ã¶ï¿½ï¿½Ã¿ï¿½ï¿½Ë®Í°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                int cur = (int) Math.ceil((double) vat[i] / pour - bucket[i]); //ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½Ë®ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½Ê¼ï¿½ï¿½Ë®ï¿½ï¿½=ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 upgrade += Math.max(cur, 0);
                 if (upgrade >= ans) break;
             }
-            ans = Math.min(ans, upgrade + pour); //µ¹Ë®´ÎÊý + ×ÜÉý¼¶´ÎÊý = ×Ü´ÎÊý
+            ans = Math.min(ans, upgrade + pour); //ï¿½ï¿½Ë®ï¿½ï¿½ï¿½ï¿½ + ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ = ï¿½Ü´ï¿½ï¿½ï¿½
         }
         return ans;
     }
 
     public static void main(String[] args) {
         Test3 test3 = new Test3();
-//        ÊäÈë£ºbucket = [1,3], vat = [6,8]
-//        Êä³ö£º4
+//        ï¿½ï¿½ï¿½ë£ºbucket = [1,3], vat = [6,8]
+//        ï¿½ï¿½ï¿½ï¿½ï¿½4
         MyPrint.print(test3.storeWater(Helper.getArrays(1,3),Helper.getArrays(6,8)));
     }
 

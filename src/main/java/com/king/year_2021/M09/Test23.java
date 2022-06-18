@@ -4,21 +4,21 @@ import com.king.util.MyPrint;
 
 /**
  * @program: leetcode
- * @description: 326. 3µÄÃÝ
- * À´Ô´£ºÁ¦¿Û£¨LeetCode£©
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/power-of-three
- * Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+ * @description: 326. 3ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/power-of-three
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-09-23 14:50
  */
 public class Test23 {
-    //¸ø¶¨Ò»¸öÕûÊý£¬Ð´Ò»¸öº¯ÊýÀ´ÅÐ¶ÏËüÊÇ·ñÊÇ 3µÄÃÝ´Î·½¡£Èç¹ûÊÇ£¬·µ»Ø true £»·ñÔò£¬·µ»Ø false ¡£
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ 3ï¿½ï¿½ï¿½Ý´Î·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½ï¿½ï¿½ï¿½ï¿½ true ï¿½ï¿½ï¿½ï¿½ï¿½ò£¬·ï¿½ï¿½ï¿½ false ï¿½ï¿½
     //
-    //ÕûÊý n ÊÇ 3 µÄÃÝ´Î·½ÐèÂú×ã£º´æÔÚÕûÊý x Ê¹µÃ n == 3x
+    //ï¿½ï¿½ï¿½ï¿½ n ï¿½ï¿½ 3 ï¿½ï¿½ï¿½Ý´Î·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã£ºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ x Ê¹ï¿½ï¿½ n == 3x
 
-    //¼òµ¥µÝ¹é
-    //Ö´ÐÐÓÃÊ±£º 15 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 93.08% µÄÓÃ»§
-    //ÄÚ´æÏûºÄ£º 37.9 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 91.37% µÄÓÃ»§
+    //ï¿½òµ¥µÝ¹ï¿½
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 15 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 93.08% ï¿½ï¿½ï¿½Ã»ï¿½
+    //ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 37.9 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 91.37% ï¿½ï¿½ï¿½Ã»ï¿½
     public boolean isPowerOfThree(int n) {
         if (n == 1) {
             return true;
@@ -29,16 +29,16 @@ public class Test23 {
         return (n % 3 == 0) && isPowerOfThree(n / 3);
     }
 
-    //ÄãÄÜ²»Ê¹ÓÃÑ­»·»òÕßµÝ¹éÀ´Íê³É±¾ÌâÂð£¿
-    //ÔÚÌâÄ¿¸ø¶¨µÄ 3232 Î»ÓÐ·ûºÅÕûÊýµÄ·¶Î§ÄÚ£¬×î´óµÄ 33 µÄÃÝÎª 3^{19} = 1162261467¡£ÎÒÃÇÖ»ÐèÒªÅÐ¶Ï nn ÊÇ·ñÊÇ 3^{19}µÄÔ¼Êý¼´¿É¡£
-    //Óë·½·¨Ò»²»Í¬µÄÊÇ£¬ÕâÀïÐèÒªÌØÊâÅÐ¶Ï n ÊÇ¸ºÊý»ò 0 µÄÇé¿ö¡£
-    //Ö´ÐÐÓÃÊ±£º 15 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 93.08% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 38.2 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 48.36% µÄÓÃ»§
+    //ï¿½ï¿½ï¿½Ü²ï¿½Ê¹ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ßµÝ¹ï¿½ï¿½ï¿½ï¿½ï¿½É±ï¿½ï¿½ï¿½ï¿½ï¿½
+    //ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3232 Î»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½Î§ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ 33 ï¿½ï¿½ï¿½ï¿½Îª 3^{19} = 1162261467ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Òªï¿½Ð¶ï¿½ nn ï¿½Ç·ï¿½ï¿½ï¿½ 3^{19}ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½É¡ï¿½
+    //ï¿½ë·½ï¿½ï¿½Ò»ï¿½ï¿½Í¬ï¿½ï¿½ï¿½Ç£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ n ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ 0 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 15 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 93.08% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.2 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 48.36% ï¿½ï¿½ï¿½Ã»ï¿½
     public boolean isPowerOfThree1(int n) {
         return n > 0 && 1162261467 % n == 0;
     }
 
-    //»»µ×¹«Ê½
-    //Ö´ÐÐÓÃÊ±£º 17 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 21.16% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 38.1 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 69.48% µÄÓÃ»§
+    //ï¿½ï¿½ï¿½×¹ï¿½Ê½
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 17 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 21.16% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.1 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 69.48% ï¿½ï¿½ï¿½Ã»ï¿½
     public boolean isPowerOfThree2(int n) {
         double v = Math.log10(n) / Math.log10(3);
         return v%1 == 0;

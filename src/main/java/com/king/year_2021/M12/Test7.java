@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @program: leetcode
- * @description: 1034. ±ß½ç×ÅÉ«
+ * @description: 1034. ï¿½ß½ï¿½ï¿½ï¿½É«
  * https://leetcode-cn.com/problems/coloring-a-border/
  * @author: King
  * @create: 2021-12-07 18:57
@@ -69,8 +69,8 @@ public class Test7 {
 
 
     public static void main(String[] args) {
-        //ÊäÈë£ºgrid = [[1,2,2],[2,3,2]], row = 0, col = 1, color = 3
-        //Êä³ö£º[[1,3,3],[2,3,3]]
+        //ï¿½ï¿½ï¿½ë£ºgrid = [[1,2,2],[2,3,2]], row = 0, col = 1, color = 3
+        //ï¿½ï¿½ï¿½ï¿½ï¿½[[1,3,3],[2,3,3]]
         int arr[][] = {{1, 2, 2}, {2, 3, 2}};
         Test7 test7 = new Test7();
         List<Integer> list = new ArrayList<>();

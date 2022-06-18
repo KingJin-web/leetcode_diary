@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class Test2 {
     /**
-     * ÇëÎğĞŞ¸Ä·µ»ØÖµÀàĞÍ
+     * ï¿½ï¿½ï¿½ï¿½ï¿½Ş¸Ä·ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½
      */
     public static int[] answer(int x) {
         return t3(t2(t1(x)));
@@ -30,7 +30,7 @@ public class Test2 {
         }
 
         if (list.size() > 2) {
-            //´óµ½Ğ¡
+            //ï¿½ï¿½Ğ¡
             return new int[]{list.get(list.size() - 1), list.get(list.size() - 2)};
         } else {
             return new int[]{list.get(0), list.get(1)};

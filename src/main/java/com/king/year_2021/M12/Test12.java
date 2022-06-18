@@ -2,13 +2,13 @@ package com.king.year_2021.M12;
 
 /**
  * @program: leetcode
- * @description: 709. 转换成小写字母
+ * @description: 709. 转锟斤拷锟斤拷小写锟斤拷母
  * https://leetcode-cn.com/problems/to-lower-case/
  * @author: King
  * @create: 2021-12-12 23:39
  */
 public class Test12 {
-    //执行用时： 0 ms , 在所有 Java 提交中击败了 100.00% 的用户 内存消耗： 36.3 MB , 在所有 Java 提交中击败了 87.92% 的用户
+    //执锟斤拷锟斤拷时锟斤拷 0 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 100.00% 锟斤拷锟矫伙拷 锟节达拷锟斤拷锟侥ｏ拷 36.3 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 87.92% 锟斤拷锟矫伙拷
     public String toLowerCase(String s) {
         StringBuilder sb = new StringBuilder();
         char[] chars = s.toCharArray();

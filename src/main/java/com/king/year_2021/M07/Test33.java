@@ -4,7 +4,7 @@ import com.king.util.Helper;
 
 /**
  * @program: leetcode
- * @description: 171. Excel±íÁĞĞòºÅ
+ * @description: 171. Excelï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/excel-sheet-column-number/
  * @author: King
  * @create: 2021-07-30 14:26
@@ -13,8 +13,8 @@ public class Test33 {
     public static Test33 t33 = new Test33();
 
     /**
-     * Ö´ĞĞÓÃÊ±£º 1 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§
-     * ÄÚ´æÏûºÄ£º 38.5 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 36.27% µÄÓÃ»§
+     * Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 1 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½
+     * ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.5 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 36.27% ï¿½ï¿½ï¿½Ã»ï¿½
      *
      * @param columnTitle
      * @return

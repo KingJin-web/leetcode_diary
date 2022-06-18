@@ -4,30 +4,30 @@ import com.king.util.Helper;
 
 /**
  * @program: leetcode
- * @description: 1588. ËùÓÐÆæÊý³¤¶È×ÓÊý×éµÄºÍ
+ * @description: 1588. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äºï¿½
  * https://leetcode-cn.com/problems/sum-of-all-odd-length-subarrays/
  * @author: King
  * @create: 2021-08-29 19:29
  */
 public class Test29 {
-    //¿¼ÂÇÃ¿¸öÔªËØiÔÚÅÅÁÐ×éºÏÖÖ³öÏÖµÄ´ÎÊý¡ÁÉÏarr[i],ÀÛ¼Ó½á¹û¼´¿É
-    //ËùÒÔ±éÀúÃ¿¸öÔªËØ¿´Æä³öÏÖ´ÎÊý£¬¾ßÌåµÄ£¬ÒªÏëÊ¹µÃÏÂ±êÎªiµÄÔªËØ³öÏÖ
-    //ÔÚÆæÊý³¤¶ÈµÄ×ÓÊý×éµÄ´ÎÊý£¬ÔÚ°üº¬arr[i]µÄÇ°ÌáÏÂ£¬×ó²àÈôÓÐÅ¼Êý¸öÔªËØ£¬
-    //ÓÒ²à±ØÐëÎªÅ¼Êý¸öÔªËØ£¬×ó²àÈç¹ûÓÐÆæÊý¸öÔªËØÓÒ²àÒ²±ØÐëÓÐÆæÊý¸öÔªËØ
-    //Ö´ÐÐÓÃÊ±£º 0 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 36.1 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 45.75% µÄÓÃ»§
+    //ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ôªï¿½ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö³ï¿½ï¿½ÖµÄ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½arr[i],ï¿½Û¼Ó½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ôªï¿½Ø¿ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½Òªï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Â±ï¿½Îªiï¿½ï¿½Ôªï¿½Ø³ï¿½ï¿½ï¿½
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½arr[i]ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Â£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¼ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½
+    //ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ÎªÅ¼ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ò²ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 0 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 36.1 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 45.75% ï¿½ï¿½ï¿½Ã»ï¿½
     public int sumOddLengthSubarrays(int[] arr) {
         int res = 0;
         for (int i = 0; i < arr.length; i++) {
-            //ÏÂ±êÎªiÊ±£¬arr[i]×ó²àÒ»¹²ÓÐi¸öÊý£¬¿ÉÒÔÔÚÆäÇ°ÃæÑ¡Ôñ0¡¢1¡¢2...i¸öÊý
-            //¹²ÓÐi+1ÖÖ¿ÉÄÜ£¬iµÄÓÒ²àÓÐarr.length - i - 1¸öÔªËØ
-            //ËùÒÔÓÐarr.length - iÖÖ¿ÉÄÜ
+            //ï¿½Â±ï¿½ÎªiÊ±ï¿½ï¿½arr[i]ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½Ñ¡ï¿½ï¿½0ï¿½ï¿½1ï¿½ï¿½2...iï¿½ï¿½ï¿½ï¿½
+            //ï¿½ï¿½ï¿½ï¿½i+1ï¿½Ö¿ï¿½ï¿½Ü£ï¿½iï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½arr.length - i - 1ï¿½ï¿½Ôªï¿½ï¿½
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½arr.length - iï¿½Ö¿ï¿½ï¿½ï¿½
             int left = i + 1, right = arr.length - i;
-            //¶Ô×ó²à¶øÑÔ£¬Ñ¡ÔñÅ¼Êý³¤¶ÈµÄ×ÓÊý×éÇé¿öÎªleft/2
-            //ÆæÊýÎª(left + 1)/2£¬ÓÒ²àÒàÈ»
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½Ñ¡ï¿½ï¿½Å¼ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªleft/2
+            //ï¿½ï¿½ï¿½ï¿½Îª(left + 1)/2ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½È»
             int leftOdd = (left + 1) / 2, leftEven = left / 2;
             int rightOdd = (right + 1) / 2, rightEven = right / 2;
 
-            //¶ÔÃ¿¸öÔªËØ³öÏÖÔÚÆæÊý¸ö×ÓÊý×éµÄ´ÎÊýÀÛ¼Ó¼´¿É
+            //ï¿½ï¿½Ã¿ï¿½ï¿½Ôªï¿½Ø³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Û¼Ó¼ï¿½ï¿½ï¿½
             res += (leftOdd * rightOdd + leftEven * rightEven) * arr[i];
         }
 
@@ -36,9 +36,9 @@ public class Test29 {
 
     public static void main(String[] args) {
         Test29 test29 = new Test29();
-//        ÊäÈë£ºarr = [1,4,2,5,3]
-//        Êä³ö£º58
-//        ½âÊÍ£ºËùÓÐÆæÊý³¤¶È×ÓÊý×éºÍËüÃÇµÄºÍÎª£º
+//        ï¿½ï¿½ï¿½ë£ºarr = [1,4,2,5,3]
+//        ï¿½ï¿½ï¿½ï¿½ï¿½58
+//        ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÇµÄºï¿½Îªï¿½ï¿½
 //                [1] = 1
 //                [4] = 4
 //                [2] = 2
@@ -48,7 +48,7 @@ public class Test29 {
 //                [4,2,5] = 11
 //                [2,5,3] = 10
 //                [1,4,2,5,3] = 15
-//        ÎÒÃÇ½«ËùÓÐÖµÇóºÍµÃµ½ 1 + 4 + 2 + 5 + 3 + 7 + 11 + 10 + 15 = 58
+//        ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ÍµÃµï¿½ 1 + 4 + 2 + 5 + 3 + 7 + 11 + 10 + 15 = 58
         int a = test29.sumOddLengthSubarrays(Helper.getArrays(1, 4, 2, 5, 3));
         Helper.print(a);
     }

@@ -5,30 +5,30 @@ import java.util.Arrays;
 
 /**
  * @program: leetcode
- * @description: 475. ¹©Å¯Æ÷
+ * @description: 475. ï¿½ï¿½Å¯ï¿½ï¿½
  * @author: King
  * @create: 2021-12-20 23:06
  */
 public class Test20 {
 
     public int findRadius(int[] houses, int[] heaters) {
-        // ÏÈ½øÐÐÉýÐòÅÅÁÐ
+        // ï¿½È½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         Arrays.sort(houses);
         Arrays.sort(heaters);
         int radius = 0;
         int i = 0;
         for (int house : houses) {
             while (i < heaters.length && heaters[i] < house) {
-                // Ò»Ö±ÕÒµ½´¦ÓÚ·¿ÎÝÓÒ²àµÄÈÈË®Æ÷
+                // Ò»Ö±ï¿½Òµï¿½ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½
                 i++;
             }
             if (i == 0)
                 radius = Math.max(radius, heaters[i] - house);
             else if (i == heaters.length)
-                // ×îºóÒ»¸öÈÈË®Æ÷
+                // ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½
                 return Math.max(radius, houses[houses.length - 1] - heaters[heaters.length - 1]);
             else
-                // ·¿ÎÝÓÒ²àµÄÈÈË®Æ÷ºÍ·¿ÎÝ×ó²àµÄÈÈË®Æ÷£¬È¡Ð¡µÄÄÇ¸ö
+                // ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½ï¿½ï¿½È¡Ð¡ï¿½ï¿½ï¿½Ç¸ï¿½
                 radius = Math.max(radius, Math.min(heaters[i] - house, house - heaters[i - 1]));
         }
         return radius;

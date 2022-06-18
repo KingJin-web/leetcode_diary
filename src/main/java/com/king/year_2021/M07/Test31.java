@@ -6,7 +6,7 @@ import java.util.*;
 
 /**
  * @program: leetcode
- * @description: 496. ÏÂÒ»¸ö¸ü´óÔªËØ I
+ * @description: 496. ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ I
  * https://leetcode-cn.com/problems/next-greater-element-i/
  * @author: King
  * @create: 2021-07-27 16:58
@@ -18,8 +18,8 @@ public class Test31 {
 
 
     /**
-     * Ö´ĞĞÓÃÊ±£º 3 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 97.49% µÄÓÃ»§
-     * ÄÚ´æÏûºÄ£º 38.6 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 53.39% µÄÓÃ»§
+     * Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 3 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 97.49% ï¿½ï¿½ï¿½Ã»ï¿½
+     * ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.6 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 53.39% ï¿½ï¿½ï¿½Ã»ï¿½
      *
      * @param nums1
      * @param nums2
@@ -30,7 +30,7 @@ public class Test31 {
 
         Deque<Integer> stack = new ArrayDeque<>();
         Map<Integer, Integer> map = new HashMap<>();
-        // ÏÈ´¦Àí nums2£¬°Ñ¶ÔÓ¦¹ØÏµ´æÈë¹şÏ£±í
+        // ï¿½È´ï¿½ï¿½ï¿½ nums2ï¿½ï¿½ï¿½Ñ¶ï¿½Ó¦ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½Ï£ï¿½ï¿½
         for (int j : nums2) {
             while (!stack.isEmpty() && stack.peekLast() < j) {
                 map.put(stack.removeLast(), j);
@@ -38,7 +38,7 @@ public class Test31 {
             stack.addLast(j);
         }
 
-        // ±éÀú nums1 µÃµ½½á¹û¼¯
+        // ï¿½ï¿½ï¿½ï¿½ nums1 ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         int[] res = new int[len1];
         for (int i = 0; i < len1; ++i) {
             res[i] = map.getOrDefault(nums1[i], -1);
@@ -47,8 +47,8 @@ public class Test31 {
     }
 
     public static void main(String[] args) {
-        //ÊäÈë: nums1 = [4,1,2], nums2 = [1,3,4,2].
-        //Êä³ö: [-1,3,-1]
+        //ï¿½ï¿½ï¿½ï¿½: nums1 = [4,1,2], nums2 = [1,3,4,2].
+        //ï¿½ï¿½ï¿½: [-1,3,-1]
         int[] a = d.nextGreaterElement(Helper.getArrays(4, 1, 2), Helper.getArrays(1, 3, 4, 2));
         Helper.print(a);
 
@@ -57,7 +57,7 @@ public class Test31 {
     private static class Solution {
 
         /**
-         * ±©Á¦
+         * ï¿½ï¿½ï¿½ï¿½
          *
          * @param nums1
          * @param nums2
@@ -79,7 +79,7 @@ public class Test31 {
                     j++;
                 }
 
-                // ´ËÊ± nums[j] = nums[i]
+                // ï¿½ï¿½Ê± nums[j] = nums[i]
                 j++;
                 while (j < len2 && nums2[j] < curVal) {
                     j++;

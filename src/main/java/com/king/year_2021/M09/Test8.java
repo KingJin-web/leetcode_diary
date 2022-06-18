@@ -8,29 +8,29 @@ import java.util.List;
 
 /**
  * @program: leetcode
- * @description: 68. ÎÄ±¾×óÓÒ¶ÔÆë
- * ×÷Õß£ºLeetCode-Solution
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/text-justification/solution/wen-ben-zuo-you-dui-qi-by-leetcode-solut-dyeg/
- * À´Ô´£ºÁ¦¿Û£¨LeetCode£©
- * Öø×÷È¨¹é×÷ÕßËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ×÷Õß»ñµÃÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+ * @description: 68. ï¿½Ä±ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ß£ï¿½LeetCode-Solution
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/text-justification/solution/wen-ben-zuo-you-dui-qi-by-leetcode-solut-dyeg/
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ß»ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-09-09 22:37
  */
 public class Test8 {
 
-    //Ö´ÐÐÓÃÊ±£º 1 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 71.13% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 36.6 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 78.21% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 1 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 71.13% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 36.6 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 78.21% ï¿½ï¿½ï¿½Ã»ï¿½
     public List<String> fullJustify(String[] words, int maxWidth) {
         List<String> ans = new ArrayList<String>();
         int right = 0, n = words.length;
         while (true) {
-            int left = right; // µ±Ç°ÐÐµÄµÚÒ»¸öµ¥´ÊÔÚ words µÄÎ»ÖÃ
-            int sumLen = 0; // Í³¼ÆÕâÒ»ÐÐµ¥´Ê³¤¶ÈÖ®ºÍ
-            // Ñ­»·È·¶¨µ±Ç°ÐÐ¿ÉÒÔ·Å¶àÉÙµ¥´Ê£¬×¢Òâµ¥´ÊÖ®¼äÓ¦ÖÁÉÙÓÐÒ»¸ö¿Õ¸ñ
+            int left = right; // ï¿½ï¿½Ç°ï¿½ÐµÄµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ words ï¿½ï¿½Î»ï¿½ï¿½
+            int sumLen = 0; // Í³ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Ðµï¿½ï¿½Ê³ï¿½ï¿½ï¿½Ö®ï¿½ï¿½
+            // Ñ­ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ð¿ï¿½ï¿½Ô·Å¶ï¿½ï¿½Ùµï¿½ï¿½Ê£ï¿½×¢ï¿½âµ¥ï¿½ï¿½Ö®ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Õ¸ï¿½
             while (right < n && sumLen + words[right].length() + right - left <= maxWidth) {
                 sumLen += words[right++].length();
             }
 
-            // µ±Ç°ÐÐÊÇ×îºóÒ»ÐÐ£ºµ¥´Ê×ó¶ÔÆë£¬ÇÒµ¥´ÊÖ®¼äÓ¦Ö»ÓÐÒ»¸ö¿Õ¸ñ£¬ÔÚÐÐÄ©Ìî³äÊ£Óà¿Õ¸ñ
+            // ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½Òµï¿½ï¿½ï¿½Ö®ï¿½ï¿½Ó¦Ö»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Õ¸ï¿½ï¿½ï¿½ï¿½ï¿½Ä©ï¿½ï¿½ï¿½Ê£ï¿½ï¿½Õ¸ï¿½
             if (right == n) {
                 StringBuffer sb = join(words, left, n, " ");
                 sb.append(blank(maxWidth - sb.length()));
@@ -41,7 +41,7 @@ public class Test8 {
             int numWords = right - left;
             int numSpaces = maxWidth - sumLen;
 
-            // µ±Ç°ÐÐÖ»ÓÐÒ»¸öµ¥´Ê£º¸Ãµ¥´Ê×ó¶ÔÆë£¬ÔÚÐÐÄ©Ìî³äÊ£Óà¿Õ¸ñ
+            // ï¿½ï¿½Ç°ï¿½ï¿½Ö»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ê£ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½Ä©ï¿½ï¿½ï¿½Ê£ï¿½ï¿½Õ¸ï¿½
             if (numWords == 1) {
                 StringBuffer sb = new StringBuffer(words[left]);
                 sb.append(blank(numSpaces));
@@ -49,18 +49,18 @@ public class Test8 {
                 continue;
             }
 
-            // µ±Ç°ÐÐ²»Ö»Ò»¸öµ¥´Ê
+            // ï¿½ï¿½Ç°ï¿½Ð²ï¿½Ö»Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             int avgSpaces = numSpaces / (numWords - 1);
             int extraSpaces = numSpaces % (numWords - 1);
             StringBuffer sb = new StringBuffer();
-            sb.append(join(words, left, left + extraSpaces + 1, blank(avgSpaces + 1))); // Æ´½Ó¶îÍâ¼ÓÒ»¸ö¿Õ¸ñµÄµ¥´Ê
+            sb.append(join(words, left, left + extraSpaces + 1, blank(avgSpaces + 1))); // Æ´ï¿½Ó¶ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Õ¸ï¿½Äµï¿½ï¿½ï¿½
             sb.append(blank(avgSpaces));
-            sb.append(join(words, left + extraSpaces + 1, right, blank(avgSpaces))); // Æ´½ÓÆäÓàµ¥´Ê
+            sb.append(join(words, left + extraSpaces + 1, right, blank(avgSpaces))); // Æ´ï¿½ï¿½ï¿½ï¿½ï¿½àµ¥ï¿½ï¿½
             ans.add(sb.toString());
         }
     }
 
-    // blank ·µ»Ø³¤¶ÈÎª n µÄÓÉ¿Õ¸ñ×é³ÉµÄ×Ö·û´®
+    // blank ï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½Îª n ï¿½ï¿½ï¿½É¿Õ¸ï¿½ï¿½ï¿½Éµï¿½ï¿½Ö·ï¿½ï¿½ï¿½
     public String blank(int n) {
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < n; ++i) {
@@ -70,7 +70,7 @@ public class Test8 {
     }
 
 
-    // join ·µ»ØÓÃ sep Æ´½Ó [left, right) ·¶Î§ÄÚµÄ words ×é³ÉµÄ×Ö·û´®
+    // join ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ sep Æ´ï¿½ï¿½ [left, right) ï¿½ï¿½Î§ï¿½Úµï¿½ words ï¿½ï¿½Éµï¿½ï¿½Ö·ï¿½ï¿½ï¿½
     public StringBuffer join(String[] words, int left, int right, String sep) {
         StringBuffer sb = new StringBuffer(words[left]);
         for (int i = left + 1; i < right; ++i) {
@@ -81,10 +81,10 @@ public class Test8 {
     }
 
     public static void main(String[] args) {
-        //ÊäÈë:
+        //ï¿½ï¿½ï¿½ï¿½:
         //words = ["This", "is", "an", "example", "of", "text", "justification."]
         //maxWidth = 16
-        //Êä³ö:
+        //ï¿½ï¿½ï¿½:
         //[
         //"This   is   an",
         //"example of text",

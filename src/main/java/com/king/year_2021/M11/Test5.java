@@ -4,14 +4,14 @@ import java.util.HashMap;
 
 /**
  * @program: leetcode
- * @description: 1218. 最长定差子序列
+ * @description: 1218. 锟筋长锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
  * https://leetcode-cn.com/problems/longest-arithmetic-subsequence-of-given-difference/
  * @author: King
  * @create: 2021-11-05 02:23
  */
 public class Test5 {
 
-    //执行用时： 34 ms , 在所有 Java 提交中击败了 86.80% 的用户 内存消耗： 55.4 MB , 在所有 Java 提交中击败了 28.94% 的用户
+    //执锟斤拷锟斤拷时锟斤拷 34 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 86.80% 锟斤拷锟矫伙拷 锟节达拷锟斤拷锟侥ｏ拷 55.4 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 28.94% 锟斤拷锟矫伙拷
     public int longestSubsequence(int[] arr, int difference) {
         int max = 1;
         HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();

@@ -2,7 +2,7 @@ package com.king.year_2021.M08;
 
 /**
  * @program: leetcode
- * @description: 28. й╣ож strStr()
+ * @description: 28. й╣О©╫О©╫ strStr()
  * https://leetcode-cn.com/problems/implement-strstr/
  * @author: King
  * @create: 2021-08-02 23:21

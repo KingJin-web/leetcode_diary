@@ -5,21 +5,21 @@ import org.junit.rules.TestRule;
 
 /**
  * @program: leetcode
- * @description: 367. ÓÐÐ§µÄÍêÈ«Æ½·½Êý
+ * @description: 367. ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½È«Æ½ï¿½ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-11-04 00:57
  */
 public class Test4 {
 
-    //¸ø¶¨Ò»¸ö ÕýÕûÊý num £¬±àÐ´Ò»¸öº¯Êý£¬Èç¹û num ÊÇÒ»¸öÍêÈ«Æ½·½Êý£¬Ôò·µ»Ø true £¬·ñÔò·µ»Ø false ¡£
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ num ï¿½ï¿½ï¿½ï¿½Ð´Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ num ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½È«Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò·µ»ï¿½ true ï¿½ï¿½ï¿½ï¿½ï¿½ò·µ»ï¿½ false ï¿½ï¿½
     //
-    //½ø½×£º²»Òª Ê¹ÓÃÈÎºÎÄÚÖÃµÄ¿âº¯Êý£¬Èç? sqrt ¡£
+    //ï¿½ï¿½ï¿½×£ï¿½ï¿½ï¿½Òª Ê¹ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½ÃµÄ¿âº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½? sqrt ï¿½ï¿½
     //
-    //À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-    //Á´½Ó£ºhttps://leetcode-cn.com/problems/valid-perfect-square
-    //Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+    //ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+    //ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/valid-perfect-square
+    //ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-    //Ö´ÐÐÓÃÊ±£º 0 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 35.3 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 26.79% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 0 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 35.3 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 26.79% ï¿½ï¿½ï¿½Ã»ï¿½
     public boolean isPerfectSquare(int num) {
         return Math.sqrt(num) % 1 == 0;
     }
@@ -29,7 +29,7 @@ public class Test4 {
         int high = num;
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            // int product = mid * mid;   Ô½½ç
+            // int product = mid * mid;   Ô½ï¿½ï¿½
             int t = num / mid;
             if (t == mid) {
                 if (num%mid == 0) return true;

@@ -7,7 +7,7 @@ import java.util.Objects;
 import java.util.Random;
 
 /**
- * @author: 12613
+ * @author: King
  * @project: leetcode_diary
  * @pcakage: com.king.year_2022.M05.Test21
  * @date: 2022年05月21日 00:37

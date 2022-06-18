@@ -16,7 +16,7 @@ import java.util.Map;
 //import org.slf4j.LoggerFactory;
 
 /**
- * @author: 12613
+ * @author: King
  * @project: leetcode_diary
  * @pcakage: com.king.util.HttpUtil
  * @date: 2022年06月13日 00:06

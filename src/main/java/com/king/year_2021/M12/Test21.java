@@ -11,13 +11,13 @@ import java.util.Date;
 
 /**
  * @program: leetcode
- * @description: 1154. Ò»ÄêÖĞµÄµÚ¼¸Ìì
+ * @description: 1154. Ò»ï¿½ï¿½ï¿½ĞµÄµÚ¼ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-12-21 22:03
  */
 public class Test21 {
 
-    //Ö´ĞĞÓÃÊ±£º 9 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 89.60% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 38.9 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 62.77% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 9 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 89.60% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.9 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 62.77% ï¿½ï¿½ï¿½Ã»ï¿½
     public int dayOfYear1(String date) {
         int[] months = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         String[] str = date.split("-");
@@ -40,7 +40,7 @@ public class Test21 {
     }
 
 
-    //Ö´ĞĞÓÃÊ±£º 113 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 5.11% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 41.8 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 5.11% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 113 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 5.11% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 41.8 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 5.11% ï¿½ï¿½ï¿½Ã»ï¿½
     public int dayOfYear2(String date) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         try {
@@ -56,9 +56,9 @@ public class Test21 {
     }
 
     /**
-     * »ñÈ¡Ä³ÄêµÚÒ»ÌìÈÕÆÚ¿ªÊ¼Ê±¿Ì
+     * ï¿½ï¿½È¡Ä³ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½Ê¼Ê±ï¿½ï¿½
      *
-     * @param year Ê±¼ä
+     * @param year Ê±ï¿½ï¿½
      * @return Date
      */
     public static long getYearFirstDay(int year) {
@@ -68,7 +68,7 @@ public class Test21 {
         return cal.getTimeInMillis();
     }
 
-    //Ö´ĞĞÓÃÊ±£º 33 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 10.95% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 40 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 9.49% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 33 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 10.95% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 40 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 9.49% ï¿½ï¿½ï¿½Ã»ï¿½
     public int dayOfYear(String date) {
         return LocalDate.parse(date, DateTimeFormatter.ofPattern("yyyy-MM-dd")).getDayOfYear();
 

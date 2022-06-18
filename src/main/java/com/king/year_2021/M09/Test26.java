@@ -7,20 +7,20 @@ import java.util.Arrays;
 
 /**
  * @program: leetcode
- * @description: 371. 两整数之和
+ * @description: 371. 锟斤拷锟斤拷锟斤拷之锟斤拷
  * https://leetcode-cn.com/problems/sum-of-two-integers/
- * 看到两数之和，我啪一下子就进来了啊，很快啊，定睛一看不让用加减号，我啪一下子就躺下了啊
+ * 锟斤拷锟斤拷锟斤拷锟斤拷之锟酵ｏ拷锟斤拷啪一锟斤拷锟接就斤拷锟斤拷锟剿帮拷锟斤拷锟杰快啊锟斤拷锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷锟矫加硷拷锟脚ｏ拷锟斤拷啪一锟斤拷锟接撅拷锟斤拷锟斤拷锟剿帮拷
  * @author: King
  * @create: 2021-09-26 22:52
  */
 public class Test26 {
 
-    //执行用时： 0 ms , 在所有 Java 提交中击败了 100.00% 的用户 内存消耗： 35.3 MB , 在所有 Java 提交中击败了 17.26% 的用户
+    //执锟斤拷锟斤拷时锟斤拷 0 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 100.00% 锟斤拷锟矫伙拷 锟节达拷锟斤拷锟侥ｏ拷 35.3 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 17.26% 锟斤拷锟矫伙拷
     public int getSum1(int a, int b) {
         return a + b;
     }
 
-    //执行用时： 0 ms , 在所有 Java 提交中击败了 100.00% 的用户 内存消耗： 35 MB , 在所有 Java 提交中击败了 84.83% 的用户
+    //执锟斤拷锟斤拷时锟斤拷 0 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 100.00% 锟斤拷锟矫伙拷 锟节达拷锟斤拷锟侥ｏ拷 35 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 84.83% 锟斤拷锟矫伙拷
     public int getSum(int a,int b){
         int [] arr = {a,b};
         return Arrays.stream(arr).sum();

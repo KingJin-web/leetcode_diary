@@ -2,15 +2,15 @@ package com.king.year_2021.M11;
 
 /**
  * @program: leetcode
- * @description: 598. ·¶Î§ÇóºÍ II
+ * @description: 598. ï¿½ï¿½Î§ï¿½ï¿½ï¿½ II
  * https://leetcode-cn.com/problems/range-addition-ii/
  * @author: King
  * @create: 2021-11-07 23:43
  */
 public class Test7 {
 
-    //Ö´ĞĞÓÃÊ±£º 0 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 100.00% µÄÓÃ»§
-    //ÄÚ´æÏûºÄ£º 38.4 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 66.72% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 0 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½
+    //ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.4 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 66.72% ï¿½ï¿½ï¿½Ã»ï¿½
     public int maxCount(int m, int n, int[][] ops) {
         if (ops.length == 0) {
             return m * n;

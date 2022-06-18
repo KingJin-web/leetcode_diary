@@ -4,15 +4,15 @@ import com.king.util.Helper;
 
 /**
  * @program: leetcode
- * @description: 1480. Ò»Î¬Êý×éµÄ¶¯Ì¬ºÍ
- * ¸øÄãÒ»¸öÊý×é nums ¡£Êý×é¡¸¶¯Ì¬ºÍ¡¹µÄ¼ÆËã¹«Ê½Îª£ºrunningSum[i] = sum(nums[0]¡­nums[i]) ¡£
- * Çë·µ»Ø nums µÄ¶¯Ì¬ºÍ¡£
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/running-sum-of-1d-array
+ * @description: 1480. Ò»Î¬ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½Ì¬ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ nums ï¿½ï¿½ï¿½ï¿½ï¿½é¡¸ï¿½ï¿½Ì¬ï¿½Í¡ï¿½ï¿½Ä¼ï¿½ï¿½ã¹«Ê½Îªï¿½ï¿½runningSum[i] = sum(nums[0]ï¿½ï¿½nums[i]) ï¿½ï¿½
+ * ï¿½ë·µï¿½ï¿½ nums ï¿½Ä¶ï¿½Ì¬ï¿½Í¡ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/running-sum-of-1d-array
  * @author: King
  * @create: 2021-08-28 22:39
  */
 public class Test28 {
-    //Ö´ÐÐÓÃÊ±£º 0 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 38.5 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 61.07% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 0 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.5 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 61.07% ï¿½ï¿½ï¿½Ã»ï¿½
     public int[] runningSum(int[] nums) {
         int ln = nums.length;
         int[] result = new int[ln];
@@ -24,8 +24,8 @@ public class Test28 {
     }
 
     public static void main(String[] args) {
-//        ÊäÈë£ºnums = [3,1,2,10,1]
-//        Êä³ö£º[3,4,6,16,17]
+//        ï¿½ï¿½ï¿½ë£ºnums = [3,1,2,10,1]
+//        ï¿½ï¿½ï¿½ï¿½ï¿½[3,4,6,16,17]
         Test28 test28 = new Test28();
         Helper.print(test28.runningSum(Helper.getArrays(3,1,2,10,1)));
     }

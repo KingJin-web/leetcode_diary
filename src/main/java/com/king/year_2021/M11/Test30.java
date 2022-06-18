@@ -4,14 +4,14 @@ import com.king.util.MyPrint;
 
 /**
  * @program: leetcode
- * @description: 400. µÚ N Î»Êý×Ö
+ * @description: 400. ï¿½ï¿½ N Î»ï¿½ï¿½ï¿½ï¿½
  *
  * @author: King
  * @create: 2021-11-30 22:34
  */
 public class Test30 {
 
-    //Ö´ÐÐÓÃÊ±£º 0 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 34.9 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 96.02% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 0 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 34.9 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 96.02% ï¿½ï¿½ï¿½Ã»ï¿½
     public int findNthDigit(int n) {
         int d = 1, count = 9;
         while (n > (long) d * count) {

@@ -8,7 +8,7 @@ import java.util.Queue;
 
 /**
  * @program: leetcode
- * @description: 1705. ³ÔÆ»¹ûµÄ×î´óÊýÄ¿
+ * @description: 1705. ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
  * @author: King
  * @create: 2021-12-24 23:35
  */
@@ -16,9 +16,9 @@ public class Test24 {
     //982ms
     public int eatenApples(int[] apples, int[] days) {
         int count=0;
-        int[] dp = new int[apples.length+20000]; //ÓÃdpÊý×é±êÖ¾ÒÑ½áËãµÄÆ»¹û
+        int[] dp = new int[apples.length+20000]; //ï¿½ï¿½dpï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½Ñ½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½
         for(int i = apples.length-1;i>=0;i--){
-            for(int j=i + days[i] - 1;j>=i && apples[i]>0;j--){ //±éÀú´ÓÎ´¿ªÊ¼½áËã´¦¿ªÊ¼Ìî³äÆ»¹û
+            for(int j=i + days[i] - 1;j>=i && apples[i]>0;j--){ //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ã´¦ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Æ»ï¿½ï¿½
                 if(dp[j]==0){
                     dp[j] = Math.max(j - apples[i] + 2, i + 1);
                     count++;
@@ -33,10 +33,10 @@ public class Test24 {
     //691ms
     public int eatenApples5(int[] apples, int[] days) {
         int count=0;
-        int[] dp = new int[apples.length+20000]; //ÓÃdpÊý×é±êÖ¾ÒÑ½áËãµÄÆ»¹û
+        int[] dp = new int[apples.length+20000]; //ï¿½ï¿½dpï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½Ñ½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½
         for(int i = apples.length-1;i>=0;i--){
             int app = apples[i];
-            for(int j=i + days[i] - 1;j>=i && app>0;j--){ //±éÀú´ÓÎ´¿ªÊ¼½áËã´¦¿ªÊ¼Ìî³äÆ»¹û
+            for(int j=i + days[i] - 1;j>=i && app>0;j--){ //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ã´¦ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Æ»ï¿½ï¿½
                 if(dp[j]==0){
                     dp[j]=1;
                     count++;
@@ -49,24 +49,24 @@ public class Test24 {
     //298ms
     public int eatenApples4(int[] apples, int[] days) {
         int day = 0;
-        //ÕÒ³öÆ»¹û»¹Î´È«²¿¸¯ÀÃµÄ×îºóÈÕÆÚ
+        //ï¿½Ò³ï¿½Æ»ï¿½ï¿½ï¿½ï¿½Î´È«ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         for (int i = 0; i < days.length; i++) {
             day = Math.max(i + days[i], day);
         }
-        //ÏÂ±êÖµ±íÊ¾Ê§Ð§ÈÕÆÚ£¬´æ´¢ÔÚµ±Ììºó¼´¸¯ÀÃµÄÆ»¹ûÊý
+        //ï¿½Â±ï¿½Öµï¿½ï¿½Ê¾Ê§Ð§ï¿½ï¿½ï¿½Ú£ï¿½ï¿½æ´¢ï¿½Úµï¿½ï¿½ï¿½ó¼´¸ï¿½ï¿½Ãµï¿½Æ»ï¿½ï¿½ï¿½ï¿½
         int[] tmp = new int[day];
         int res = 0;
         for (int i = 0; i < day; i++) {
-            //±£´æµ±ÌìÐÂ³¤³öµÄÆ»¹û
+            //ï¿½ï¿½ï¿½æµ±ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½
             if (i < apples.length && apples[i] != 0) {
                 tmp[i + days[i] - 1] += apples[i];
             }
             int idx = i;
-            //È¡³ö×îÏÈ¸¯ÀÃµÄÆ»¹û
+            //È¡ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½Ãµï¿½Æ»ï¿½ï¿½
             while (idx < day && tmp[idx] == 0) {
                 idx++;
             }
-            //ÓÐÆ»¹û¾ÍÄÃ³öÀ´³Ôµô
+            //ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½Ôµï¿½
             if (idx != day) {
                 tmp[idx]--;
                 res++;
@@ -84,10 +84,10 @@ public class Test24 {
         });
         int max=0;
         for(int i = 0;i < apples.length+20000; i++){
-            //·ÅÈëµ±ÌìµÄÆ»¹û
+            //ï¿½ï¿½ï¿½ëµ±ï¿½ï¿½ï¿½Æ»ï¿½ï¿½
             if(i < apples.length &&apples[i] > 0 && days[i]>0)
                 queue.add(new int[]{apples[i],i,days[i]});
-            //³Ô×îÔç¹ýÆÚµÄÆ»¹û
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Æ»ï¿½ï¿½
             if(!queue.isEmpty()){
                 int[] cur = queue.poll();
                 if(cur[0]-- > 0 && i < cur[1] + cur[2]){
@@ -96,7 +96,7 @@ public class Test24 {
                     max++;
                 }
             }
-            //È¡³ö½ñÌì¹ýÆÚµÄÆ»¹û
+            //È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Æ»ï¿½ï¿½
             while(!queue.isEmpty() && i + 1== queue.peek()[1] + queue.peek()[2])
                 queue.poll();
         }
@@ -105,20 +105,20 @@ public class Test24 {
     //9ms
     public int eatenApples2(int[] apples, int[] days) {
         int day = 0;
-        //ÕÒ³öÆ»¹û»¹Î´È«²¿¸¯ÀÃµÄ×îºóÈÕÆÚ
+        //ï¿½Ò³ï¿½Æ»ï¿½ï¿½ï¿½ï¿½Î´È«ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         for (int i = 0; i < days.length; i++) {
             day = Math.max(i + days[i], day);
         }
-        //ÏÂ±êÖµ±íÊ¾Ê§Ð§ÈÕÆÚ£¬´æ´¢ÔÚµ±Ììºó¼´¸¯ÀÃµÄÆ»¹ûÊý
+        //ï¿½Â±ï¿½Öµï¿½ï¿½Ê¾Ê§Ð§ï¿½ï¿½ï¿½Ú£ï¿½ï¿½æ´¢ï¿½Úµï¿½ï¿½ï¿½ó¼´¸ï¿½ï¿½Ãµï¿½Æ»ï¿½ï¿½ï¿½ï¿½
         int[] tmp = new int[day];
         int curMax = day,res = 0;
         for (int i = 0; i < day; i++) {
-            //±£´æµ±ÌìÐÂ³¤³öµÄÆ»¹û
+            //ï¿½ï¿½ï¿½æµ±ï¿½ï¿½ï¿½Â³ï¿½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½
             if (i < apples.length && apples[i] != 0) {
                 tmp[i + days[i] - 1] += apples[i];
                 curMax = Math.min(curMax,i + days[i] - 1);
             }
-            //ÓÐÆ»¹û¾ÍÄÃ³öÀ´³Ôµô
+            //ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½Ôµï¿½
             int idx = Math.max(i,curMax);
             while (idx < day && tmp[idx] == 0) {
                 idx++;
@@ -137,7 +137,7 @@ public class Test24 {
         for(int i=0;i<n;++i){
             if(apples[i] != 0 && i+days[i] > EndDay)
                 EndDay = i + days[i];
-            if(i >= EndDay) //¿ÕÏÐµÄÌìÊý
+            if(i >= EndDay) //ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½
                 ZeroDay++;
         }
         return EndDay - ZeroDay;
@@ -150,34 +150,34 @@ public class Test24 {
         MyPrint.print(test.eatenApples(apples,days));
     }
 
-    //ÓÐÒ»¿ÃÌØÊâµÄÆ»¹ûÊ÷£¬Ò»Á¬ n Ìì£¬Ã¿Ìì¶¼¿ÉÒÔ³¤³öÈô¸É¸öÆ»¹û¡£ÔÚµÚ i Ìì£¬Ê÷ÉÏ»á³¤³ö apples[i] ¸öÆ»¹û£¬ÕâÐ©Æ»¹û½«»áÔÚ days[i] Ììºó£¨Ò²¾ÍÊÇËµ£¬µÚ i + days[i] ÌìÊ±£©¸¯ÀÃ£¬±äµÃÎÞ·¨Ê³ÓÃ¡£Ò²¿ÉÄÜÓÐÄÇÃ´¼¸Ìì£¬Ê÷ÉÏ²»»á³¤³öÐÂµÄÆ»¹û£¬´ËÊ±ÓÃ apples[i] == 0 ÇÒ days[i] == 0 ±íÊ¾¡£
+    //ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ n ï¿½ì£¬Ã¿ï¿½ì¶¼ï¿½ï¿½ï¿½Ô³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¸ï¿½Æ»ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ i ï¿½ì£¬ï¿½ï¿½ï¿½Ï»á³¤ï¿½ï¿½ apples[i] ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©Æ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ days[i] ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ i + days[i] ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½Ê³ï¿½Ã¡ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ì£¬ï¿½ï¿½ï¿½Ï²ï¿½ï¿½á³¤ï¿½ï¿½ï¿½Âµï¿½Æ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ apples[i] == 0 ï¿½ï¿½ days[i] == 0 ï¿½ï¿½Ê¾ï¿½ï¿½
     //
-    //Äã´òËãÃ¿Ìì ×î¶à ³ÔÒ»¸öÆ»¹ûÀ´±£Ö¤ÓªÑø¾ùºâ¡£×¢Òâ£¬Äã¿ÉÒÔÔÚÕâ n ÌìÖ®ºó¼ÌÐø³ÔÆ»¹û¡£
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ò»ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤Óªï¿½ï¿½ï¿½ï¿½ï¿½â¡£×¢ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ n ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½
     //
-    //¸øÄãÁ½¸ö³¤¶ÈÎª n µÄÕûÊýÊý×é days ºÍ apples £¬·µ»ØÄã¿ÉÒÔ³ÔµôµÄÆ»¹ûµÄ×î´óÊýÄ¿¡£
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª n ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ days ï¿½ï¿½ apples ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô³Ôµï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½
     //
     //?
     //
-    //Ê¾Àý 1£º
+    //Ê¾ï¿½ï¿½ 1ï¿½ï¿½
     //
-    //ÊäÈë£ºapples = [1,2,3,5,2], days = [3,2,1,4,2]
-    //Êä³ö£º7
-    //½âÊÍ£ºÄã¿ÉÒÔ³Ôµô 7 ¸öÆ»¹û£º
-    //- µÚÒ»Ìì£¬Äã³ÔµôµÚÒ»Ìì³¤³öÀ´µÄÆ»¹û¡£
-    //- µÚ¶þÌì£¬Äã³ÔµôÒ»¸öµÚ¶þÌì³¤³öÀ´µÄÆ»¹û¡£
-    //- µÚÈýÌì£¬Äã³ÔµôÒ»¸öµÚ¶þÌì³¤³öÀ´µÄÆ»¹û¡£¹ýÁËÕâÒ»Ìì£¬µÚÈýÌì³¤³öÀ´µÄÆ»¹û¾ÍÒÑ¾­¸¯ÀÃÁË¡£
-    //- µÚËÄÌìµ½µÚÆßÌì£¬Äã³ÔµÄ¶¼ÊÇµÚËÄÌì³¤³öÀ´µÄÆ»¹û¡£
-    //Ê¾Àý 2£º
+    //ï¿½ï¿½ï¿½ë£ºapples = [1,2,3,5,2], days = [3,2,1,4,2]
+    //ï¿½ï¿½ï¿½ï¿½ï¿½7
+    //ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½Ô³Ôµï¿½ 7 ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½
+    //- ï¿½ï¿½Ò»ï¿½ì£¬ï¿½ï¿½Ôµï¿½ï¿½ï¿½Ò»ï¿½ì³¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½
+    //- ï¿½Ú¶ï¿½ï¿½ì£¬ï¿½ï¿½Ôµï¿½Ò»ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ì³¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½
+    //- ï¿½ï¿½ï¿½ï¿½ï¿½ì£¬ï¿½ï¿½Ôµï¿½Ò»ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ì³¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ì£¬ï¿½ï¿½ï¿½ï¿½ï¿½ì³¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¡ï¿½
+    //- ï¿½ï¿½ï¿½ï¿½ï¿½ìµ½ï¿½ï¿½ï¿½ï¿½ï¿½ì£¬ï¿½ï¿½ÔµÄ¶ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½ì³¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½
+    //Ê¾ï¿½ï¿½ 2ï¿½ï¿½
     //
-    //ÊäÈë£ºapples = [3,0,0,0,0,2], days = [3,0,0,0,0,2]
-    //Êä³ö£º5
-    //½âÊÍ£ºÄã¿ÉÒÔ³Ôµô 5 ¸öÆ»¹û£º
-    //- µÚÒ»Ììµ½µÚÈýÌì£¬Äã³ÔµÄ¶¼ÊÇµÚÒ»Ìì³¤³öÀ´µÄÆ»¹û¡£
-    //- µÚËÄÌìºÍµÚÎåÌì²»³ÔÆ»¹û¡£
-    //- µÚÁùÌìºÍµÚÆßÌì£¬Äã³ÔµÄ¶¼ÊÇµÚÁùÌì³¤³öÀ´µÄÆ»¹û¡£
+    //ï¿½ï¿½ï¿½ë£ºapples = [3,0,0,0,0,2], days = [3,0,0,0,0,2]
+    //ï¿½ï¿½ï¿½ï¿½ï¿½5
+    //ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½Ô³Ôµï¿½ 5 ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½
+    //- ï¿½ï¿½Ò»ï¿½ìµ½ï¿½ï¿½ï¿½ï¿½ï¿½ì£¬ï¿½ï¿½ÔµÄ¶ï¿½ï¿½Çµï¿½Ò»ï¿½ì³¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½
+    //- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½ì²»ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½
+    //- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½ì£¬ï¿½ï¿½ÔµÄ¶ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½ì³¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½
     //?
     //
-    //À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-    //Á´½Ó£ºhttps://leetcode-cn.com/problems/maximum-number-of-eaten-apples
-    //Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+    //ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+    //ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/maximum-number-of-eaten-apples
+    //ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 }

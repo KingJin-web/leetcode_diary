@@ -3,7 +3,7 @@ package com.king.year_2022.M05;
 import com.king.util.MyPrint;
 
 /**
- * @author: 12613
+ * @author: King
  * @project: leetcode_diary
  * @pcakage: com.king.year_2022.M05.Test9
  * @date: 2022年05月09日 23:26

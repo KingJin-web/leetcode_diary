@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 /**
  * @program: leetcode
- * @description: 611. 有效三角形的个数
+ * @description: 611. 锟斤拷效锟斤拷锟斤拷锟轿的革拷锟斤拷
  * https://leetcode-cn.com/problems/valid-triangle-number/
  * @author: King
  * @create: 2021-08-04 09:55

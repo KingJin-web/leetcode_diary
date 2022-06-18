@@ -9,14 +9,14 @@ import java.util.TreeSet;
 
 /**
  * @program: leetcode
- * @description: 414. µÚÈı´óµÄÊı
+ * @description: 414. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/third-maximum-number/
  * @author: King
  * @create: 2021-10-06 22:51
  */
 public class Test6 {
 
-    //Ö´ĞĞÓÃÊ±£º 6 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 25.26% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 38.4 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 15.51% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 6 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 25.26% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.4 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 15.51% ï¿½ï¿½ï¿½Ã»ï¿½
     public int thirdMax(int[] nums) {
         Set<Integer> s = new TreeSet<>();
         for (int num : nums) {

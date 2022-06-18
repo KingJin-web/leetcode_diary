@@ -2,7 +2,7 @@ package com.king.year_2021.M12;
 
 /**
  * @program: leetcode
- * @description: 748. ×î¶Ì²¹È«´Ê
+ * @description: 748. ï¿½ï¿½Ì²ï¿½È«ï¿½ï¿½
  * https://leetcode-cn.com/problems/shortest-completing-word/
  * @author: King
  * @create: 2021-12-10 23:09

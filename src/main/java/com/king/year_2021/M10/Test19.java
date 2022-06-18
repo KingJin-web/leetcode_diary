@@ -2,23 +2,23 @@ package com.king.year_2021.M10;
 
 /**
  * @program: leetcode
- * @description: 211. Ìí¼ÓÓëËÑË÷µ¥´Ê - Êý¾Ý½á¹¹Éè¼Æ
+ * @description: 211. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½Ý½á¹¹ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-10-19 23:36
  */
 public class Test19 {
-    //ÇëÄãÉè¼ÆÒ»¸öÊý¾Ý½á¹¹£¬Ö§³Ö Ìí¼ÓÐÂµ¥´Ê ºÍ ²éÕÒ×Ö·û´®ÊÇ·ñÓëÈÎºÎÏÈÇ°Ìí¼ÓµÄ×Ö·û´®Æ¥Åä ¡£
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ý½á¹¹ï¿½ï¿½Ö§ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½Ç°ï¿½ï¿½Óµï¿½ï¿½Ö·ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½ ï¿½ï¿½
     //
-    //ÊµÏÖ´ÊµäÀà WordDictionary £º
+    //Êµï¿½Ö´Êµï¿½ï¿½ï¿½ WordDictionary ï¿½ï¿½
     //
-    //WordDictionary() ³õÊ¼»¯´Êµä¶ÔÏó
-    //void addWord(word) ½« word Ìí¼Óµ½Êý¾Ý½á¹¹ÖÐ£¬Ö®ºó¿ÉÒÔ¶ÔËü½øÐÐÆ¥Åä
-    //bool search(word) Èç¹ûÊý¾Ý½á¹¹ÖÐ´æÔÚ×Ö·û´®Óëword Æ¥Åä£¬Ôò·µ»Ø true £»·ñÔò£¬·µ»Øfalse ¡£
-    // word ÖÐ¿ÉÄÜ°üº¬Ò»Ð© '.' £¬Ã¿¸ö. ¶¼¿ÉÒÔ±íÊ¾ÈÎºÎÒ»¸ö×ÖÄ¸¡£
+    //WordDictionary() ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½
+    //void addWord(word) ï¿½ï¿½ word ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½Ý½á¹¹ï¿½Ð£ï¿½Ö®ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½
+    //bool search(word) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý½á¹¹ï¿½Ð´ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½word Æ¥ï¿½ä£¬ï¿½ò·µ»ï¿½ true ï¿½ï¿½ï¿½ï¿½ï¿½ò£¬·ï¿½ï¿½ï¿½false ï¿½ï¿½
+    // word ï¿½Ð¿ï¿½ï¿½Ü°ï¿½ï¿½ï¿½Ò»Ð© '.' ï¿½ï¿½Ã¿ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½Ê¾ï¿½Îºï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½
     //
-    //À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-    //Á´½Ó£ºhttps://leetcode-cn.com/problems/design-add-and-search-words-data-structure
-    //Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+    //ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+    //ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/design-add-and-search-words-data-structure
+    //ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     class WordDictionary {
         private Trie root;

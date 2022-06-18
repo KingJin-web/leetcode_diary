@@ -27,19 +27,19 @@ public class Test18 {
 
     public static void main(String[] args) {
 
-        //¶ÁÈ¡Ö¸¶¨ÎÄ¼þ¼ÐÏÂµÄËùÓÐÎÄ¼þ
+        //ï¿½ï¿½È¡Ö¸ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 
         String filepath = "F:\\A";
-        //¸øÎÒÄãµÄÄ¿Â¼ÎÄ¼þ¼ÐÂ·¾¶
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Â¼ï¿½Ä¼ï¿½ï¿½ï¿½Â·ï¿½ï¿½
         //"H:\\Downloads\\XFTV16.0\\Website\\Zz_www.zw3e.com";
         File file = new File(filepath);
         Map<String, String> map = new HashMap<>();
-        map.put("ÒªÐÞ¸ÄµÄÄÚÈÝ1", "ÐÞ¸ÄµÄÄÚÈÝ1");
-        map.put("ÒªÐÞ¸ÄµÄÄÚÈÝ2;", "ÒªÐÞ¸ÄµÄÄÚÈÝ1");
+        map.put("Òªï¿½Þ¸Äµï¿½ï¿½ï¿½ï¿½ï¿½1", "ï¿½Þ¸Äµï¿½ï¿½ï¿½ï¿½ï¿½1");
+        map.put("Òªï¿½Þ¸Äµï¿½ï¿½ï¿½ï¿½ï¿½2;", "Òªï¿½Þ¸Äµï¿½ï¿½ï¿½ï¿½ï¿½1");
         new Test18(map).refreshFileList(file);
 
 //        if (!file.isDirectory()) {
-//            System.out.println("ÇëÊäÈëÒ»¸öÄ¿Â¼ÎÄ¼þÂ·¾¶");
+//            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ä¿Â¼ï¿½Ä¼ï¿½Â·ï¿½ï¿½");
 //        } else if (file.isDirectory()) {
 //            try {
 //                refreshFileList(filepath);
@@ -55,28 +55,28 @@ public class Test18 {
 
     public void refreshFileList(File filepath) {
         if (!filepath.exists()) {
-            System.out.println("´ËÂ·¾¶²»´æÔÚ");
+            System.out.println("ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
             return;
         }
         File[] fileList = filepath.listFiles();
         if (fileList == null || fileList.length < 1) {
-            System.out.println("¿ÕÎÄ¼þ¼Ð");
+            System.out.println("ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½");
             return;
         }
         for (File file : fileList) {
             if (file.isDirectory()) {
-                //Èç¹ûÊÇÎÄ¼þ¼ÐµÝ¹éÉ¨Ãè
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ÐµÝ¹ï¿½É¨ï¿½ï¿½
                 refreshFileList(file);
             } else {
-                String filename = file.getName();//¶Áµ½µÄÎÄ¼þÃû
-                String strFileName = file.getAbsolutePath();//ÎÄ¼þÂ·¾¶
-                //½ØÈ¡ÎÄ¼þ¸ñÊ½
+                String filename = file.getName();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
+                String strFileName = file.getAbsolutePath();//ï¿½Ä¼ï¿½Â·ï¿½ï¿½
+                //ï¿½ï¿½È¡ï¿½Ä¼ï¿½ï¿½ï¿½Ê½
                 String SufName = filename.substring(filename.lastIndexOf(".") + 1);
-                //ÅÅ³ý²»ÐèÒªÉ¨ÃèµÄÎÄ¼þ
+                //ï¿½Å³ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÉ¨ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 //                if (SufName.equals("rar") || SufName.equals("jpg") || SufName.equals("png") || SufName.equals("jar") || SufName.equals("doc") || SufName.equals("xls") || SufName.equals("gif") || SufName.equals("wmz")) {
 //                    continue;
 //                }
-                //»òÕßÖ¸¶¨É¨ÃèÎÄ¼þ
+                //ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½É¨ï¿½ï¿½ï¿½Ä¼ï¿½
                 if (SufName.equalsIgnoreCase("html") || SufName.equalsIgnoreCase("java")) {
                     changeFile(file);
                 }
@@ -85,7 +85,7 @@ public class Test18 {
     }
 
     /**
-     * ÐÞ¸ÄÎÄ¼þ
+     * ï¿½Þ¸ï¿½ï¿½Ä¼ï¿½
      *
      * @param file
      */
@@ -94,9 +94,9 @@ public class Test18 {
         try (FileInputStream fis = new FileInputStream(file);
              BufferedReader reader = new BufferedReader(new InputStreamReader(fis));) {
 
-            //Ö®ËùÒÔÓÃBufferedReader,¶ø²»ÊÇÖ±½ÓÓÃBufferedInputStream¶ÁÈ¡,ÊÇÒòÎªBufferedInputStreamÊÇInputStreamµÄ¼ä½Ó×ÓÀà,
-            //InputStreamµÄread·½·¨¶ÁÈ¡µÄÊÇÒ»¸öbyte,¶øÒ»¸öÖÐÎÄÕ¼Á½¸öbyte,ËùÒÔ¿ÉÄÜ»á³öÏÖ¶Áµ½°ë¸öºº×ÖµÄÇé¿ö,¾ÍÊÇÂÒÂë.
-            //BufferedReader¼Ì³Ð×ÔReader,¸ÃÀàµÄread·½·¨¶ÁÈ¡µÄÊÇchar,ËùÒÔÎÞÂÛÈçºÎ²»»á³öÏÖ¶Á¸ö°ë¸öºº×ÖµÄ.
+            //Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½BufferedReader,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½BufferedInputStreamï¿½ï¿½È¡,ï¿½ï¿½ï¿½ï¿½ÎªBufferedInputStreamï¿½ï¿½InputStreamï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,
+            //InputStreamï¿½ï¿½readï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½byte,ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½byte,ï¿½ï¿½ï¿½Ô¿ï¿½ï¿½Ü»ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+            //BufferedReaderï¿½Ì³ï¿½ï¿½ï¿½Reader,ï¿½ï¿½ï¿½ï¿½ï¿½readï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½char,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½.
             StringBuilder result = new StringBuilder();
             while (reader.ready()) {
                 result.append((char) reader.read());
@@ -104,8 +104,8 @@ public class Test18 {
             s = result.toString();
             Set<Map.Entry<String, String>> entries = map.entrySet();
             for (Map.Entry<String, String> mapKey : entries) {
-                if (s.contains(mapKey.getKey())) { //ÅÐ¶Ïµ±Ç°ÐÐÊÇ·ñ´æÔÚÏëÒªÌæ»»µôµÄ×Ö·û
-                    s = s.replace(mapKey.getKey(), mapKey.getValue());//Ìæ»»ÎªÄãÏëÌæ»»µÄÄÚÈÝ
+                if (s.contains(mapKey.getKey())) { //ï¿½Ð¶Ïµï¿½Ç°ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½æ»»ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
+                    s = s.replace(mapKey.getKey(), mapKey.getValue());//ï¿½æ»»Îªï¿½ï¿½ï¿½ï¿½ï¿½æ»»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 }
             }
 
@@ -118,7 +118,7 @@ public class Test18 {
     }
 
     /**
-     * Ð´ÈëÎÄ¼þ
+     * Ð´ï¿½ï¿½ï¿½Ä¼ï¿½
      * @param s
      * @param file
      */
@@ -126,10 +126,10 @@ public class Test18 {
         try (FileOutputStream fos = new FileOutputStream(file);
              BufferedOutputStream bos = new BufferedOutputStream(fos)) {
             bos.write(s.getBytes());
-            System.out.println("ÎÄ¼þÐÞ¸Ä³É¹¦£¡");
+            System.out.println("ï¿½Ä¼ï¿½ï¿½Þ¸Ä³É¹ï¿½ï¿½ï¿½");
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("ÎÄ¼þÐÞ¸ÄÊ§°Ü£¡");
+            System.out.println("ï¿½Ä¼ï¿½ï¿½Þ¸ï¿½Ê§ï¿½Ü£ï¿½");
         }
     }
 
@@ -137,16 +137,16 @@ public class Test18 {
 //
 //
 //    public String getFileCharsetName(File file) {
-//        String charsetName = "GBK";//»òGB2312£¬¼´ANSI
+//        String charsetName = "GBK";//ï¿½ï¿½GB2312ï¿½ï¿½ï¿½ï¿½ANSI
 //        try (InputStream inputStream = new FileInputStream(file)) {
 //            byte[] head = new byte[3];
 //            inputStream.read(head);
 //            if (head[0] == -1 && head[1] == -2) //0xFFFE
 //                charsetName = "UTF-16";
 //            else if (head[0] == -2 && head[1] == -1) //0xFEFF
-//                charsetName = "Unicode";//°üº¬Á½ÖÖ±àÂë¸ñÊ½£ºUCS2-Big-EndianºÍUCS2-Little-Endian
+//                charsetName = "Unicode";//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½UCS2-Big-Endianï¿½ï¿½UCS2-Little-Endian
 //            else if (head[0] == -27 && head[1] == -101 && head[2] == -98)
-//                charsetName = "UTF-8"; //UTF-8(²»º¬BOM)
+//                charsetName = "UTF-8"; //UTF-8(ï¿½ï¿½ï¿½ï¿½BOM)
 //            else if (head[0] == -17 && head[1] == -69 && head[2] == -65)
 //                charsetName = "UTF-8"; //UTF-8-BOM
 //
@@ -158,23 +158,23 @@ public class Test18 {
 //    }
 //
 //    /**
-//     * ÅÐ¶ÏÎÄ¼þµÄ±àÂë¸ñÊ½
+//     * ï¿½Ð¶ï¿½ï¿½Ä¼ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½Ê½
 //     *
 //     * @param file :file
-//     * @return ÎÄ¼þ±àÂë¸ñÊ½
+//     * @return ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 //     * @throws Exception
 //     */
 //    public static String codeString(File file) {
 //
 //        if (!file.exists()) {
-//            System.out.println("ÎÄ¼þ²»´æÔÚ..." + file.getAbsolutePath());
+//            System.out.println("ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½..." + file.getAbsolutePath());
 //            return null;
 //        }
 //        String code = null;
 //        try (BufferedInputStream bin = new BufferedInputStream(new FileInputStream(file));) {
 //            int p = (bin.read() << 8) + bin.read();
 //
-//            //ÆäÖÐµÄ 0xefbb¡¢0xfffe¡¢0xfeff¡¢0x5c75ÕâÐ©¶¼ÊÇÕâ¸öÎÄ¼þµÄÇ°ÃæÁ½¸ö×Ö½ÚµÄ16½øÖÆÊý
+//            //ï¿½ï¿½ï¿½Ðµï¿½ 0xefbbï¿½ï¿½0xfffeï¿½ï¿½0xfeffï¿½ï¿½0x5c75ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Úµï¿½16ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //            switch (p) {
 //                case 0xefbb:
 //                    code = "UTF-8";

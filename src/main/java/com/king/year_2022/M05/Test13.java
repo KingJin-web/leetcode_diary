@@ -3,7 +3,7 @@ package com.king.year_2022.M05;
 import java.util.Random;
 
 /**
- * @author: 12613
+ * @author: King
  * @project: leetcode_diary
  * @pcakage: com.king.year_2022.M05.Test13
  * @date: 2022年05月13日 02:45

@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 
 /**
  * @program: leetcode
- * @description: 349. Á½¸öÊı×éµÄ½»¼¯
- * ¸ø¶¨Á½¸öÊı×é£¬±àĞ´Ò»¸öº¯ÊıÀ´¼ÆËãËüÃÇµÄ½»¼¯¡£
+ * @description: 349. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½Ğ´Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÇµÄ½ï¿½ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/intersection-of-two-arrays/
  * @author: King
  * @create: 2021-08-16 22:07
@@ -17,8 +17,8 @@ import java.util.stream.Collectors;
 public class Test16 {
 
     /**
-     * Ö´ĞĞÓÃÊ±£º 5 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 20.52% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 38.3 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 88.82% µÄÓÃ»§
-     * Ö´ĞĞÓÃÊ±£º 3 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 67.53% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 38.5 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 75.50% µÄÓÃ»§
+     * Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 5 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 20.52% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.3 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 88.82% ï¿½ï¿½ï¿½Ã»ï¿½
+     * Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 3 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 67.53% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.5 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 75.50% ï¿½ï¿½ï¿½Ã»ï¿½
      *
      * @param nums1
      * @param nums2
@@ -85,8 +85,8 @@ public class Test16 {
     }
 
 
-    //¾«Í¨Java¼¯ºÏµÄµ÷ÓÃ
-    //Ö´ĞĞÓÃÊ±£º 5 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 20.52% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 38.4 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 83.03% µÄÓÃ»§
+    //ï¿½ï¿½Í¨Javaï¿½ï¿½ï¿½ÏµÄµï¿½ï¿½ï¿½
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 5 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 20.52% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.4 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 83.03% ï¿½ï¿½ï¿½Ã»ï¿½
     public int[] intersection1(int[] nums1, int[] nums2) {
         Set<Integer> set1, set2 = new HashSet<>();
         List<Integer> list = new ArrayList<>();
@@ -101,7 +101,7 @@ public class Test16 {
         return set1.stream().mapToInt(i -> i).toArray();
     }
 
-    // ÆÀÂÛ¾«Í¨streamµ÷ÓÃ
+    // ï¿½ï¿½ï¿½Û¾ï¿½Í¨streamï¿½ï¿½ï¿½ï¿½
     public int[] intersection2(int[] nums1, int[] nums2) {
         Set<Integer> set = Arrays.stream(nums1).boxed().collect(Collectors.toSet());
         return Arrays.stream(nums2).distinct().filter(set::contains).toArray();

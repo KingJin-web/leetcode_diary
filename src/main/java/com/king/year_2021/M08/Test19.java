@@ -4,7 +4,7 @@ import com.king.util.Helper;
 
 /**
  * @program: leetcode
- * @description: 345. 反转字符串中的元音字母
+ * @description: 345. 锟斤拷转锟街凤拷锟斤拷锟叫碉拷元锟斤拷锟斤拷母
  * https://leetcode-cn.com/problems/reverse-vowels-of-a-string/
  * @author: King
  * @create: 2021-08-19 16:01
@@ -13,8 +13,8 @@ public class Test19 {
     private static Test19 test19 = new Test19();
 
     /**
-     * 执行用时： 3 ms , 在所有 Java 提交中击败了 83.83% 的用户
-     * 内存消耗： 38.4 MB , 在所有 Java 提交中击败了 77.08% 的用户
+     * 执锟斤拷锟斤拷时锟斤拷 3 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 83.83% 锟斤拷锟矫伙拷
+     * 锟节达拷锟斤拷锟侥ｏ拷 38.4 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 77.08% 锟斤拷锟矫伙拷
      *
      * @param s
      * @return

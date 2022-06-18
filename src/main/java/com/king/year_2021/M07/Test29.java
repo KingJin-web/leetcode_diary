@@ -4,14 +4,14 @@ import com.king.util.Helper;
 
 /**
  * @program: leetcode
- * @description: 509. ì³²¨ÄÇÆõÊı
+ * @description: 509. ì³²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/fibonacci-number/
  * @author: King
  * @create: 2021-07-25 23:39
  */
 public class Test29 {
-    //F(0) = 0£¬F(1) = 1
-    //F(n) = F(n - 1) + F(n - 2)£¬ÆäÖĞ n > 1
+    //F(0) = 0ï¿½ï¿½F(1) = 1
+    //F(n) = F(n - 1) + F(n - 2)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ n > 1
     public int fib1(int n) {
         int[] F = new int[]{0, 1, 0};
         if (n <= 1)

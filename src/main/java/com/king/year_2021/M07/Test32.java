@@ -7,7 +7,7 @@ import java.util.Stack;
 
 /**
  * @program: leetcode
- * @description: 20. 有效的括号
+ * @description: 20. 锟斤拷效锟斤拷锟斤拷锟斤拷
  * https://leetcode-cn.com/problems/valid-parentheses/
  * @author: King
  * @create: 2021-07-28 14:41
@@ -22,8 +22,8 @@ public class Test32 {
     }
 
     /**
-     * 执行用时： 1 ms , 在所有 Java 提交中击败了 99.28% 的用户
-     * 内存消耗： 36.6 MB , 在所有 Java 提交中击败了 52.85% 的用户
+     * 执锟斤拷锟斤拷时锟斤拷 1 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 99.28% 锟斤拷锟矫伙拷
+     * 锟节达拷锟斤拷锟侥ｏ拷 36.6 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 52.85% 锟斤拷锟矫伙拷
      *
      * @param s
      * @return

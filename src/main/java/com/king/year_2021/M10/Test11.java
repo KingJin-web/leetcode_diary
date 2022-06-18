@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * @program: leetcode
- * @description: 273. 整数转换英文表示
+ * @description: 273. 锟斤拷锟斤拷转锟斤拷英锟侥憋拷示
  * @author: King
  * @create: 2021-10-11 21:55
  */
@@ -15,7 +15,7 @@ public class Test11 {
     String[] mid = {"Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
     String[] high = {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
 
-    //执行用时： 11 ms , 在所有 Java 提交中击败了 31.16% 的用户 内存消耗： 38.4 MB , 在所有 Java 提交中击败了 36.04% 的用户
+    //执锟斤拷锟斤拷时锟斤拷 11 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 31.16% 锟斤拷锟矫伙拷 锟节达拷锟斤拷锟侥ｏ拷 38.4 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 36.04% 锟斤拷锟矫伙拷
     public String numberToWords(int num) {
 
 

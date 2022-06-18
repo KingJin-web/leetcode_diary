@@ -6,7 +6,7 @@ import java.util.*;
 
 /**
  * @program: leetcode
- * @description: 313. ³¬¼¶³óÊý
+ * @description: 313. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/super-ugly-number/
  * @author: King
  * @create: 2021-08-09 23:26

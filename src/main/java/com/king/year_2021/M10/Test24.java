@@ -3,7 +3,7 @@ package com.king.year_2021.M10;
 import java.util.*;
 /**
  * @program: leetcode
- * @description: 638. ´óÀñ°ü
+ * @description: 638. ï¿½ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/shopping-offers/
  * @author: King
  * @create: 2021-10-24 02:20
@@ -14,7 +14,7 @@ public class Test24 {
     public int shoppingOffers(List<Integer> price, List<List<Integer>> special, List<Integer> needs) {
         int n = price.size();
 
-        // ¹ýÂË²»ÐèÒª¼ÆËãµÄ´óÀñ°ü£¬Ö»±£ÁôÐèÒª¼ÆËãµÄ´óÀñ°ü
+        // ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½
         List<List<Integer>> filterSpecial = new ArrayList<List<Integer>>();
         for (List<Integer> sp : special) {
             int totalCount = 0, totalPrice = 0;
@@ -30,23 +30,23 @@ public class Test24 {
         return dfs(price, special, needs, filterSpecial, n);
     }
 
-    // ¼ÇÒä»¯ËÑË÷¼ÆËãÂú×ã¹ºÎïÇåµ¥ËùÐè»¨·ÑµÄ×îµÍ¼Û¸ñ
+    // ï¿½ï¿½ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã¹ºï¿½ï¿½ï¿½åµ¥ï¿½ï¿½ï¿½è»¨ï¿½Ñµï¿½ï¿½ï¿½Í¼Û¸ï¿½
     public int dfs(List<Integer> price, List<List<Integer>> special, List<Integer> curNeeds, List<List<Integer>> filterSpecial, int n) {
         if (!memo.containsKey(curNeeds)) {
             int minPrice = 0;
             for (int i = 0; i < n; ++i) {
-                minPrice += curNeeds.get(i) * price.get(i); // ²»¹ºÂòÈÎºÎ´óÀñ°ü£¬Ô­¼Û¹ºÂò¹ºÎïÇåµ¥ÖÐµÄËùÓÐÎïÆ·
+                minPrice += curNeeds.get(i) * price.get(i); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎºÎ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½Û¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½åµ¥ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·
             }
             for (List<Integer> curSpecial : filterSpecial) {
                 int specialPrice = curSpecial.get(n);
                 List<Integer> nxtNeeds = new ArrayList<Integer>();
                 for (int i = 0; i < n; ++i) {
-                    if (curSpecial.get(i) > curNeeds.get(i)) { // ²»ÄÜ¹ºÂò³¬³ö¹ºÎïÇåµ¥Ö¸¶¨ÊýÁ¿µÄÎïÆ·
+                    if (curSpecial.get(i) > curNeeds.get(i)) { // ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½ò³¬³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½åµ¥Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·
                         break;
                     }
                     nxtNeeds.add(curNeeds.get(i) - curSpecial.get(i));
                 }
-                if (nxtNeeds.size() == n) { // ´óÀñ°ü¿ÉÒÔ¹ºÂò
+                if (nxtNeeds.size() == n) { // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¹ï¿½ï¿½ï¿½
                     minPrice = Math.min(minPrice, dfs(price, special, nxtNeeds, filterSpecial, n) + specialPrice);
                 }
             }

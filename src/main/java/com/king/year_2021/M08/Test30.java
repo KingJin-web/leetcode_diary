@@ -7,14 +7,14 @@ import java.util.Random;
 
 /**
  * @program: leetcode
- * @description: 528. °´È¨ÖØËæ»úÑ¡Ôñ
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/random-pick-with-weight
+ * @description: 528. ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/random-pick-with-weight
  * @author: King
  * @create: 2021-08-30 13:59
  */
 public class Test30 {
 
-    //Ö´ÐÐÓÃÊ±£º 28 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 62.44% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 43.4 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 33.78% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 28 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 62.44% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 43.4 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 33.78% ï¿½ï¿½ï¿½Ã»ï¿½
     public static class Solution {
         int[] pre;
         int sum = 0;
@@ -49,36 +49,36 @@ public class Test30 {
     }
 
     public static void main(String[] args) {
-        //ÊäÈë£º
+        //ï¿½ï¿½ï¿½ë£º
         //["Solution","pickIndex","pickIndex","pickIndex","pickIndex","pickIndex"]
         //[[[1,3]],[],[],[],[],[]]
-        //Êä³ö£º
+        //ï¿½ï¿½ï¿½ï¿½ï¿½
         //[null,1,1,1,1,0]
-        //½âÊÍ£º
+        //ï¿½ï¿½ï¿½Í£ï¿½
         //Solution solution = new Solution([1, 3]);
-        //solution.pickIndex(); // ·µ»Ø 1£¬·µ»ØÏÂ±ê 1£¬·µ»Ø¸ÃÏÂ±ê¸ÅÂÊÎª 3/4 ¡£
-        //solution.pickIndex(); // ·µ»Ø 1
-        //solution.pickIndex(); // ·µ»Ø 1
-        //solution.pickIndex(); // ·µ»Ø 1
-        //solution.pickIndex(); // ·µ»Ø 0£¬·µ»ØÏÂ±ê 0£¬·µ»Ø¸ÃÏÂ±ê¸ÅÂÊÎª 1/4 ¡£
+        //solution.pickIndex(); // ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½ 1ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½Â±ï¿½ï¿½ï¿½ï¿½Îª 3/4 ï¿½ï¿½
+        //solution.pickIndex(); // ï¿½ï¿½ï¿½ï¿½ 1
+        //solution.pickIndex(); // ï¿½ï¿½ï¿½ï¿½ 1
+        //solution.pickIndex(); // ï¿½ï¿½ï¿½ï¿½ 1
+        //solution.pickIndex(); // ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½ 0ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½Â±ï¿½ï¿½ï¿½ï¿½Îª 1/4 ï¿½ï¿½
         //
-        //ÓÉÓÚÕâÊÇÒ»¸öËæ»úÎÊÌâ£¬ÔÊÐí¶à¸ö´ð°¸£¬Òò´ËÏÂÁÐÊä³ö¶¼¿ÉÒÔ±»ÈÏÎªÊÇÕýÈ·µÄ:
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ð°¸£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½:
         //[null,1,1,1,1,0]
         //[null,1,1,1,1,1]
         //[null,1,1,1,0,0]
         //[null,1,1,1,0,1]
         //[null,1,0,1,0,0]
         //......
-        //ÖîÈô´ËÀà¡£
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à¡£
 
         Solution solution = new Solution(Helper.getArrays(1, 3));
         ArrayList<Integer> list = new ArrayList<>();
 
-        list.add(solution.pickIndex()); // ·µ»Ø 1£¬·µ»ØÏÂ±ê 1£¬·µ»Ø¸ÃÏÂ±ê¸ÅÂÊÎª 3/4 ¡£
-        list.add(solution.pickIndex()); // ·µ»Ø 1
-        list.add(solution.pickIndex()); // ·µ»Ø 1
-        list.add(solution.pickIndex()); // ·µ»Ø 1
-        list.add(solution.pickIndex()); // ·µ»Ø 0£¬·µ»ØÏÂ±ê 0£¬·µ»Ø¸ÃÏÂ±ê¸ÅÂÊÎª 1/4 ¡£
+        list.add(solution.pickIndex()); // ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½ 1ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½Â±ï¿½ï¿½ï¿½ï¿½Îª 3/4 ï¿½ï¿½
+        list.add(solution.pickIndex()); // ï¿½ï¿½ï¿½ï¿½ 1
+        list.add(solution.pickIndex()); // ï¿½ï¿½ï¿½ï¿½ 1
+        list.add(solution.pickIndex()); // ï¿½ï¿½ï¿½ï¿½ 1
+        list.add(solution.pickIndex()); // ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½ 0ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½Â±ï¿½ï¿½ï¿½ï¿½Îª 1/4 ï¿½ï¿½
         Helper.print(list.toArray());
     }
 /**

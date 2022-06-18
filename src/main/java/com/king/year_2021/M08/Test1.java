@@ -15,36 +15,36 @@ public class Test1 {
 
 
     /**
-     * 1337. ¾ØÕóÖÐÕ½¶·Á¦×îÈõµÄ K ÐÐ
+     * 1337. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ K ï¿½ï¿½
      * https://leetcode-cn.com/problems/the-k-weakest-rows-in-a-matrix/
      */
     public static class T1 {
 
-        // ¶þ·Ö + ´ó¸ù¶Ñ
-        // Ê±¼ä£ºO(M*logN + M*logK)
-        // ¿Õ¼ä£ºO(M + K)
+        // ï¿½ï¿½ï¿½ï¿½ + ï¿½ï¿½ï¿½ï¿½ï¿½
+        // Ê±ï¿½ä£ºO(M*logN + M*logK)
+        // ï¿½Õ¼ä£ºO(M + K)
         public int[] kWeakestRows(int[][] mat, int k) {
             int m = mat.length;
-            // 1£©Í³¼ÆÃ¿ÐÐµÄ¾üÈËÊýÁ¿£¬ÌîÈëarrÊý×é
-            int[][] arr = new int[m][2]; // arr[i][0]£ºµÚiÐÐµÄ¾üÈËÊýÁ¿£¬arr[i][1]£ºÐÐºÅi
+            // 1ï¿½ï¿½Í³ï¿½ï¿½Ã¿ï¿½ÐµÄ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½arrï¿½ï¿½ï¿½ï¿½
+            int[][] arr = new int[m][2]; // arr[i][0]ï¿½ï¿½ï¿½ï¿½iï¿½ÐµÄ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½arr[i][1]ï¿½ï¿½ï¿½Ðºï¿½i
             for (int i = 0; i < m; i++) {
-                int index = findTheMostRightOne(mat[i]); // ¶þ·Ö²éÕÒ
+                int index = findTheMostRightOne(mat[i]); // ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½
                 arr[i] = new int[]{index + 1, i};
             }
-            // 2£©Ê¹ÓÃÈÝÁ¿ÎªkµÄ´ó¸ù¶Ñ£¬¶Ñ¶¥Î¬»¤"ÃÅ¼÷"£¬ÈÝÁ¿ÂúÁËºó£¬Ö»ÓÐ"¸Éµô"ÃÅ¼÷£¬·½¿ÉÈë¶Ñ
+            // 2ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªkï¿½Ä´ï¿½ï¿½ï¿½Ñ£ï¿½ï¿½Ñ¶ï¿½Î¬ï¿½ï¿½"ï¿½Å¼ï¿½"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëºï¿½Ö»ï¿½ï¿½"ï¿½Éµï¿½"ï¿½Å¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             PriorityQueue<int[]> maxHeap = new PriorityQueue<>(((o1, o2) -> o2[0] != o1[0] ? o2[0] - o1[0] : o2[1] - o1[1]));
             for (int[] row : arr) {
-                if (maxHeap.size() < k) maxHeap.add(row); // ÈÝÁ¿Î´Âú£¬Ö±½ÓÈë¶Ñ
-                else { // maxHeap.size() == k £¬´ó¸ù¶ÑÂúÁË
+                if (maxHeap.size() < k) maxHeap.add(row); // ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½
+                else { // maxHeap.size() == k ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                     int[] peek = maxHeap.peek();
 
                     if (row[0] < peek[0] || (row[0] == peek[0] && row[1] < peek[1])) {
-                        maxHeap.poll(); // ¸ÉµôÃÅ¼÷
-                        maxHeap.add(row); // ·½¿ÉÈë¶Ñ
+                        maxHeap.poll(); // ï¿½Éµï¿½ï¿½Å¼ï¿½
+                        maxHeap.add(row); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                     }
                 }
             }
-            // 3£©´Ó´ó¸ù¶ÑÒÀ´Îµ¯³öÔªËØ£¬¹¹½¨´ð°¸
+            // 3ï¿½ï¿½ï¿½Ó´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îµï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             int[] ans = new int[k];
             while (k >= 1) {
                 ans[--k] = maxHeap.poll()[1];
@@ -52,15 +52,15 @@ public class Test1 {
             return ans;
         }
 
-        // ¶þ·Ö²éÕÒ£¬ÕÒµ½×îÓÒ²àµÄ1£¬½«ÏÂ±ê·µ»Ø£¬Èç¹ûÃ»ÓÐ£¬·µ»Ø-1
+        // ï¿½ï¿½ï¿½Ö²ï¿½ï¿½Ò£ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½Â±ê·µï¿½Ø£ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½-1
         private int findTheMostRightOne(int[] arr) {
             int l = 0, r = arr.length - 1, index = -1;
             while (l <= r) {
                 int m = l + (r - l) / 2;
-                if (arr[m] == 1) { // ÕÒµ½ÁË1£¬¼ÇÂ¼ÏÂ´ËÊ±index£¬ÔÙ¿´ÓÒ²àÊÇ·ñ»¹ÓÐ¸üÓÒµÄ
+                if (arr[m] == 1) { // ï¿½Òµï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Â´ï¿½Ê±indexï¿½ï¿½ï¿½Ù¿ï¿½ï¿½Ò²ï¿½ï¿½Ç·ï¿½ï¿½Ð¸ï¿½ï¿½Òµï¿½
                     index = m;
                     l = m + 1;
-                } else { // ×ó²à¶þ·Ö
+                } else { // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                     r = m - 1;
                 }
             }
@@ -81,7 +81,7 @@ public class Test1 {
     }
 
     /**
-     * 5830. Èý³ýÊý
+     * 5830. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public static class T2{
         public static void main(String args[]) {

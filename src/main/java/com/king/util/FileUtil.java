@@ -23,11 +23,10 @@ public class FileUtil {
 
         //读取指定文件夹下的所有文件
         //给我你的目录文件夹路径
-        String filepath = "F:\\A";
+        String filepath = "H:\\jetbrains\\java\\leetcode_diary\\src\\main\\java\\com";
         File file = new File(filepath);
         Map<String, String> map = new HashMap<>();
-        map.put("要修改的内容1", "修改的内容1");
-        map.put("要修改的内容2;", "修改的内容2");
+        map.put("@author: King", "@author: King");
         new FileUtil(map).refreshFileList(file);
 
     }

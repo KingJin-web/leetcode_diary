@@ -8,25 +8,25 @@ import java.util.Set;
 
 /**
  * @program: leetcode
- * @description: 575. ·ÖÌÇ¹û
+ * @description: 575. ï¿½ï¿½ï¿½Ç¹ï¿½
  * https://leetcode-cn.com/problems/distribute-candies/
  * @author: King
  * @create: 2021-11-01 04:09
  */
 public class Test1 {
 
-    //¸ø¶¨Ò»¸öÅ¼Êý³¤¶ÈµÄÊý×é£¬ÆäÖÐ²»Í¬µÄÊý×Ö´ú±í×Å²»Í¬ÖÖÀàµÄÌÇ¹û£¬Ã¿Ò»¸öÊý×Ö´ú±íÒ»¸öÌÇ¹û¡£
-    // ÄãÐèÒª°ÑÕâÐ©ÌÇ¹ûÆ½¾ù·Ö¸øÒ»¸öµÜµÜºÍÒ»¸öÃÃÃÃ¡£·µ»ØÃÃÃÃ¿ÉÒÔ»ñµÃµÄ×î´óÌÇ¹ûµÄÖÖÀàÊý¡£
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Å¼ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½Ð²ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Å²ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½ï¿½Ã¿Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½ï¿½
+    // ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ð©ï¿½Ç¹ï¿½Æ½ï¿½ï¿½ï¿½Ö¸ï¿½Ò»ï¿½ï¿½ï¿½ÜµÜºï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ã¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ô»ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     /**
-     * Ì°ÐÄ
-     * ¸ù¾ÝÌâÒâ£¬ÃÃÃÃÃ¿ÖÖÌÇ¹ûÖÁÉÙÒªÄÃÒ»¿Å1.
-     * 1. Èç¹ûÌÇ¹ûÖÖÀàÊý<=Êý×é³¤¶ÈµÄÒ»°ë£¬ÄÇÃ´ÃÃÃÃ¿ÉÒÔÄÃµ½ËùÓÐÖÖÀàµÄÌÇ¹û¡£ans = ÌÇ¹ûÖÖÀàÊý
-     * 2. Èç¹ûÌÇ¹ûÖÖÀàÊý>Êý×é³¤¶ÈµÄÒ»°ë£¬ÄÇÃ´ÃÃÃÃÄÜÄÃµ½µÄËùÓÐÌÇ¹û¶¼»¥²»ÏàÍ¬¡£ans = candyType.length/2
-     * ¶þÕßÈ¡Ð¡¼´¿É¡£
+     * Ì°ï¿½ï¿½
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ò»ï¿½ï¿½1.
+     * 1. ï¿½ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<=ï¿½ï¿½ï¿½é³¤ï¿½Èµï¿½Ò»ï¿½ë£¬ï¿½ï¿½Ã´ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½ï¿½ans = ï¿½Ç¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     * 2. ï¿½ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½>ï¿½ï¿½ï¿½é³¤ï¿½Èµï¿½Ò»ï¿½ë£¬ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ans = candyType.length/2
+     * ï¿½ï¿½ï¿½ï¿½È¡Ð¡ï¿½ï¿½ï¿½É¡ï¿½
      */
 
-    //Ö´ÐÐÓÃÊ±£º 36 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 42.44% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 40 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 93.15% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 36 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 42.44% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 40 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 93.15% ï¿½ï¿½ï¿½Ã»ï¿½
     public int distributeCandies(int[] candyType) {
         Set<Integer> set = new HashSet<>();
         for (int num : candyType) {
@@ -36,8 +36,8 @@ public class Test1 {
      //   return set.size() <= candyType.length / 2 ? ln : ln / 2;
     }
 
-    //ÊäÈë: candies = [1,1,2,2,3,3]
-    //Êä³ö: 3
+    //ï¿½ï¿½ï¿½ï¿½: candies = [1,1,2,2,3,3]
+    //ï¿½ï¿½ï¿½: 3
     public static void main(String[] args) {
         Test1 test1 = new Test1();
         MyPrint.print(test1.distributeCandies(Helper.getArrays(1,1,2,2,3,3)));

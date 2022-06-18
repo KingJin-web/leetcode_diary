@@ -5,18 +5,18 @@ import com.king.util.MyPrint;
 
 /**
  * @program: leetcode
- * @description: 794. ÓĞĞ§µÄ¾®×ÖÓÎÏ·
+ * @description: 794. ï¿½ï¿½Ğ§ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½Ï·
  * https://leetcode-cn.com/problems/valid-tic-tac-toe-state/
  * @author: King
  * @create: 2021-12-09 23:19
  */
 public class Test9 {
 
-    //Ö´ĞĞÓÃÊ±£º 13 ms , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 7.10% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 36.9 MB , ÔÚËùÓĞ Java Ìá½»ÖĞ»÷°ÜÁË 5.33% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 13 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 7.10% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 36.9 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ï¿½ 5.33% ï¿½ï¿½ï¿½Ã»ï¿½
     public boolean validTicTacToe(String[] board) {
-        // ÅĞ¶ÏÔÚ¹æÔòÏÂ£¬Á½¸öÈËÂÖÁ÷ÓÎÏ·ÄÜ·ñĞÎ³Éboard
+        // ï¿½Ğ¶ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½Â£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½Ü·ï¿½ï¿½Î³ï¿½board
         int XCount = 0, OCount = 0;
-        String[] all = new String[8]; // ´æ´¢8ÌõÏßµÄÇé¿ö
+        String[] all = new String[8]; // ï¿½æ´¢8ï¿½ï¿½ï¿½ßµï¿½ï¿½ï¿½ï¿½
         for(int i=0; i<3; i++){
             all[i] = board[i];
         }
@@ -32,19 +32,19 @@ public class Test9 {
         }
         all[idx++] = ""+board[0].charAt(0)+board[1].charAt(1)+board[2].charAt(2);
         all[idx] = ""+board[0].charAt(2)+board[1].charAt(1)+board[2].charAt(0);
-        // Îª¿ÕÒ²ĞĞ
+        // Îªï¿½ï¿½Ò²ï¿½ï¿½
         if(OCount+XCount==0) return true;
-            // OµÄ¸öÊı²»»á³¬¹ıX£¬µ«XµÄ¸öÊı²»»á±ÈO¶àÁ½¸ö
+            // Oï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á³¬ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½Xï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         else if(OCount+2<=XCount || XCount<OCount) return false;
         else{
             int Count = XCount + OCount;
-            if(Count%2==0){  // Å¼Êı¸ö£¬ËµÃ÷O³ÉÒ»ÌõÏß»òÕßÁ½¸ö¶¼²»³ÉÏß
+            if(Count%2==0){  // Å¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½Oï¿½ï¿½Ò»ï¿½ï¿½ï¿½ß»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 for(int i=0; i<8; i++){
                     if(all[i].equals("XXX")){
                         return false;
                     }
                 }
-            }else{  // ÆæÊı¸ö£¬ËµÃ÷X³ÉÒ»ÌõÏß»òÕßÁ½¸ö¶¼²»³ÉÏß
+            }else{  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½Xï¿½ï¿½Ò»ï¿½ï¿½ï¿½ß»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 for(int i=0; i<8; i++){
                     if(all[i].equals("OOO")){
                         return false;
@@ -57,8 +57,8 @@ public class Test9 {
 
     public static void main(String[] args) {
         Test9 test9 = new Test9();
-        //ÊäÈë£ºboard = ["XXX","   ","OOO"]
-        //Êä³ö£ºfalse
+        //ï¿½ï¿½ï¿½ë£ºboard = ["XXX","   ","OOO"]
+        //ï¿½ï¿½ï¿½ï¿½ï¿½false
         MyPrint.print(test9.validTicTacToe(Helper.getArrays("XXX","   ","OOO")));
     }
 }

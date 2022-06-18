@@ -12,14 +12,14 @@ import java.util.regex.Pattern;
 public class StringUtil {
 
 
-    //¼ì²â×Ö·û´®ÖÐÊÇ·ñÓÐÖÐÎÄ  ²»°üº¬ÖÐÎÄ·ûºÅ
+    //ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
     public static boolean isContainChinese(String str) {
         Pattern p = Pattern.compile("[\u4e00-\u9fa5]+");
         Matcher m = p.matcher(str);
         return m.find();
     }
 
-    //¼ì²â×Ö·û´®ÖÐÊÇ·ñÓÐË«×Ö½Ú×Ö·û°üº¬ÖÐÎÄ,ÖÐÎÄ·ûºÅ
+    //ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ë«ï¿½Ö½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
     public static boolean isContainTwoByte(String str) {
         Pattern p = Pattern.compile("[^\\x00-\\xff]");
         Matcher m = p.matcher(str);

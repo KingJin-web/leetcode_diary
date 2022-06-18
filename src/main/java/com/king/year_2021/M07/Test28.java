@@ -4,7 +4,7 @@ import com.king.util.Helper;
 
 /**
  * @program: leetcode
- * @description: 1047. É¾³ý×Ö·û´®ÖÐµÄËùÓÐÏàÁÚÖØ¸´Ïî
+ * @description: 1047. É¾ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/
  * @author: King
  * @create: 2021-07-25 21:30
@@ -27,7 +27,7 @@ public class Test28 {
     }
 
     /**
-     * ÔÙ´Î³¬Ê±
+     * ï¿½Ù´Î³ï¿½Ê±
      *
      * @param S
      * @return
@@ -48,7 +48,7 @@ public class Test28 {
     }
 
     /**
-     * ¿ÉÏ§³¬Ê±ÁË
+     * ï¿½ï¿½Ï§ï¿½ï¿½Ê±ï¿½ï¿½
      *
      * @param S
      * @return

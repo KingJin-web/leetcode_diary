@@ -4,7 +4,7 @@ import com.king.util.MyPrint;
 
 /**
  * @program: leetcode
- * @description: 29. Á½ÊýÏà³ý
+ * @description: 29. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/divide-two-integers/
  * @author: King
  * @create: 2021/10/12 21:27
@@ -12,9 +12,9 @@ import com.king.util.MyPrint;
 public class Test12 {
     private static final int MAX = 2147483647;
 
-    public int divide(int dividend, int divisor) { //Ê×ÏÈ½øÐÐÔ¤´¦Àí
+    public int divide(int dividend, int divisor) { //ï¿½ï¿½ï¿½È½ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½ï¿½
         if (divisor == 1) return dividend;
-        if (divisor == -1) return dividend < MAX * -1 ? MAX : dividend * -1; //¿ªÊ¼Ïò¼õ
+        if (divisor == -1) return dividend < MAX * -1 ? MAX : dividend * -1; //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½
         long res = 0, a = dividend, b = divisor, flag = -1;
         if (a >= 0 && b > 0 || a < 0 && b < 0) flag = 1;
         a = Math.abs(a);

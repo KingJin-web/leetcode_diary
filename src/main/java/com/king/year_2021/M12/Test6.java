@@ -7,16 +7,16 @@ import java.util.stream.Collectors;
 
 /**
  * @program: leetcode
- * @description: 1816. ½Ø¶Ï¾ä×Ó
- * À´Ô´£ºÁ¦¿Û£¨LeetCode£©
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/truncate-sentence
- * Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+ * @description: 1816. ï¿½Ø¶Ï¾ï¿½ï¿½ï¿½
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/truncate-sentence
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-12-06 22:25
  */
 public class Test6 {
 
-    //Ö´ÐÐÓÃÊ±£º 1 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 53.65% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 36.9 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 24.02% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 1 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 53.65% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 36.9 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 24.02% ï¿½ï¿½ï¿½Ã»ï¿½
     public String truncateSentence(String s, int k) {
       String[] strings = s.split(" ");
       StringBuilder stringBuilder = new StringBuilder();
@@ -42,12 +42,12 @@ public class Test6 {
     public static void main(String[] args) {
         Test6 test6 = new Test6();
 
-        //ÊäÈë£ºs = "Hello how are you Contestant", k = 4
-        //Êä³ö£º"Hello how are you"
-        //½âÊÍ£º
-        //s ÖÐµÄµ¥´ÊÎª ["Hello", "how" "are", "you", "Contestant"]
-        //Ç° 4 ¸öµ¥´ÊÎª ["Hello", "how", "are", "you"]
-        //Òò´Ë£¬Ó¦µ±·µ»Ø "Hello how are you"
+        //ï¿½ï¿½ï¿½ë£ºs = "Hello how are you Contestant", k = 4
+        //ï¿½ï¿½ï¿½ï¿½ï¿½"Hello how are you"
+        //ï¿½ï¿½ï¿½Í£ï¿½
+        //s ï¿½ÐµÄµï¿½ï¿½ï¿½Îª ["Hello", "how" "are", "you", "Contestant"]
+        //Ç° 4 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª ["Hello", "how", "are", "you"]
+        //ï¿½ï¿½Ë£ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ "Hello how are you"
         //
 
         MyPrint.print(test6.truncateSentence("Hello how are you Contestant", 4));

@@ -13,16 +13,16 @@ import java.util.stream.IntStream;
 public class Test7 {
 
     /**
-     * 剑指 Offer 64. 求1+2+…+n
-     * 求 1+2+...+n ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。
+     * 锟斤拷指 Offer 64. 锟斤拷1+2+锟斤拷+n
+     * 锟斤拷 1+2+...+n 锟斤拷要锟斤拷锟斤拷使锟矫乘筹拷锟斤拷锟斤拷for锟斤拷while锟斤拷if锟斤拷else锟斤拷switch锟斤拷case锟饺关硷拷锟街硷拷锟斤拷锟斤拷锟叫讹拷锟斤拷洌ˋ?B:C锟斤拷锟斤拷
      * https://leetcode-cn.com/problems/qiu-12n-lcof/
      */
     public static class T1 {
         int[] arr = new int[]{0};
 
         /**
-         * 执行用时： 1918 ms , 在所有 Java 提交中击败了 48.47% 的用户
-         * 内存消耗： 38.4 MB , 在所有 Java 提交中击败了 5.02% 的用户
+         * 执锟斤拷锟斤拷时锟斤拷 1918 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 48.47% 锟斤拷锟矫伙拷
+         * 锟节达拷锟斤拷锟侥ｏ拷 38.4 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 5.02% 锟斤拷锟矫伙拷
          * @param n
          * @return
          */

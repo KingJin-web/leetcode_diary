@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @program: leetcode
- * @description: 5863. 统计特殊四元组
+ * @description: 5863. 统锟斤拷锟斤拷锟斤拷锟斤拷元锟斤拷
  * @author: King
  * @create: 2021-09-05 10:57
  */

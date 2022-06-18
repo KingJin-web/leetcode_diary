@@ -5,14 +5,14 @@ import com.king.util.MyPrint;
 
 /**
  * @program: leetcode
- * @description: 496. 下一个更大元素 I
+ * @description: 496. 锟斤拷一锟斤拷锟斤拷锟斤拷元锟斤拷 I
  * https://leetcode-cn.com/problems/next-greater-element-i/
  * @author: King
  * @create: 2021-10-26 23:12
  */
 public class Test25 {
-    //执行用时： 3 ms , 在所有 Java 提交中击败了 91.45% 的用户
-    //内存消耗： 38.3 MB , 在所有 Java 提交中击败了 94.31% 的用户
+    //执锟斤拷锟斤拷时锟斤拷 3 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 91.45% 锟斤拷锟矫伙拷
+    //锟节达拷锟斤拷锟侥ｏ拷 38.3 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 94.31% 锟斤拷锟矫伙拷
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         int m = nums1.length, n = nums2.length;
         int[] res = new int[m];

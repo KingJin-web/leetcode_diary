@@ -3,7 +3,7 @@ package com.king.year_2021.contest.weekly_contest_262;
 import java.util.*;
 /**
  * @program: leetcode
- * @description: 5895. »ñÈ¡µ¥ÖµÍø¸ñµÄ×îÐ¡²Ù×÷Êý
+ * @description: 5895. ï¿½ï¿½È¡ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/contest/weekly-contest-262/problems/minimum-operations-to-make-a-uni-value-grid/
  * @author: King
  * @create: 2021-10-10 11:18
@@ -16,7 +16,7 @@ public class Test2 {
 }
 class StockPrice {
 
-    //Ê±¼ä´Á  ¼Û¸ñ
+    //Ê±ï¿½ï¿½ï¿½  ï¿½Û¸ï¿½
     Map<Integer, Integer> map;
 
     int last;

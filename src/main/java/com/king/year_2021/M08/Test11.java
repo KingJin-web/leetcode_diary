@@ -4,7 +4,7 @@ import com.king.util.Helper;
 
 /**
  * @program: leetcode
- * @description: 413. 等差数列划分
+ * @description: 413. 锟饺诧拷锟斤拷锟叫伙拷锟斤拷
  * https://leetcode-cn.com/problems/arithmetic-slices/
  * @author: King
  * @create: 2021-08-11 22:34
@@ -13,8 +13,8 @@ public class Test11 {
 
     static Test11 test11 = new Test11();
     /**
-     * 执行用时： 0 ms , 在所有 Java 提交中击败了 100.00% 的用户
-     * 内存消耗： 36.2 MB , 在所有 Java 提交中击败了 47.28% 的用户
+     * 执锟斤拷锟斤拷时锟斤拷 0 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 100.00% 锟斤拷锟矫伙拷
+     * 锟节达拷锟斤拷锟侥ｏ拷 36.2 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 47.28% 锟斤拷锟矫伙拷
      *
      * @param nums
      * @return

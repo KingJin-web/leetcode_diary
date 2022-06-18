@@ -4,18 +4,18 @@ import com.king.util.Helper;
 
 /**
  * @program: leetcode
- * @description: 419. ¼×°åÉÏµÄÕ½½¢
+ * @description: 419. ï¿½×°ï¿½ï¿½Ïµï¿½Õ½ï¿½ï¿½
  * @author: King
  * @create: 2021-12-18 23:19
  */
 public class Test18 {
-    //¸øÄãÒ»¸ö´óÐ¡Îª m x n µÄ¾ØÕó board ±íÊ¾¼×°å£¬ÆäÖÐ£¬Ã¿¸öµ¥Ôª¸ñ¿ÉÒÔÊÇÒ»ËÒÕ½½¢ 'X' »òÕßÊÇÒ»¸ö¿ÕÎ» '.' £¬·µ»ØÔÚ¼×°å board ÉÏ·ÅÖÃµÄ Õ½½¢ µÄÊýÁ¿¡£
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð¡Îª m x n ï¿½Ä¾ï¿½ï¿½ï¿½ board ï¿½ï¿½Ê¾ï¿½×°å£¬ï¿½ï¿½ï¿½Ð£ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Õ½ï¿½ï¿½ 'X' ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î» '.' ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¼×°ï¿½ board ï¿½Ï·ï¿½ï¿½Ãµï¿½ Õ½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     //
-    //Õ½½¢ Ö»ÄÜË®Æ½»òÕß´¹Ö±·ÅÖÃÔÚ board ÉÏ¡£»»¾ä»°Ëµ£¬Õ½½¢Ö»ÄÜ°´ 1 x k£¨1 ÐÐ£¬k ÁÐ£©»ò k x 1£¨k ÐÐ£¬1 ÁÐ£©µÄÐÎ×´½¨Ôì£¬ÆäÖÐ k ¿ÉÒÔÊÇÈÎÒâ´óÐ¡¡£Á½ËÒÕ½½¢Ö®¼äÖÁÉÙÓÐÒ»¸öË®Æ½»ò´¹Ö±µÄ¿ÕÎ»·Ö¸ô £¨¼´Ã»ÓÐÏàÁÚµÄÕ½½¢£©¡£
+    //Õ½ï¿½ï¿½ Ö»ï¿½ï¿½Ë®Æ½ï¿½ï¿½ï¿½ß´ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ board ï¿½Ï¡ï¿½ï¿½ï¿½ï¿½ä»°Ëµï¿½ï¿½Õ½ï¿½ï¿½Ö»ï¿½Ü°ï¿½ 1 x kï¿½ï¿½1 ï¿½Ð£ï¿½k ï¿½Ð£ï¿½ï¿½ï¿½ k x 1ï¿½ï¿½k ï¿½Ð£ï¿½1 ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ì£¬ï¿½ï¿½ï¿½ï¿½ k ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ë®Æ½ï¿½ï¿½Ö±ï¿½Ä¿ï¿½Î»ï¿½Ö¸ï¿½ ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     //
-    //À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-    //Á´½Ó£ºhttps://leetcode-cn.com/problems/battleships-in-a-board
-    //Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+    //ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+    //ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/battleships-in-a-board
+    //ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     public static void main(String[] args) {
         String [] strings = Helper.getArrays("T0225KkcRBoQ8geCchilxvcIIACjVWnYaS5kRrbA","T0225KkcRktMplHUdhz8kaIIcACjVWnYaS5kRrbA","T0225KkcRhkd_QDWck_8wPILfQCjVWnYaS5kRrbA","T0225KkcRE9N8gXXJxj2wvALIgCjVWnYaS5kRrbA","T018v_h6QRgd_FLSIBOb1ACjVWnYaS5kRrbA","T0225KkcRBkQ9lCBIBzxxfRcIQCjVWnYaS5kRrbA","T008-bQxRxcQCjVWnYaS5kRrbA","T016aWXZlqWwIOFv975bCjVWnYaS5kRrbA","T0205KkcHkN7khOwVGGcxpVqCjVWnYaS5kRrbA","T0225KkcR08epgfUKEmgk6EJdQCjVWnYaS5kRrbA","T0205KkcKkBQkgWrYGyM45FXCjVWnYaS5kRrbA","T020u_91QBke9FTKJRP8nPAJCjVWnYaS5kRrbA","T023v_13QBYf81zKIxnwk_MCfW4CjVWnYaS5kRrbA","T014xLgwBEdH9VPXJQCjVWnYaS5kRrbA","T0077KQtGkoCjVWnYaS5kRrbA","T0157756SBod9lbfJxMCjVWnYaS5kRrbA","T022uv1yQBYe_VzTPR78nf8IfQCjVWnYaS5kRrbA","T0107KgtHldYtACjVWnYaS5kRrbA","T0205KkcPmJsoSCXc1-S56JoCjVWnYaS5kRrbA","T0225KkcRUhK8lLVJh_3lqVeIQCjVWnYaS5kRrbA","T0225KkcRBZM91PfKB-glKICJwCjVWnYaS5kRrbA","T0205KkcFEhgtCOgQX2A0r9RCjVWnYaS5kRrbA","T0225KkcRk9KoFWFJE7zwKMKdgCjVWnYaS5kRrbA","T0205KkcO2FmlBCoYGKA_qlPCjVWnYaS5kRrbA","T0225KkcRhkeplWBIR78k_cCIQCjVWnYaS5kRrbA","T020tvlySBka9F3KJxr1lP8NCjVWnYaS5kRrbA");

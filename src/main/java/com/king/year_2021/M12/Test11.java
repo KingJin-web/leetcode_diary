@@ -2,7 +2,7 @@ package com.king.year_2021.M12;
 
 /**
  * @program: leetcode
- * @description: 911. 在线选举
+ * @description: 911. 锟斤拷锟斤拷选锟斤拷
  * https://leetcode-cn.com/problems/online-election/
  * @author: King
  * @create: 2021-12-11 23:48

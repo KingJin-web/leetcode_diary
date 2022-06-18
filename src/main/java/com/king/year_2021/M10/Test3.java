@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * @program: leetcode
- * @description: 166. ·ÖÊýµ½Ð¡Êý
+ * @description: 166. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½
  * https://leetcode-cn.com/problems/fraction-to-recurring-decimal/
  * @author: King
  * @create: 2021-10-04 00:03

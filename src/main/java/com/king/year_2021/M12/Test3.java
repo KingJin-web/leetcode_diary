@@ -4,7 +4,7 @@ import java.util.PriorityQueue;
 
 /**
  * @program: leetcode
- * @description: 1005. K ´ÎÈ¡·´ºó×î´ó»¯µÄÊý×éºÍ
+ * @description: 1005. K ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó»¯µï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/maximize-sum-of-array-after-k-negations/
  * @author: King
  * @create: 2021-12-03 22:03

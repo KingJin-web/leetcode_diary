@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * @program: leetcode
- * @description: 677. 键值映射
+ * @description: 677. 锟斤拷值映锟斤拷
  * https://leetcode-cn.com/problems/map-sum-pairs/
  * @author: King
  * @create: 2021-11-14 12:33
@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class Test14 {
 
-    //执行用时： 12 ms , 在所有 Java 提交中击败了 66.71% 的用户 内存消耗： 38.3 MB , 在所有 Java 提交中击败了 75.04% 的用户
+    //执锟斤拷锟斤拷时锟斤拷 12 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 66.71% 锟斤拷锟矫伙拷 锟节达拷锟斤拷锟侥ｏ拷 38.3 MB , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 75.04% 锟斤拷锟矫伙拷
     public static class MapSum {
 
         private Map<String, Integer> map;

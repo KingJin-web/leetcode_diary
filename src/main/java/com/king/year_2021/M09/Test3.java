@@ -6,23 +6,23 @@ import java.util.*;
 
 /**
  * @program: leetcode
- * @description: ÃæÊÔÌâ 17.14. ×îÐ¡K¸öÊý
+ * @description: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 17.14. ï¿½ï¿½Ð¡Kï¿½ï¿½ï¿½ï¿½
  * https://leetcode-cn.com/problems/smallest-k-lcci/
  * @author: King
  * @create: 2021-09-03 14:16
  */
 public class Test3 {
-    //ÃæÊÔÌâ 17.14. ×îÐ¡K¸öÊý
-    //Éè¼ÆÒ»¸öËã·¨£¬ÕÒ³öÊý×éÖÐ×îÐ¡µÄk¸öÊý¡£ÒÔÈÎÒâË³Ðò·µ»ØÕâk¸öÊý¾ù¿É¡£
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 17.14. ï¿½ï¿½Ð¡Kï¿½ï¿½ï¿½ï¿½
+    //ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ã·¨ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½kï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ò·µ»ï¿½ï¿½ï¿½kï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¡ï¿½
     //
-    //Ê¾Àý£º
+    //Ê¾ï¿½ï¿½ï¿½ï¿½
     //
-    //ÊäÈë£º arr = [1,3,5,7,2,4,6,8], k = 4
-    //Êä³ö£º [1,2,3,4]
+    //ï¿½ï¿½ï¿½ë£º arr = [1,3,5,7,2,4,6,8], k = 4
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ [1,2,3,4]
 
 
-    //Ö´ÐÐÓÃÊ±£º 7 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 64.09% µÄÓÃ»§
-    //ÄÚ´æÏûºÄ£º 48.2 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 30.59% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 7 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 64.09% ï¿½ï¿½ï¿½Ã»ï¿½
+    //ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 48.2 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 30.59% ï¿½ï¿½ï¿½Ã»ï¿½
     public int[] smallestK1(int[] arr, int k) {
         Arrays.sort(arr);
         return Arrays.copyOf(arr, k);
@@ -36,7 +36,7 @@ public class Test3 {
 
     public int[] smallestK(int[] arr, int k) {
         int[] vec = new int[k];
-        if (k == 0) { // ÅÅ³ý 0 µÄÇé¿ö
+        if (k == 0) { // ï¿½Å³ï¿½ 0 ï¿½ï¿½ï¿½ï¿½ï¿½
             return vec;
         }
         PriorityQueue<Integer> queue = new PriorityQueue<Integer>(new Comparator<Integer>() {
@@ -81,45 +81,45 @@ public class Test3 {
                 }
                 List data = SurveyAnswerSQL.getInstance().doQuery(-1, "create_at", "desc", param);
 
-                //name: 'ºËÑé¼Û´óÈ«',
+                //name: 'ï¿½ï¿½ï¿½ï¿½Û´ï¿½È«',
                 Map<Integer, Integer> map1 = new HashMap<Integer, Integer>();
-                //name: 'Ä§¶¼²Æ¹Û',
+                //name: 'Ä§ï¿½ï¿½ï¿½Æ¹ï¿½',
                 Map<Integer, Integer> map2 = new HashMap<Integer, Integer>();
-                //name: 'ÐÂ·¿Ö¸ÄÏ',
+                //name: 'ï¿½Â·ï¿½Ö¸ï¿½ï¿½',
                 Map<Integer, Integer> map3 = new HashMap<Integer, Integer>();
-                //name: 'ÉýÑ§´óÈ«',
+                //name: 'ï¿½ï¿½Ñ§ï¿½ï¿½È«',
                 Map<Integer, Integer> map4 = new HashMap<Integer, Integer>();
-                //name: 'Âò·¿¹¥ÂÔ',
+                //name: 'ï¿½ò·¿¹ï¿½ï¿½ï¿½',
                 Map<Integer, Integer> map5 = new HashMap<Integer, Integer>();
-                //name: 'Æ½Ã×·¿²ú×ÉÑ¯',
+                //name: 'Æ½ï¿½×·ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯',
                 Map<Integer, Integer> map6 = new HashMap<Integer, Integer>();
-                //name: 'Æ½Ã×·¿²ú·þÎñºÅ',
+                //name: 'Æ½ï¿½×·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
                 Map<Integer, Integer> map7 = new HashMap<Integer, Integer>();
-                //name: '¶¶ÒôÕÔ¹«×Ó',
+                //name: 'ï¿½ï¿½ï¿½ï¿½ï¿½Ô¹ï¿½ï¿½ï¿½',
                 Map<Integer, Integer> map8 = new HashMap<Integer, Integer>();
                 if (data != null) {
                     for (Object o : data) {
                         String a = o.toString();
                         //System.out.println(a);
                         int index = a.indexOf("\"update_at\":\"") + 13;
-                        //µÃµ½ÕâÊÇÕâÖÜµÚ¼¸Ìì
+                        //ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÜµÚ¼ï¿½ï¿½ï¿½
                         int da = list.indexOf(a.substring(index, index + 10));
                         //System.out.println(da);
-                        if (a.contains("ºËÑé¼Û´óÈ«")) {
+                        if (a.contains("ï¿½ï¿½ï¿½ï¿½Û´ï¿½È«")) {
                             map1.put(da, map1.getOrDefault(da, 1) + 1);
-                        } else if (a.contains("Ä§¶¼²Æ¹Û")) {
+                        } else if (a.contains("Ä§ï¿½ï¿½ï¿½Æ¹ï¿½")) {
                             map2.put(da, map2.getOrDefault(da, 1) + 1);
-                        } else if (a.contains("ÐÂ·¿Ö¸ÄÏ")) {
+                        } else if (a.contains("ï¿½Â·ï¿½Ö¸ï¿½ï¿½")) {
                             map3.put(da, map3.getOrDefault(da, 1) + 1);
-                        } else if (a.contains("ÉýÑ§´óÈ«")) {
+                        } else if (a.contains("ï¿½ï¿½Ñ§ï¿½ï¿½È«")) {
                             map4.put(da, map4.getOrDefault(da, 1) + 1);
-                        } else if (a.contains("Âò·¿¹¥ÂÔ")) {
+                        } else if (a.contains("ï¿½ò·¿¹ï¿½ï¿½ï¿½")) {
                             map5.put(da, map5.getOrDefault(da, 1) + 1);
-                        } else if (a.contains("Æ½Ã×·¿²ú×ÉÑ¯")) {
+                        } else if (a.contains("Æ½ï¿½×·ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯")) {
                             map6.put(da, map6.getOrDefault(da, 1) + 1);
-                        } else if (a.contains("Æ½Ã×·¿²ú·þÎñºÅ")) {
+                        } else if (a.contains("Æ½ï¿½×·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")) {
                             map7.put(da, map7.getOrDefault(da, 1) + 1);
-                        } else if (a.contains("¶¶ÒôÕÔ¹«×Ó")) {
+                        } else if (a.contains("ï¿½ï¿½ï¿½ï¿½ï¿½Ô¹ï¿½ï¿½ï¿½")) {
                             map8.put(da, map8.getOrDefault(da, 1) + 1);
                         }
                     }

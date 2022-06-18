@@ -3,7 +3,7 @@ package com.king.year_2022.M05;
 import java.util.Arrays;
 
 /**
- * @author: 12613
+ * @author: King
  * @project: leetcode_diary
  * @pcakage: com.king.year_2022.M05.Test3
  * @date: 2022年05月03日 23:42

@@ -1,7 +1,7 @@
 package com.king.year_2022.M04;
 
 /**
- * @author: 12613
+ * @author: King
  * @project: leetcode_diary
  * @pcakage: com.king.year_2022.M04.Test30
  * @date: 2022年04月30日 23:37

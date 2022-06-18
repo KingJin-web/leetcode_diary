@@ -8,15 +8,15 @@ import java.util.concurrent.Semaphore;
 
 /**
  * @program: leetcode
- * @description: 1115. ½»Ìæ´òÓ¡FooBar
- * À´Ô´£ºÁ¦¿Û£¨LeetCode£©
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/print-foobar-alternately
- * Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+ * @description: 1115. ï¿½ï¿½ï¿½ï¿½ï¿½Ó¡FooBar
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/print-foobar-alternately
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-09-16 19:34
  */
 public class Test16 {
-    //Ö´ÐÐÓÃÊ±£º 24 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 31.45% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 38.3 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 93.63% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 24 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 31.45% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.3 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 93.63% ï¿½ï¿½ï¿½Ã»ï¿½
     static class FooBar {
         private int n;
         private volatile boolean finish = false;
@@ -51,7 +51,7 @@ public class Test16 {
     }
 
     public static void main(String[] args) {
-        //a£¬bÕâÁ½¸örunnable Êµ¼ÊÉÏÔÚfoo£¬ºÍbarÀïÃæÖ´ÐÐµÄÊÇÔ­ÉúµÄrun·½·¨¡£
+        //aï¿½ï¿½bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½runnable Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½fooï¿½ï¿½ï¿½ï¿½barï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ðµï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½runï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         Runnable a = ()->{
             System.out.print("foo");
         };
@@ -62,7 +62,7 @@ public class Test16 {
 
         FooBar fooBar2 = new FooBar(11);
 
-        //ÕæÕýstartµÄÊÇÕâ¸ö¡£lamada±í´ïÊ½´´½¨µÄÄäÃûÀà
+        //ï¿½ï¿½ï¿½ï¿½startï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½lamadaï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         new Thread(()->{
             try {
                 fooBar2.bar(b);

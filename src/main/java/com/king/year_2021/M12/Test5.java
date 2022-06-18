@@ -2,7 +2,7 @@ package com.king.year_2021.M12;
 
 /**
  * @program: leetcode
- * @description: 372. ³¬¼¶´Î·½
+ * @description: 372. ï¿½ï¿½ï¿½ï¿½ï¿½Î·ï¿½
  * https://leetcode-cn.com/problems/super-pow/
  * @author: King
  * @create: 2021-12-05 22:51

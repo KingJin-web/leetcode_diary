@@ -5,15 +5,15 @@ import com.king.util.LeetcodeUtil;
 
 /**
  * @program: leetcode
- * @description: 237. 删除链表中的节点
+ * @description: 237. 删锟斤拷锟斤拷锟斤拷锟叫的节碉拷
  * https://leetcode-cn.com/problems/delete-node-in-a-linked-list/
  * @author: King
  * @create: 2021-11-02 02:45
  */
 public class Test2 {
 
-    //执行用时： 0 ms , 在所有 Java 提交中击败了 100.00% 的用户 内存消耗： 37.8 MB ,
-    //在所有 Java 提交中击败了 54.53% 的用户
+    //执锟斤拷锟斤拷时锟斤拷 0 ms , 锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 100.00% 锟斤拷锟矫伙拷 锟节达拷锟斤拷锟侥ｏ拷 37.8 MB ,
+    //锟斤拷锟斤拷锟斤拷 Java 锟结交锟叫伙拷锟斤拷锟斤拷 54.53% 锟斤拷锟矫伙拷
     public void deleteNode(ListNode node) {
         if(node == null || node.next == null) return;
         node.val = node.next.val;

@@ -6,11 +6,11 @@ import com.king.year_2021.MyAssert;
 
 /**
  * @program: leetcode
- * @description: 6. Z ×ÖÐÎ±ä»»
+ * @description: 6. Z ï¿½ï¿½ï¿½Î±ä»»
  * https://leetcode-cn.com/problems/zigzag-conversion/
  * @author: King
  * @create: 2021-08-11 00:17
- * ÀýÈç¶ÔÒ»¸ö4ÐÐµÄ
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½4ï¿½Ðµï¿½
  * 0     6      12        18
  * 1   5 7   11 13    17
  * 2 4   8 10   14 16
@@ -18,14 +18,14 @@ import com.king.year_2021.MyAssert;
  */
 public class Test10 {
 //    public String convert(String s, int numRows) {
-//        //µ±sµÄ³¤¶ÈÐ¡ÓÚÐÐÊýÊ±£¬Ö±½Ó·µ»Øs
-//        //µ±ÐÐÊýÎª1Ê±£¬Ò²Ö±½Ó·µ»Øs
+//        //ï¿½ï¿½sï¿½Ä³ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ö±ï¿½Ó·ï¿½ï¿½ï¿½s
+//        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª1Ê±ï¿½ï¿½Ò²Ö±ï¿½Ó·ï¿½ï¿½ï¿½s
 //        if (s.length() < numRows || numRows == 1) {
 //            return s;
 //        }
 //        int segment = 2 * numRows - 2;
 //        StringBuilder stb = new StringBuilder(s.length());
-//        // Êä³öÍ·
+//        // ï¿½ï¿½ï¿½Í·
 //        for (int i = 0; i * segment < s.length(); i++) {
 //            stb.append(s.charAt(i * segment));
 //        }
@@ -35,16 +35,16 @@ public class Test10 {
 //    }
 
     /**
-     * Ö´ÐÐÓÃÊ±£º 2 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 100.00% µÄÓÃ»§
-     * ÄÚ´æÏûºÄ£º 38.3 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 97.51% µÄÓÃ»§
+     * Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 2 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½
+     * ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 38.3 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 97.51% ï¿½ï¿½ï¿½Ã»ï¿½
      *
      * @param s
      * @param numRows
      * @return
      */
     public String convert(String s, int numRows) {
-        //µ±sµÄ³¤¶ÈÐ¡ÓÚÐÐÊýÊ±£¬Ö±½Ó·µ»Øs
-        //µ±ÐÐÊýÎª1Ê±£¬Ò²Ö±½Ó·µ»Øs
+        //ï¿½ï¿½sï¿½Ä³ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ö±ï¿½Ó·ï¿½ï¿½ï¿½s
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª1Ê±ï¿½ï¿½Ò²Ö±ï¿½Ó·ï¿½ï¿½ï¿½s
         int len = s.length();
         if (len < numRows || numRows == 1) {
             return s;
@@ -52,24 +52,24 @@ public class Test10 {
 
         int segment = 2 * numRows - 2;
         StringBuilder target = new StringBuilder(len);
-        // Êä³öÍ·
+        // ï¿½ï¿½ï¿½Í·
         for (int i = 0; i * segment < len; ++i) {
             target.append(s.charAt(i * segment));
         }
-        // Êä³öÌå
+        // ï¿½ï¿½ï¿½ï¿½ï¿½
         int l = 0;
         for (int i = 0; i < numRows - 2; ++i) {
             for (int j = 0; j * segment + i + 1 < len; ++j) {
-                // Êä³öÒ»¶ÎµÄµÚÒ»ÁÐ
+                // ï¿½ï¿½ï¿½Ò»ï¿½ÎµÄµï¿½Ò»ï¿½ï¿½
                 target.append(s.charAt(j * segment + i + 1));
-                // Êä³öÒ»¶ÎµÄµÚ¶þÁÐ£¬Ê×ÏÈÒªÅÐ¶ÏµÚ¶þÁÐ¶ÔÓ¦Î»ÖÃÊÇ·ñÓÐÔªËØ£¬Ò²¾ÍÊÇË÷Òý²»ÄÜ³¬¹ýsµÄ³¤¶È
+                // ï¿½ï¿½ï¿½Ò»ï¿½ÎµÄµÚ¶ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ð¶ÏµÚ¶ï¿½ï¿½Ð¶ï¿½Ó¦Î»ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½sï¿½Ä³ï¿½ï¿½ï¿½
                 l = j * segment + (segment - i - 1);
 
                 if (l < len)
                     target.append(s.charAt(l));
             }
         }
-        // Êä³öÎ²
+        // ï¿½ï¿½ï¿½Î²
         for (int i = 0; i * segment + numRows - 1 < len; i++) {
             target.append(s.charAt(i * segment + numRows - 1));
         }
@@ -86,11 +86,11 @@ public class Test10 {
         Helper.print(a);
 
 /**
- ÊäÈë£ºs = "PAYPALISHIRING", numRows = 3
- Êä³ö£º"PAHNAPLSIIGYIR"
- Ê¾Àý 2£º
- ÊäÈë£ºs = "PAYPALISHIRING", numRows = 4
- Êä³ö£º"PINALSIGYAHRPI"
+ ï¿½ï¿½ï¿½ë£ºs = "PAYPALISHIRING", numRows = 3
+ ï¿½ï¿½ï¿½ï¿½ï¿½"PAHNAPLSIIGYIR"
+ Ê¾ï¿½ï¿½ 2ï¿½ï¿½
+ ï¿½ï¿½ï¿½ë£ºs = "PAYPALISHIRING", numRows = 4
+ ï¿½ï¿½ï¿½ï¿½ï¿½"PINALSIGYAHRPI"
  **/
     }
 }

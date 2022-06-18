@@ -7,30 +7,30 @@ import java.util.List;
 
 /**
  * @program: leetcode
- * @description: 1078. Bigram ·Ö´Ê
- * À´Ô´£ºÁ¦¿Û£¨LeetCode£©
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/occurrences-after-bigram
- * Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+ * @description: 1078. Bigram ï¿½Ö´ï¿½
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/occurrences-after-bigram
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-12-26 02:22
  */
 public class Test26 {
-    //¸ø³öµÚÒ»¸ö´Êfirst ºÍµÚ¶þ¸ö´Êsecond£¬¿¼ÂÇÔÚÄ³Ð©ÎÄ±¾textÖÐ¿ÉÄÜÒÔ "first second third" ÐÎÊ½³öÏÖµÄÇé¿ö£¬
-    // ÆäÖÐsecond½ôËæfirst³öÏÖ£¬third½ôËæsecond³öÏÖ¡£
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½first ï¿½ÍµÚ¶ï¿½ï¿½ï¿½ï¿½ï¿½secondï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³Ð©ï¿½Ä±ï¿½textï¿½Ð¿ï¿½ï¿½ï¿½ï¿½ï¿½ "first second third" ï¿½ï¿½Ê½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    // ï¿½ï¿½ï¿½ï¿½secondï¿½ï¿½ï¿½ï¿½firstï¿½ï¿½ï¿½Ö£ï¿½thirdï¿½ï¿½ï¿½ï¿½secondï¿½ï¿½ï¿½Ö¡ï¿½
     //
-    //¶ÔÓÚÃ¿ÖÖÕâÑùµÄÇé¿ö£¬½«µÚÈý¸ö´Ê "third" Ìí¼Óµ½´ð°¸ÖÐ£¬²¢·µ»Ø´ð°¸¡£
+    //ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ "third" ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø´ð°¸¡ï¿½
 
-    //Ê¾Àý 1£º
+    //Ê¾ï¿½ï¿½ 1ï¿½ï¿½
     //
-    //ÊäÈë£ºtext = "alice is a good girl she is a good student", first = "a", second = "good"
-    //Êä³ö£º["girl","student"]
-    //Ê¾Àý 2£º
+    //ï¿½ï¿½ï¿½ë£ºtext = "alice is a good girl she is a good student", first = "a", second = "good"
+    //ï¿½ï¿½ï¿½ï¿½ï¿½["girl","student"]
+    //Ê¾ï¿½ï¿½ 2ï¿½ï¿½
     //
-    //ÊäÈë£ºtext = "we will we will rock you", first = "we", second = "will"
-    //Êä³ö£º["we","rock"]
+    //ï¿½ï¿½ï¿½ë£ºtext = "we will we will rock you", first = "we", second = "will"
+    //ï¿½ï¿½ï¿½ï¿½ï¿½["we","rock"]
 
 
-    //Ö´ÐÐÓÃÊ±£º 0 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 100.00% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 36.4 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 73.00% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 0 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 100.00% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 36.4 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 73.00% ï¿½ï¿½ï¿½Ã»ï¿½
     public String[] findOcurrences(String text, String first, String second) {
         List<String> list = new ArrayList<>();
         String[] strings = text.split(" ");

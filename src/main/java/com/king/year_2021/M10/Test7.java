@@ -4,25 +4,25 @@ import com.king.util.MyPrint;
 
 /**
  * @program: leetcode
- * @description: 434. ×Ö·û´®ÖÐµÄµ¥´ÊÊý
- * À´Ô´£ºÁ¦¿Û£¨LeetCode£©
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/number-of-segments-in-a-string
- * Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓÐ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
+ * @description: 434. ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ÐµÄµï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½LeetCodeï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ó£ï¿½https://leetcode-cn.com/problems/number-of-segments-in-a-string
+ * ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½Ù·ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµ×ªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author: King
  * @create: 2021-10-07 09:21
  */
 public class Test7 {
 
-    //Í³¼Æ×Ö·û´®ÖÐµÄµ¥´Ê¸öÊý£¬ÕâÀïµÄµ¥´ÊÖ¸µÄÊÇÁ¬ÐøµÄ²»ÊÇ¿Õ¸ñµÄ×Ö·û¡£
-    //Çë×¢Òâ£¬Äã¿ÉÒÔ¼Ù¶¨×Ö·û´®Àï²»°üÀ¨ÈÎºÎ²»¿É´òÓ¡µÄ×Ö·û¡£
-    //Ê¾Àý:
+    //Í³ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ÐµÄµï¿½ï¿½Ê¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½Ç¿Õ¸ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+    //ï¿½ï¿½×¢ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ô¼Ù¶ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï²»ï¿½ï¿½ï¿½ï¿½ï¿½ÎºÎ²ï¿½ï¿½É´ï¿½Ó¡ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+    //Ê¾ï¿½ï¿½:
     //
-    //ÊäÈë: "Hello, my name is John"
-    //Êä³ö: 5
-    //½âÊÍ: ÕâÀïµÄµ¥´ÊÊÇÖ¸Á¬ÐøµÄ²»ÊÇ¿Õ¸ñµÄ×Ö·û£¬ËùÒÔ "Hello," Ëã×÷ 1 ¸öµ¥´Ê¡£
+    //ï¿½ï¿½ï¿½ï¿½: "Hello, my name is John"
+    //ï¿½ï¿½ï¿½: 5
+    //ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½Ç¿Õ¸ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ "Hello," ï¿½ï¿½ï¿½ï¿½ 1 ï¿½ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½
 
 
-    //Ö´ÐÐÓÃÊ±£º 2 ms , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 28.55% µÄÓÃ»§ ÄÚ´æÏûºÄ£º 36.4 MB , ÔÚËùÓÐ Java Ìá½»ÖÐ»÷°ÜÁË 19.91% µÄÓÃ»§
+    //Ö´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ 2 ms , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 28.55% ï¿½ï¿½ï¿½Ã»ï¿½ ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ 36.4 MB , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Java ï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ 19.91% ï¿½ï¿½ï¿½Ã»ï¿½
     public int countSegments(String s) {
         if(s.equals("")) return 0;
         int k=0;

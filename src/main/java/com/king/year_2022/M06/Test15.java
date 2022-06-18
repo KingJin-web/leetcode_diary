@@ -6,7 +6,7 @@ import com.king.util.MyPrint;
 import java.util.Arrays;
 
 /**
- * @author: 12613
+ * @author: King
  * @project: leetcode_diary
  * @pcakage: com.king.year_2022.M06.Test15
  * @date: 2022年06月15日 21:33
