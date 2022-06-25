@@ -23,7 +23,7 @@ public class MyPrint {
 
 
     public static void println(Object o) {
-        System.out.println(o);
+        print(o);
     }
 
     public static void print(List... os) {
@@ -110,7 +110,7 @@ public class MyPrint {
             }
             print(list.toArray());
         } else {
-            println(o);
+            System.out.println(o);
         }
 
     }
