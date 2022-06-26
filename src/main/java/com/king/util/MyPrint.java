@@ -58,7 +58,8 @@ public class MyPrint {
             print("null");
             return;
         }
-        if (o.getClass().getSimpleName().contains("[]")) {
+//        System.out.println(o.getClass().getSimpleName());
+        if (o.getClass().getSimpleName().contains("[][]")) {
             System.out.println(Arrays.deepToString((Object[]) o));
         } else if (isArray(o)) {
             List<Object> coll = new ArrayList<>();

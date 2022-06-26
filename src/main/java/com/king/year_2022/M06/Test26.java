@@ -1,49 +1,66 @@
 package com.king.year_2022.M06;
 
+import com.king.util.Helper;
 import com.king.util.MyPrint;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * @author: King
  * @project: leetcode_diary
  * @date: 2022年06月25日 22:51
- * @description: 剑指 Offer II 091. 粉刷房子
+ * @description: 710. 黑名单中的随机数
  */
 public class Test26 {
-
     private static class Solution {
-        public int minCost(int[][] costs) {
-            int n = costs.length;
-            int[] dp = new int[3];
-            for (int j = 0; j < 3; j++) {
-                dp[j] = costs[0][j];
-            }
-            for (int i = 1; i < n; i++) {
-                int[] dpNew = new int[3];
-                for (int j = 0; j < 3; j++) {
-                    dpNew[j] = Math.min(dp[(j + 1) % 3], dp[(j + 2) % 3]) + costs[i][j];
+
+        Random random = new Random();
+        Map<Integer, Integer> map = new HashMap<>();
+        int bound;
+
+        public Solution(int n, int[] blacklist) {
+            bound = n - blacklist.length;
+            Set<Integer> blacks = new HashSet<>();
+            for (int b : blacklist) {
+                if (b >= bound) {
+                    blacks.add(b);
                 }
-                dp = dpNew;
             }
-            return Arrays.stream(dp).min().getAsInt();
+            int w = bound;
+            for (int b : blacklist) {
+                if (b < bound) {
+                    while (blacks.contains(w)) {
+                        w++;
+                    }
+                    map.put(b, w);
+                    w++;
+                }
+            }
+        }
+
+        public int pick() {
+            int x = random.nextInt(bound);
+            return map.getOrDefault(x, x);
         }
     }
 
-
     public static void main(String[] args) {
-        int[][] costs = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
-        MyPrint.println(new Solution().minCost(costs));
-
-        //输入: costs = [[17,2,17],[16,16,5],[14,3,19]]
-        //输出: 10
-        //解释: 将 0 号房子粉刷成蓝色，1 号房子粉刷成绿色，2 号房子粉刷成蓝色。
-        //     最少花费: 2 + 5 + 3 = 10。
+        //MyPrint.print(new Solution(3, new int[]{0, 1}).pick());
+        //输入
+        //["Solution", "pick", "pick", "pick", "pick", "pick", "pick", "pick"]
+        //[[7, [2, 3, 5]], [], [], [], [], [], [], []]
+        //输出
+        //[null, 0, 4, 1, 6, 1, 0, 4]
         //
         //来源：力扣（LeetCode）
-        //链接：https://leetcode.cn/problems/JEj789
+        //链接：https://leetcode.cn/problems/random-pick-with-blacklist
         //著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-        int[][] costs2 = {{17, 2, 17}, {16, 16, 5}, {14, 3, 19}};
-        MyPrint.println(new Solution().minCost(costs2));
+        int[][] blacklist = new int[][]{{2, 3, 5}, {2, 3, 5}};
+        MyPrint.print(blacklist);
+        Solution solution = new Solution(7, new int[]{2, 3, 5});
+        int[] o = Helper.getArrays(solution.pick(), solution.pick(), solution.pick(), solution.pick(), solution.pick(), solution.pick(), solution.pick(), solution.pick());
+        MyPrint.print(o);
+
+
     }
 }
