@@ -2,6 +2,8 @@ package com.king.year_2022.M06;
 
 import com.king.util.MyPrint;
 
+import java.time.LocalDate;
+
 /**
  * @author: King
  * @project: leetcode_diary
@@ -107,6 +109,9 @@ public class Test27 {
         MyPrint.println(test27.findLUSlength(strs));
         Solution solution = new Solution();
         MyPrint.println(solution.findLUSlength(strs));
+
+        LocalDate localDate = LocalDate.now();
+        MyPrint.println(localDate.toString());
 
     }
 }
