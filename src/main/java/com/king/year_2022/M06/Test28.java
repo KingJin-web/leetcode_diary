@@ -29,9 +29,9 @@ public class Test28 {
         MyPrint.print(test28.wiggleSort(LeetcodeUtil.stringToIntegerArray("[1,5,1,1,6,4]")));
     }
 
-    public int[] wiggleSort(int[] nums) {
+    public int[] wiggleSort2(int[] nums) {
         int[] result = new int[nums.length];
-        //  System.arraycopy(nums, 0, result, 0, result.length);
+        System.arraycopy(nums, 0, result, 0, result.length);
         Arrays.sort(result);
         int j = nums.length - 1;
         for (int i = 1; i < nums.length; i += 2) {
@@ -42,5 +42,19 @@ public class Test28 {
         }
 
         return result;
+    }
+
+    public int[] wiggleSort(int[] nums) {
+        int[] result = nums.clone();
+        Arrays.sort(result);
+        int j = nums.length - 1;
+        for (int i = 1; i < nums.length; i += 2) {
+            nums[i] = result[j--];
+        }
+        for (int i = 0; i < nums.length; i += 2) {
+            nums[i] = result[j--];
+        }
+        return nums;
+
     }
 }
