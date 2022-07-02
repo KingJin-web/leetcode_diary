@@ -13,7 +13,7 @@ import java.util.Map;
  * @date: 2022年07月01日 23:51
  * @description: 241. 为运算表达式设计优先级
  */
-public class Test7 {
+public class Test1 {
     public Map<String, List<Integer>> map = new HashMap<>();
     // 记录已经计算出来的字符串对应的值，避免重复计算。
     public List<Integer> diffWaysToCompute(String input) {
@@ -51,7 +51,7 @@ public class Test7 {
     }
 
     public static void main(String[] args) {
-        Test7 test7 = new Test7();
+        Test1 test7 = new Test1();
         MyPrint.print(test7.diffWaysToCompute("2*3-4*5"));
     }
 
