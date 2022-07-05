@@ -1,5 +1,7 @@
 package com.king.year_2022.M07;
 
+import com.king.util.MyPrint;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,5 +40,11 @@ public class Test4 {
         }
 
         return ans;
+    }
+
+    public static void main(String[] args) {
+        Test4 test4 = new Test4();
+        int[] arr = {4,2,1,3};
+        MyPrint.print(test4.minimumAbsDifference(arr));
     }
 }
