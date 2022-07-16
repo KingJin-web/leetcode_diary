@@ -1,5 +1,8 @@
 package com.king.year_2022.M07;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 /**
  * @author: King
  * @project: leetcode_diary
@@ -52,5 +55,13 @@ public class Test15 {
         Node quadTree2 = new Node(true, true, null, null, null, null);
         Node result = test15.intersect(quadTree1, quadTree2);
         System.out.println(result.val);
+
+
+        LocalDate localDate = LocalDate.of(2022, 7, 15);
+        LocalDate localDate1 = LocalDate.of(2022, 1, 1);
+
+        //差值
+        long between = localDate.toEpochDay() - localDate1.toEpochDay();
+        System.out.println(between);
     }
 }
