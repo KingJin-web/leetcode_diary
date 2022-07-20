@@ -23,7 +23,7 @@ public class MyPrint {
 
 
     public static void println(Object o) {
-        print(o);
+        System.out.println(o);
     }
 
     public static void print(List... os) {
