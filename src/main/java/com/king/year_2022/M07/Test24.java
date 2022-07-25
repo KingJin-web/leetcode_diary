@@ -9,7 +9,6 @@ import com.king.util.MyPrint;
  * @description: 1184. 公交站间的距离
  */
 public class Test24 {
-
     public int distanceBetweenBusStops1(int[] distance, int start, int destination) {
         int d1 = 0, d2 = 0;
         int l = Math.min(start, destination);
