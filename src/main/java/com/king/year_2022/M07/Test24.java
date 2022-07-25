@@ -61,8 +61,6 @@ public class Test24 {
         System.out.println(test24.distanceBetweenBusStops(distance, 0, 1));
         System.out.println(test24.distanceBetweenBusStops(distance, 0, 2));
         //[7,10,1,12,11,14,5,0]
-        //7
-        //2
         int[] distance2 = {7, 10, 1, 12, 11, 14, 5, 0};
         System.out.println(test24.distanceBetweenBusStops1(distance2, 7, 2));
         System.out.println(test24.distanceBetweenBusStops(distance2, 7, 2));
