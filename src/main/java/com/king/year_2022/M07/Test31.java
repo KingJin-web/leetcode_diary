@@ -4,6 +4,7 @@ package com.king.year_2022.M07;
 import com.king.util.LeetcodeUtil;
 import com.king.util.TreeNode;
 
+import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -40,11 +41,15 @@ public class Test31 {
     }
 
 
-
     public static void main(String[] args) {
         Test31 test31 = new Test31();
         TreeNode root = LeetcodeUtil.stringToTreeNode("[-1,null,-2,-3,null,null,-4]");
         System.out.println(test31.maxLevelSum(root));
+
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Long time = new Long(1659423540);
+        String d = format.format(time * 1000);
+        System.out.println(d);
     }
 }
 
