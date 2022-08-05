@@ -36,5 +36,6 @@ public class Test5 {
         TreeNode root2 =  LeetcodeUtil.stringToTreeNode("[4,2,6,3,1,5]");
         TreeNode result2 = test5.addOneRow(root2, 1, 2);
         MyPrint.print(LeetcodeUtil.treeNodeToString(result2));
+        MyPrint.print(result2);
     }
 }

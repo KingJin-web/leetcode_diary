@@ -164,7 +164,7 @@ public class LeetcodeUtil {
                 continue;
             }
 
-            output.append(String.valueOf(node.val)).append(", ");
+            output.append(node.val).append(", ");
             nodeQueue.add(node.left);
             nodeQueue.add(node.right);
         }
