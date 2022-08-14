@@ -6,7 +6,7 @@ import com.king.util.MyPrint;
  * @author: King
  * @project: leetcode_diary
  * @date: 2022年08月14日 23:42
- * @description:
+ * @description: 1422. 分割字符串的最大得分
  */
 public class Test14 {
     public int maxScore(String s) {
